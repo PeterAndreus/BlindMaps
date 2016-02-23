@@ -1,0 +1,306 @@
+ 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Vector Layer</title>
+        <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css">
+        <link rel="stylesheet" href="http://openlayers.org/en/v3.13.1/css/ol.css" type="text/css">
+        <script src="http://openlayers.org/en/v3.13.1/build/ol.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+
+    </head>
+    <body class="claro bodyClass">
+        <style>
+            .bodyClass{
+                background-color: black;
+            }
+            .taskInfo{
+                color: white;
+                font-family: monospace;
+                font-size: 1.6em;
+            }
+            .task{
+                color: gainsboro;
+                font-size: 2em;
+                font-weight: bold;
+            }
+        </style>
+    <center>
+        <div id='taskDiv'>
+            <span class='taskInfo' id='taskInfoSpan'></span>
+            <span class='task' id='taskSpan'></span>
+        </div>
+        <div id="map" class="map" style="width: 80%"></div>
+    </center>
+    <script>
+        require(["dojo/domReady!"], function() {
+            dojo.require("dojox.timing");
+        })
+    </script>
+    <!--        <script>
+                require(["dojo/request/xhr", "dojo/domReady!"], function(xhr) {
+                    xhr("data/warning.json",
+                            {handleAs: "json"})
+                            .then(function(data) {
+                                window.recommJson = data;
+                            });
+                    xhr("data/KRAJOSN",
+                            {handleAs: "json"})
+                            .then(function(data) {
+                                window.KRAJOSN = data;
+                            });
+                })
+            </script>-->
+    <script>
+
+        var countryData;
+        var taskCountry;
+        var highlightFeature;
+        var opacity = 0.7;
+        var colorMap = {
+            1: 'rgba(255, 255, 255, ' + (opacity - 0.3) + ')',
+            2: 'rgba(50, 205, 50, ' + opacity + ')',
+            3: 'rgba(255, 215, 0, ' + opacity + ')',
+            4: 'rgba(255, 127, 0, ' + opacity + ')',
+            5: 'rgba(255, 36, 0, ' + opacity + ')',
+        };
+
+        var map = new ol.Map({
+            layers: [
+                new ol.layer.Tile({
+                    source: new ol.source.MapQuest({layer: 'sat'})
+                }),
+                new ol.layer.Vector({
+                    source: new ol.source.Vector({
+                        loader: function() {
+                            var source = this;
+                            var format = new ol.format.GeoJSON();
+                            dojo.xhrGet({
+                                url: "data/countries_highres.json",
+                                handleAs: "json",
+                                load: function(data) {
+                                    var features = format.readFeatures(data, {
+                                        featureProjection: 'EPSG:3857'
+                                    });
+                                    source.addFeatures(separateMultiPolygon(features));
+                                    countryData = data;
+                                    initializeTask();
+                                }
+                            })
+                        }
+                    }),
+                    style: function(feature) {
+                        return fillCountry();
+                    }
+                })
+            ],
+            target: 'map',
+            view: new ol.View({
+                center: ol.proj.fromLonLat([19, 48]),
+                zoom: 5,
+                maxZoom: 8,
+                minZoom: 3
+            })
+        });
+
+        var overlayFeature = new ol.layer.Vector({
+            source: new ol.source.Vector(),
+            map: map,
+            style: new ol.style.Style({
+                stroke: new ol.style.Stroke({
+                    color: 'rgba(0,0,0,1)',
+                    width: 2
+                }),
+                fill: new ol.style.Fill({
+                    color: 'rgba(0,0,0,0.3)'
+                })
+            })
+        });
+
+        var correctAnswerFeature = new ol.layer.Vector({
+            source: new ol.source.Vector(),
+            map: map,
+            style: new ol.style.Style({
+                fill: new ol.style.Fill({
+                    color: 'rgba(0, 255, 0, 0.5)'
+                })
+            })
+        });
+
+        var textFeature = new ol.layer.Vector({
+            source: new ol.source.Vector(),
+            map: map,
+            style: function(feature) {
+                return getTextFeature(feature);
+            }
+        });
+
+
+        function separateMultiPolygon(features) {
+            var result = [];
+            dojo.forEach(features, function(feature) {
+                var geom = feature.getGeometry();
+                if (geom.getType() === 'MultiPolygon') {
+                    dojo.forEach(geom.getPolygons(), function(polygon) {
+                        var clone = feature.clone();
+                        clone.setGeometry(polygon);
+                        result.push(clone);
+                    })
+                } else {
+                    result.push(feature);
+                }
+            });
+
+            return result;
+        }
+
+        function fillCountry() {
+            var color = colorMap[1];
+            var s = new ol.style.Style({
+                fill: new ol.style.Fill({
+                    color: color
+                }),
+                stroke: new ol.style.Stroke({
+                    color: 'rgba(0, 0, 0, 1)',
+                    width: 0.4
+                })
+            })
+            return  s;
+        }
+
+        function getTextFeature(feature) {
+            var t = new ol.style.Text({
+                text: feature.get("name"),
+                font: "20px sans-serif",
+                fill: new ol.style.Fill({
+                    color: 'rgba(255,255,255,1)'
+                }),
+                stroke: new ol.style.Stroke({
+                    color: 'rgba(0,0,0,1)'
+                })
+            })
+            var s = new ol.style.Style({
+                text: t
+            })
+            return s;
+        }
+
+
+        function highlightFeatureInfo(pixel) {
+            var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
+                return feature;
+            });
+
+            if (feature !== highlightFeature) {
+                if (highlightFeature) {
+                    overlayFeature.getSource().removeFeature(highlightFeature);
+                    textFeature.getSource().removeFeature(highlightFeature);
+                }
+                if (feature) {
+                    textFeature.getSource().addFeature(feature);
+                    overlayFeature.getSource().addFeature(feature);
+                } else {
+                }
+                highlightFeature = feature;
+            }
+
+        }
+
+        function checkCorrectAnswer(pixel) {
+            var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
+                return feature;
+            });
+
+            if (taskCountry && feature && feature.get("name") === taskCountry.name) {
+                correctAnswerFeature.getSource().addFeature(feature);
+                var fill = correctAnswerFeature.getStyle().getFill();
+                correctAnswerAnimate(fill, feature);
+                initializeTask();
+            }
+        }
+
+        function nextTask(){
+            initializeTask();
+        }
+
+        map.on('pointermove', function(evt) {
+            if (evt.dragging) {
+                return;
+            }
+            var pixel = map.getEventPixel(evt.originalEvent);
+            highlightFeatureInfo(pixel);
+        });
+
+        map.on('click', function(evt) {
+            checkCorrectAnswer(evt.pixel);
+        });
+    </script>
+    <script>
+        require(["dojo/dom"], function(dom) {
+            initializeTask = function() {
+                var taskSpan = dom.byId("taskSpan");
+                var taskInfoSpan = dom.byId("taskInfoSpan");
+                var randomNum = Math.floor(Math.random() * countryData.features.length);
+                var country = countryData.features[randomNum].properties;
+
+                taskInfoSpan.innerHTML = "Click on:";
+                taskSpan.innerHTML = country.name;
+                taskCountry = country;
+            };
+
+            correctAnswerAnimate = function(fill, feature) {
+                var interval = 25;
+                var timer = new dojox.timing.Timer(interval);
+                timer.alpha = 0.5;
+                timer.tickCount = 0;
+                timer.fill = fill;
+                timer.feature = feature;
+                timer.onTick = function() {
+                    timer.tickCount++;
+                    var alpha = timer.alpha - (timer.alpha / interval * timer.tickCount);
+                    timer.fill.setColor('rgba(0, 255, 0, ' + alpha + ')');
+
+                    correctAnswerFeature.getSource().removeFeature(feature);
+                    correctAnswerFeature.getSource().addFeature(feature);                    
+
+                    if (alpha === 0) {
+                        timer.stop();
+                    }
+                }
+                timer.start();
+            }
+        });
+    </script>
+    <!--        <script>
+                require(["dijit/Dialog", "dijit/form/Button", "dojo/dom-construct"], function(Dialog, Button, domConstruct) {
+                    showDialog = function(message) {
+
+                        var d = new Dialog({
+                            title: "Upozornenie!",
+                            style: {
+                                width: '450px',
+                                'text-align': 'center'
+                            }
+                        });
+
+                        var div = domConstruct.create("div", {
+                            innerHTML: message + "<br/>"
+                        });
+
+                        var bOK = new Button({
+                            label: "OK",
+                            onClick: function(){
+                                d.hide();
+                            },
+                            style: {
+                                width: '400px'
+                            }
+                        }).placeAt(div);
+
+                        d.set("content", div);
+                        d.show();
+                    }
+                });
+            </script>-->
+</body>
+</html>

@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css">
         <link rel="stylesheet" href="http://openlayers.org/en/v3.13.1/css/ol.css" type="text/css">
         <script src="http://openlayers.org/en/v3.13.1/build/ol.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="parseOnLoad: true"></script>
 
     </head>
     <body class="claro bodyClass">
@@ -24,35 +24,129 @@
                 font-size: 2em;
                 font-weight: bold;
             }
+            .settingTr{
+                width: 30%;
+            }
+            .slider{
+                width: 90%;
+            }
+            .topSlider .dijitSliderRemainingBar{
+                background-color: red !important;
+            }
+            .topSlider .dijitSliderProgressBar{
+                background-color: white !important;
+            }
+            .bottomSlider .dijitSliderRemainingBar{
+                background-color: white !important;
+            }
+            .bottomSlider .dijitSliderProgressBar{
+                background-color: red !important;
+            }
         </style>
     <center>
         <div id='taskDiv'>
             <span class='taskInfo' id='taskInfoSpan'></span>
             <span class='task' id='taskSpan'></span>
         </div>
+    </center>
+    <div id='settings'>
+        <div data-dojo-type="dijit/form/Form" id="settingForm">
+            <div>
+                <div data-dojo-type="dijit/TitlePane" title="Settings" data-dojo-props='open: false, duration: 200'>
+                    <div data-dojo-type="dijit/layout/ContentPane" >
+                        Country area:
+                        <div data-dojo-type="dijit/form/HorizontalSlider"
+                             class ='topSlider slider'
+                             name = 'minArea'
+                             onChange="changeSetting(this)"
+                             data-dojo-props="
+                             minimum: -10,
+                             maximum: 17098242,
+                             showButtons:false,
+                             value: 50000,
+                             clickSelect: false">
+                            <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="topDecoration"
+                                style="height:1em;font-size:75%;color:gray;">
+                                <li>Vatican</li>
+                                <li>Russia</li>
+                            </ol>
+                            <div data-dojo-type="dijit/form/HorizontalRule" container="topDecoration"
+                                 count=11 style="height:5px;"></div>
+                        </div>
+                        <div data-dojo-type="dijit/form/HorizontalSlider"
+                             class ='bottomSlider slider'
+                             name = 'maxArea'
+                             onChange="changeSetting(this)"
+                             data-dojo-props="
+                             minimum: -10,
+                             maximum: 17098242,
+                             value: 17098242,
+                             showButtons:false,
+                             clickSelect: false">
+                            <div data-dojo-type="dijit/form/HorizontalRule" container="bottomDecoration"
+                                 count=11 style="height:5px;"></div>
+                            <ol data-dojo-type="dijit/form/HorizontalRuleLabels" container="bottomDecoration"
+                                style="height:1em;font-size:75%;color:gray;">
+                                <li>Vatican</li>
+                                <li>Russia</li>
+                            </ol>
+                        </div>
+
+                        <table style="width: 100%">
+                            <tr class="settingTr">
+                                <td>
+                                    <input id="keepAnswer" name="keepAnswer" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <label for="keepAnswer">Keep correct answer highlighted</label>
+                                </td>
+                                <td>
+                                    <input id="northAmerica" name="northAmerica" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <label for="northAmerica">North America</label>
+                                </td>
+                                <td>
+                                    <input id="asia" name="asia" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <label for="asia">Asia</label>
+                                </td>
+                            </tr>
+                            <tr class="settingTr">
+                                <td>
+                                    <input id="names" name="names" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <label for="names">Show name task</label>
+                                </td>
+                                <td>
+                                    <input id="southAmerica" name="southAmerica" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <label for="southAmerica">South America</label>
+                                </td>
+                                <td>
+                                    <input id="africa" name="africa" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <label for="asia">Africa</label>
+                                </td>
+                            </tr>
+                            <tr class="settingTr">
+                                <td>
+                                    <input id="flags" name="flags" data-dojo-type="dijit/form/CheckBox"  onChange="changeSetting(this)"/>
+                                    <label for="flags">Show flag task</label>
+                                </td>
+                                <td>
+                                    <input id="europe" name="europe" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <label for="europe">Europe</label>
+                                </td>
+                                <td>
+                                    <input id="australia" name="australia" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <label for="australia">Australia</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <center>
         <div id="map" class="map" style="width: 80%"></div>
     </center>
     <script>
-        require(["dojo/domReady!"], function() {
-            dojo.require("dojox.timing");
-        })
-    </script>
-    <!--        <script>
-                require(["dojo/request/xhr", "dojo/domReady!"], function(xhr) {
-                    xhr("data/warning.json",
-                            {handleAs: "json"})
-                            .then(function(data) {
-                                window.recommJson = data;
-                            });
-                    xhr("data/KRAJOSN",
-                            {handleAs: "json"})
-                            .then(function(data) {
-                                window.KRAJOSN = data;
-                            });
-                })
-            </script>-->
-    <script>
 
+        var settings;
         var countryData;
         var taskCountry;
         var highlightFeature;
@@ -214,12 +308,14 @@
             if (taskCountry && feature && feature.get("name") === taskCountry.name) {
                 correctAnswerFeature.getSource().addFeature(feature);
                 var fill = correctAnswerFeature.getStyle().getFill();
-                correctAnswerAnimate(fill, feature);
+                if (settings.keepAnswer.length === 0) {
+                    correctAnswerAnimate(fill, feature);
+                }
                 initializeTask();
             }
         }
 
-        function nextTask(){
+        function nextTask() {
             initializeTask();
         }
 
@@ -236,7 +332,15 @@
         });
     </script>
     <script>
-        require(["dojo/dom"], function(dom) {
+        require(["dojo/dom", "dijit/registry"], function(dom, registry) {
+            changeSetting = function(){
+                initSettings();
+            }
+
+            initSettings = function() {
+                var form = registry.byId("settingForm");
+                settings = form.get("value");
+            }
             initializeTask = function() {
                 var taskSpan = dom.byId("taskSpan");
                 var taskInfoSpan = dom.byId("taskInfoSpan");
@@ -261,9 +365,11 @@
                     timer.fill.setColor('rgba(0, 255, 0, ' + alpha + ')');
 
                     correctAnswerFeature.getSource().removeFeature(feature);
-                    correctAnswerFeature.getSource().addFeature(feature);                    
+                    correctAnswerFeature.getSource().addFeature(feature);
 
                     if (alpha === 0) {
+                        correctAnswerFeature.getSource().removeFeature(feature);
+                        timer.fill.setColor('rgba(0, 255, 0, ' + timer.alpha + ')');
                         timer.stop();
                     }
                 }
@@ -271,36 +377,14 @@
             }
         });
     </script>
-    <!--        <script>
-                require(["dijit/Dialog", "dijit/form/Button", "dojo/dom-construct"], function(Dialog, Button, domConstruct) {
-                    showDialog = function(message) {
 
-                        var d = new Dialog({
-                            title: "Upozornenie!",
-                            style: {
-                                width: '450px',
-                                'text-align': 'center'
-                            }
-                        });
-
-                        var div = domConstruct.create("div", {
-                            innerHTML: message + "<br/>"
-                        });
-
-                        var bOK = new Button({
-                            label: "OK",
-                            onClick: function(){
-                                d.hide();
-                            },
-                            style: {
-                                width: '400px'
-                            }
-                        }).placeAt(div);
-
-                        d.set("content", div);
-                        d.show();
-                    }
-                });
-            </script>-->
+    <script>
+        require(["dojo/ready"], function(ready) {
+            ready(function() {
+                dojo.require("dojox.timing");
+                initSettings();
+            })
+        });
+    </script>
 </body>
 </html>

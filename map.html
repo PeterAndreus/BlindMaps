@@ -99,43 +99,44 @@
                                     <label for="keepAnswer">Keep correct answer highlighted</label>
                                 </td>
                                 <td>
-                                    <input id="northAmerica" name="northAmerica" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                    <label for="northAmerica">North America</label>
+                                    <input id="americas" name="region" value="Americas" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <label for="americas">North and South America</label>
                                 </td>
                                 <td>
-                                    <input id="asia" name="asia" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <input id="asia" name="region" value="Asia" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
                                     <label for="asia">Asia</label>
                                 </td>
                             </tr>
                             <tr class="settingTr">
                                 <td>
-                                    <input id="names" name="names" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <input id="names" value="names" name="taskStyle" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
                                     <label for="names">Show name task</label>
                                 </td>
                                 <td>
-                                    <input id="southAmerica" name="southAmerica" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                    <label for="southAmerica">South America</label>
+                                    <input id="europe" name="region" value="Europe" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <label for="europe">Europe</label>
                                 </td>
                                 <td>
-                                    <input id="africa" name="africa" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <input id="africa" name="region" value="Africa" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
                                     <label for="asia">Africa</label>
                                 </td>
                             </tr>
                             <tr class="settingTr">
                                 <td>
-                                    <input id="flags" name="flags" data-dojo-type="dijit/form/CheckBox"  onChange="changeSetting(this)"/>
+                                    <input id="flags" name="taskStyle" value="flags" data-dojo-type="dijit/form/CheckBox"  onChange="changeSetting(this)"/>
                                     <label for="flags">Show flag task</label>
                                 </td>
                                 <td>
-                                    <input id="europe" name="europe" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                    <label for="europe">Europe</label>
-                                </td>
-                                <td>
-                                    <input id="australia" name="australia" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                    <input id="australia" name="region" value="Australia" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
                                     <label for="australia">Australia</label>
                                 </td>
                             </tr>
                         </table>
+                        <button data-dojo-type="dijit/form/Button" type="button">Restart
+                            <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
+                                restart();
+                            </script>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -148,6 +149,8 @@
 
         var settings;
         var countryData;
+        var correctAnswers = [];
+        var filteredData;
         var taskCountry;
         var highlightFeature;
         var opacity = 0.7;
@@ -170,17 +173,15 @@
                             var source = this;
                             var format = new ol.format.GeoJSON();
                             dojo.xhrGet({
-                                url: "data/countries_highres.json",
+                                url: "data/countries_borders.json",
                                 handleAs: "json",
                                 load: function(data) {
                                     var features = format.readFeatures(data, {
                                         featureProjection: 'EPSG:3857'
                                     });
                                     source.addFeatures(separateMultiPolygon(features));
-                                    countryData = data;
-                                    initializeTask();
                                 }
-                            })
+                            });
                         }
                     }),
                     style: function(feature) {
@@ -264,7 +265,7 @@
 
         function getTextFeature(feature) {
             var t = new ol.style.Text({
-                text: feature.get("name"),
+                text: feature.get("NAME"),
                 font: "20px sans-serif",
                 fill: new ol.style.Fill({
                     color: 'rgba(255,255,255,1)'
@@ -305,14 +306,23 @@
                 return feature;
             });
 
-            if (taskCountry && feature && feature.get("name") === taskCountry.name) {
+            if (taskCountry && feature && feature.get("ISO3") === taskCountry.cca3) {
                 correctAnswerFeature.getSource().addFeature(feature);
                 var fill = correctAnswerFeature.getStyle().getFill();
                 if (settings.keepAnswer.length === 0) {
                     correctAnswerAnimate(fill, feature);
                 }
+                correctAnswers.push(taskCountry.ccn3);
                 initializeTask();
             }
+        }
+
+        function restart() {
+            var vectorSource = correctAnswerFeature.getSource();
+            dojo.forEach(vectorSource.getFeatures(), function(feature) {
+                vectorSource.removeFeature(feature);
+            });
+            correctAnswers = [];
         }
 
         function nextTask() {
@@ -333,24 +343,49 @@
     </script>
     <script>
         require(["dojo/dom", "dijit/registry"], function(dom, registry) {
-            changeSetting = function(){
+            changeSetting = function() {
                 initSettings();
             }
 
             initSettings = function() {
                 var form = registry.byId("settingForm");
                 settings = form.get("value");
+                filterDataByCriteria();
+                restart();
             }
+
+            filterDataByCriteria = function() {
+                filteredData = dojo.filter(countryData.features, function(item) {
+                    return settings.region.indexOf(item.region) !== -1 &&
+                            item.area <= settings.maxArea &&
+                            item.area >= settings.minArea;
+                });
+                initializeTask();
+            }
+
             initializeTask = function() {
                 var taskSpan = dom.byId("taskSpan");
                 var taskInfoSpan = dom.byId("taskInfoSpan");
-                var randomNum = Math.floor(Math.random() * countryData.features.length);
-                var country = countryData.features[randomNum].properties;
+                if (correctAnswers.length !== filteredData.length) {
+                    var country = getRandomCountry();
 
-                taskInfoSpan.innerHTML = "Click on:";
-                taskSpan.innerHTML = country.name;
-                taskCountry = country;
+                    taskInfoSpan.innerHTML = "Click on:";
+                    taskSpan.innerHTML = country.name.common;
+                    taskCountry = country;
+                } else {
+                    taskInfoSpan.innerHTML = "";
+                    taskSpan.innerHTML = "All answered";
+                }
             };
+
+            getRandomCountry = function() {
+                var randomNum = Math.floor(Math.random() * filteredData.length);
+                var country = filteredData[randomNum];
+                if (correctAnswers.indexOf(country.ccn3) !== -1) {
+                    country = getRandomCountry();
+                }
+                return country;
+            }
 
             correctAnswerAnimate = function(fill, feature) {
                 var interval = 25;
@@ -379,10 +414,15 @@
     </script>
 
     <script>
-        require(["dojo/ready"], function(ready) {
+        require(["dojo/request/xhr", "dojo/ready"], function(xhr, ready) {
             ready(function() {
                 dojo.require("dojox.timing");
-                initSettings();
+                xhr("data/countries.json",
+                        {handleAs: "json"})
+                        .then(function(data) {
+                            countryData = data;
+                            initSettings();
+                        });
             })
         });
     </script>

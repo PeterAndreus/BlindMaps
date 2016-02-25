@@ -222,12 +222,15 @@
             })
         });
 
-        var textFeature = new ol.layer.Vector({
+
+        var wrongAnswerFeature = new ol.layer.Vector({
             source: new ol.source.Vector(),
             map: map,
-            style: function(feature) {
-                return getTextFeature(feature);
-            }
+            style: new ol.style.Style({
+                fill: new ol.style.Fill({
+                    color: 'rgba(255, 0, 0, 0.5)'
+                })
+            })
         });
 
 
@@ -263,23 +266,6 @@
             return  s;
         }
 
-        function getTextFeature(feature) {
-            var t = new ol.style.Text({
-                text: feature.get("NAME"),
-                font: "20px sans-serif",
-                fill: new ol.style.Fill({
-                    color: 'rgba(255,255,255,1)'
-                }),
-                stroke: new ol.style.Stroke({
-                    color: 'rgba(0,0,0,1)'
-                })
-            })
-            var s = new ol.style.Style({
-                text: t
-            })
-            return s;
-        }
-
 
         function highlightFeatureInfo(pixel) {
             var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
@@ -289,10 +275,8 @@
             if (feature !== highlightFeature) {
                 if (highlightFeature) {
                     overlayFeature.getSource().removeFeature(highlightFeature);
-                    textFeature.getSource().removeFeature(highlightFeature);
                 }
                 if (feature) {
-                    textFeature.getSource().addFeature(feature);
                     overlayFeature.getSource().addFeature(feature);
                 } else {
                 }
@@ -305,6 +289,12 @@
             var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
                 return feature;
             });
+            if(feature && correctAnswers.indexOf(feature.get("ISO3")) !== -1){
+                var fill = wrongAnswerFeature.getStyle().getFill();
+                wrongAnswerFeature.getSource().addFeature(feature);
+                wrongAnswerAnimate(fill, feature);
+                return;
+            }
 
             if (taskCountry && feature && feature.get("ISO3") === taskCountry.cca3) {
                 correctAnswerFeature.getSource().addFeature(feature);
@@ -314,6 +304,10 @@
                 }
                 correctAnswers.push(taskCountry.ccn3);
                 initializeTask();
+            } else if(feature){
+                var fill = wrongAnswerFeature.getStyle().getFill();
+                wrongAnswerFeature.getSource().addFeature(feature);
+                wrongAnswerAnimate(fill, feature);
             }
         }
 
@@ -407,9 +401,33 @@
                         timer.fill.setColor('rgba(0, 255, 0, ' + timer.alpha + ')');
                         timer.stop();
                     }
-                }
+                };
                 timer.start();
-            }
+            };
+
+            wrongAnswerAnimate = function(fill, feature) {
+                var interval = 25;
+                var timer = new dojox.timing.Timer(interval);
+                timer.alpha = 0.5;
+                timer.tickCount = 0;
+                timer.fill = fill;
+                timer.feature = feature;
+                timer.onTick = function() {
+                    timer.tickCount++;
+                    var alpha = timer.alpha - (timer.alpha / interval * timer.tickCount);
+                    timer.fill.setColor('rgba(255, 0, 0, ' + alpha + ')');
+
+                    wrongAnswerFeature.getSource().removeFeature(feature);
+                    wrongAnswerFeature.getSource().addFeature(feature);
+
+                    if (alpha === 0) {
+                        wrongAnswerFeature.getSource().removeFeature(feature);
+                        timer.fill.setColor('rgba(255, 0, 0, ' + timer.alpha + ')');
+                        timer.stop();
+                    }
+                };
+                timer.start();
+            };
         });
     </script>
 

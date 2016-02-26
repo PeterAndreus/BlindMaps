@@ -23,6 +23,12 @@
                 color: gainsboro;
                 font-size: 2em;
                 font-weight: bold;
+                vertical-align: middle;
+                display: inline-block;
+                height: 100%;
+            }
+            .flagTask{
+                height: 120px;
             }
             .settingTr{
                 width: 30%;
@@ -193,7 +199,7 @@
             view: new ol.View({
                 center: ol.proj.fromLonLat([19, 48]),
                 zoom: 5,
-                maxZoom: 8,
+                maxZoom: 11,
                 minZoom: 3
             })
         });
@@ -289,7 +295,7 @@
             var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
                 return feature;
             });
-            if(feature && correctAnswers.indexOf(feature.get("ISO3")) !== -1){
+            if (feature && correctAnswers.indexOf(feature.get("ISO3")) !== -1) {
                 var fill = wrongAnswerFeature.getStyle().getFill();
                 wrongAnswerFeature.getSource().addFeature(feature);
                 wrongAnswerAnimate(fill, feature);
@@ -304,7 +310,7 @@
                 }
                 correctAnswers.push(taskCountry.ccn3);
                 initializeTask();
-            } else if(feature){
+            } else if (feature) {
                 var fill = wrongAnswerFeature.getStyle().getFill();
                 wrongAnswerFeature.getSource().addFeature(feature);
                 wrongAnswerAnimate(fill, feature);
@@ -336,7 +342,7 @@
         });
     </script>
     <script>
-        require(["dojo/dom", "dijit/registry"], function(dom, registry) {
+        require(["dojo/dom", "dijit/registry", "dojo/dom-class"], function(dom, registry, domClass) {
             changeSetting = function() {
                 initSettings();
             }
@@ -344,6 +350,11 @@
             initSettings = function() {
                 var form = registry.byId("settingForm");
                 settings = form.get("value");
+                if(settings.taskStyle.indexOf("flags") !== -1){
+                    domClass.add("taskDiv", "flagTask");
+                }else{
+                    domClass.remove("taskDiv", "flagTask");
+                }
                 filterDataByCriteria();
                 restart();
             }
@@ -362,9 +373,16 @@
                 var taskInfoSpan = dom.byId("taskInfoSpan");
                 if (correctAnswers.length !== filteredData.length) {
                     var country = getRandomCountry();
+                    var taskSpanValue = "";
 
                     taskInfoSpan.innerHTML = "Click on:";
-                    taskSpan.innerHTML = country.name.common;
+                    if (settings.taskStyle.indexOf("flags") !== -1) {
+                        taskSpanValue += "<img src='http://www.geonames.org/flags/x/" + country.cca2.toLowerCase() + ".gif' width='100px'/> <br/>";
+                    }
+                    if (settings.taskStyle.indexOf("names") !== -1) {
+                        taskSpanValue += country.name.common;
+                    }
+                    taskSpan.innerHTML = taskSpanValue;
                     taskCountry = country;
                 } else {
                     taskInfoSpan.innerHTML = "";

@@ -160,6 +160,7 @@
         var taskCountry;
         var highlightFeature;
         var opacity = 0.7;
+        var UNCODE = "wb_a3_2";
         var colorMap = {
             1: 'rgba(255, 255, 255, ' + (opacity - 0.3) + ')',
             2: 'rgba(50, 205, 50, ' + opacity + ')',
@@ -245,12 +246,34 @@
             dojo.forEach(features, function(feature) {
                 var geom = feature.getGeometry();
                 if (geom.getType() === 'MultiPolygon') {
+                    var mainFeature;
+                    var mainArea = 0;
                     dojo.forEach(geom.getPolygons(), function(polygon) {
-                        var clone = feature.clone();
-                        clone.setGeometry(polygon);
-                        result.push(clone);
-                    })
+                        if (polygon.getArea() > mainArea) {
+                            var clone = feature.clone();
+                            clone.setGeometry(polygon);
+                            mainFeature = clone;
+                            mainArea = polygon.getArea();
+                        }
+                    });
+
+                    mainFeature.childFeatures = [];
+                    mainFeature.mainFeature = true;
+
+                    dojo.forEach(geom.getPolygons(), function(polygon) {
+                        if (polygon.getArea() !== mainArea) {
+                            var clone = feature.clone();
+                            clone.setGeometry(polygon);
+                            clone.parentFeature = mainFeature;
+                            clone.mainFeature = false;
+                            result.push(clone);
+                            mainFeature.childFeatures.push(clone);
+                        }
+                    });
+
+                    result.push(mainFeature);
                 } else {
+                    feature.mainFeature = true;
                     result.push(feature);
                 }
             });
@@ -288,32 +311,53 @@
                 }
                 highlightFeature = feature;
             }
-
         }
 
         function checkCorrectAnswer(pixel) {
             var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
                 return feature;
             });
-            if (feature && correctAnswers.indexOf(feature.get("ISO3")) !== -1) {
+
+            if (!feature.mainFeature) {
+                feature = feature.parentFeature;
+            }
+            var featureList = [];
+            if (feature.childFeatures && feature.childFeatures.length > 0) {
+                featureList = feature.childFeatures;
+            }
+            featureList.push(feature);
+
+
+            if (feature && correctAnswers.indexOf(feature.get(UNCODE)) !== -1) {
                 var fill = wrongAnswerFeature.getStyle().getFill();
-                wrongAnswerFeature.getSource().addFeature(feature);
-                wrongAnswerAnimate(fill, feature);
+
+                dojo.forEach(featureList, function(childFeature) {
+                    wrongAnswerFeature.getSource().addFeature(childFeature);
+                    wrongAnswerAnimate(fill, childFeature);
+                });
                 return;
             }
 
-            if (taskCountry && feature && feature.get("ISO3") === taskCountry.cca3) {
-                correctAnswerFeature.getSource().addFeature(feature);
+            if (taskCountry && feature && feature.get(UNCODE) === taskCountry.ccn3) {
                 var fill = correctAnswerFeature.getStyle().getFill();
-                if (settings.keepAnswer.length === 0) {
-                    correctAnswerAnimate(fill, feature);
-                }
+                var keepHighlight = settings.keepAnswer.length === 0;
+
+                dojo.forEach(featureList, function(childFeature) {
+                    correctAnswerFeature.getSource().addFeature(childFeature);
+                    if (keepHighlight) {
+                        correctAnswerAnimate(fill, childFeature);
+                    }
+                });
+
                 correctAnswers.push(taskCountry.ccn3);
                 initializeTask();
             } else if (feature) {
                 var fill = wrongAnswerFeature.getStyle().getFill();
-                wrongAnswerFeature.getSource().addFeature(feature);
-                wrongAnswerAnimate(fill, feature);
+
+                dojo.forEach(featureList, function(childFeature) {
+                    wrongAnswerFeature.getSource().addFeature(childFeature);
+                    wrongAnswerAnimate(fill, childFeature);
+                });
             }
         }
 
@@ -350,9 +394,9 @@
             initSettings = function() {
                 var form = registry.byId("settingForm");
                 settings = form.get("value");
-                if(settings.taskStyle.indexOf("flags") !== -1){
+                if (settings.taskStyle.indexOf("flags") !== -1) {
                     domClass.add("taskDiv", "flagTask");
-                }else{
+                } else {
                     domClass.remove("taskDiv", "flagTask");
                 }
                 filterDataByCriteria();

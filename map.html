@@ -123,8 +123,8 @@
                                         <label for="flags">Show flag task</label>
                                     </td>
                                     <td>
-                                        <input id="australia" name="region" value="Australia" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                        <label for="australia">Australia</label>
+                                        <input id="australia" name="region" value="Oceania" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                        <label for="australia">Australia & Oceania</label>
                                     </td>
                                 </tr>
                             </table>
@@ -391,6 +391,7 @@
             });
             correctAnswers = [];
             resetCounter();
+            filterDataByCriteria();
         }
 
         function nextTask() {
@@ -430,7 +431,6 @@
                 } else {
                     domClass.remove("taskDiv", "flagTask");
                 }
-                filterDataByCriteria();
                 restart();
             }
 

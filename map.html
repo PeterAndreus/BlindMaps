@@ -114,7 +114,7 @@
                                     </td>
                                     <td>
                                         <input id="africa" name="region" value="Africa" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                        <label for="asia">Africa</label>
+                                        <label for="africa">Africa</label>
                                     </td>
                                 </tr>
                                 <tr class="settingTr">
@@ -191,13 +191,13 @@
                 }),
                 new ol.layer.Vector({
                     source: new ol.source.Vector({
-                        loader: function () {
+                        loader: function() {
                             var source = this;
                             var format = new ol.format.TopoJSON();
                             dojo.xhrGet({
                                 url: "data/countries_topojson.json",
                                 handleAs: "json",
-                                load: function (data) {
+                                load: function(data) {
                                     var features = format.readFeatures(data, {
                                         featureProjection: 'EPSG:3857'
                                     });
@@ -206,7 +206,7 @@
                             });
                         }
                     }),
-                    style: function (feature) {
+                    style: function(feature) {
                         return fillCountry();
                     }
                 })
@@ -245,25 +245,22 @@
         });
 
 
-        var wrongAnswerFeature = new ol.layer.Vector({
-            source: new ol.source.Vector(),
-            map: map,
-            style: new ol.style.Style({
-                fill: new ol.style.Fill({
-                    color: 'rgba(255, 0, 0, 0.5)'
-                })
-            })
-        });
 
+        function generateUUID() {
+            var S4 = function() {
+                return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+            };
+            return (S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4());
+        }
 
         function separateMultiPolygon(features) {
             var result = [];
-            dojo.forEach(features, function (feature) {
+            dojo.forEach(features, function(feature) {
                 var geom = feature.getGeometry();
                 if (geom.getType() === 'MultiPolygon') {
                     var mainFeature;
                     var mainArea = 0;
-                    dojo.forEach(geom.getPolygons(), function (polygon) {
+                    dojo.forEach(geom.getPolygons(), function(polygon) {
                         if (polygon.getArea() > mainArea) {
                             var clone = feature.clone();
                             clone.setGeometry(polygon);
@@ -272,15 +269,16 @@
                         }
                     });
 
-                    mainFeature.childFeatures = [];
+                    mainFeature.childFeatures = [mainFeature];
                     mainFeature.mainFeature = true;
 
-                    dojo.forEach(geom.getPolygons(), function (polygon) {
+                    dojo.forEach(geom.getPolygons(), function(polygon) {
                         if (polygon.getArea() !== mainArea) {
                             var clone = feature.clone();
                             clone.setGeometry(polygon);
                             clone.parentFeature = mainFeature;
                             clone.mainFeature = false;
+                            clone.setId(generateUUID());
                             result.push(clone);
                             mainFeature.childFeatures.push(clone);
                         }
@@ -289,6 +287,8 @@
                     result.push(mainFeature);
                 } else {
                     feature.mainFeature = true;
+                    feature.childFeatures = [feature];
+                    feature.setId(generateUUID());
                     result.push(feature);
                 }
             });
@@ -312,7 +312,7 @@
 
 
         function highlightFeatureInfo(pixel) {
-            var feature = map.forEachFeatureAtPixel(pixel, function (feature) {
+            var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
                 return feature;
             });
 
@@ -327,30 +327,31 @@
                 highlightFeature = feature;
             }
         }
+        function getWrongVectorLayer() {
+
+            var vLayer = new ol.layer.Vector({
+                source: new ol.source.Vector(),
+                map: map,
+                style: new ol.style.Style({
+                    fill: new ol.style.Fill({
+                        color: 'rgba(255, 0, 0, 0.5)'
+                    })
+                })
+            });
+            return vLayer;
+        }
 
         function checkCorrectAnswer(pixel) {
-            var feature = map.forEachFeatureAtPixel(pixel, function (feature) {
+            var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
                 return feature;
             });
 
             if (!feature.mainFeature) {
                 feature = feature.parentFeature;
             }
-            var featureList = [];
-            if (feature.childFeatures && feature.childFeatures.length > 0) {
-                featureList = feature.childFeatures;
-            }
-            featureList.push(feature);
-
 
             if (feature && correctAnswers.indexOf(feature.get(UNCODE)) !== -1) {
-                var fill = wrongAnswerFeature.getStyle().getFill();
-
-                dojo.forEach(featureList, function (childFeature) {
-                    wrongAnswerFeature.getSource().addFeature(childFeature);
-                    wrongAnswerAnimate(fill, childFeature);
-                });
-                countAnswer(false);
+                wrongAnswer(feature);
                 return;
             }
 
@@ -358,7 +359,7 @@
                 var fill = correctAnswerFeature.getStyle().getFill();
                 var keepHighlight = settings.keepAnswer.length === 0;
 
-                dojo.forEach(featureList, function (childFeature) {
+                dojo.forEach(feature.childFeatures, function(childFeature) {
                     correctAnswerFeature.getSource().addFeature(childFeature);
                     if (keepHighlight) {
                         correctAnswerAnimate(fill, childFeature);
@@ -369,19 +370,23 @@
                 countAnswer(true);
                 initializeTask();
             } else if (feature) {
-                var fill = wrongAnswerFeature.getStyle().getFill();
-
-                dojo.forEach(featureList, function (childFeature) {
-                    wrongAnswerFeature.getSource().addFeature(childFeature);
-                    wrongAnswerAnimate(fill, childFeature);
-                });
-                countAnswer(false);
+                wrongAnswer(feature);
             }
+        }
+
+        function wrongAnswer(feature) {
+            var wrongAnswerFeature = getWrongVectorLayer();
+
+            dojo.forEach(feature.childFeatures, function(childFeature) {
+                wrongAnswerFeature.getSource().addFeature(childFeature);
+            });
+            wrongAnswerAnimate(wrongAnswerFeature, feature.childFeatures);
+            countAnswer(false);
         }
 
         function restart() {
             var vectorSource = correctAnswerFeature.getSource();
-            dojo.forEach(vectorSource.getFeatures(), function (feature) {
+            dojo.forEach(vectorSource.getFeatures(), function(feature) {
                 vectorSource.removeFeature(feature);
             });
             correctAnswers = [];
@@ -392,7 +397,14 @@
             initializeTask();
         }
 
-        map.on('pointermove', function (evt) {
+        function destroyLayer(layer) {
+            if (layer) {
+                map.removeLayer(layer);
+                layer = null;
+            }
+        }
+
+        map.on('pointermove', function(evt) {
             if (evt.dragging) {
                 return;
             }
@@ -400,17 +412,17 @@
             highlightFeatureInfo(pixel);
         });
 
-        map.on('click', function (evt) {
+        map.on('click', function(evt) {
             checkCorrectAnswer(evt.pixel);
         });
     </script>
     <script>
-        require(["dojo/dom", "dijit/registry", "dojo/dom-class"], function (dom, registry, domClass) {
-            changeSetting = function () {
+        require(["dojo/dom", "dijit/registry", "dojo/dom-class"], function(dom, registry, domClass) {
+            changeSetting = function() {
                 initSettings();
             }
 
-            initSettings = function () {
+            initSettings = function() {
                 var form = registry.byId("settingForm");
                 settings = form.get("value");
                 if (settings.taskStyle.indexOf("flags") !== -1) {
@@ -422,8 +434,8 @@
                 restart();
             }
 
-            filterDataByCriteria = function () {
-                filteredData = dojo.filter(countryData.features, function (item) {
+            filterDataByCriteria = function() {
+                filteredData = dojo.filter(countryData.features, function(item) {
                     return settings.region.indexOf(item.region) !== -1 &&
                             item.area <= settings.maxArea &&
                             item.area >= settings.minArea;
@@ -431,7 +443,7 @@
                 initializeTask();
             }
 
-            initializeTask = function () {
+            initializeTask = function() {
                 var taskSpan = dom.byId("taskSpan");
                 var taskInfoSpan = dom.byId("taskInfoSpan");
                 if (correctAnswers.length !== filteredData.length) {
@@ -453,7 +465,7 @@
                 }
             };
 
-            getRandomCountry = function () {
+            getRandomCountry = function() {
                 var randomNum = Math.floor(Math.random() * filteredData.length);
                 var country = filteredData[randomNum];
                 if (correctAnswers.indexOf(country.ccn3) !== -1 || country.ccn3 === "") {
@@ -462,14 +474,14 @@
                 return country;
             }
 
-            correctAnswerAnimate = function (fill, feature) {
+            correctAnswerAnimate = function(fill, feature) {
                 var interval = 25;
                 var timer = new dojox.timing.Timer(interval);
                 timer.alpha = 0.5;
                 timer.tickCount = 0;
                 timer.fill = fill;
                 timer.feature = feature;
-                timer.onTick = function () {
+                timer.onTick = function() {
                     timer.tickCount++;
                     var alpha = timer.alpha - (timer.alpha / interval * timer.tickCount);
                     timer.fill.setColor('rgba(0, 255, 0, ' + alpha + ')');
@@ -486,31 +498,33 @@
                 timer.start();
             };
 
-            wrongAnswerAnimate = function (fill, feature) {
+            wrongAnswerAnimate = function(wrongAnswerFeature, featureList) {
                 var interval = 25;
                 var timer = new dojox.timing.Timer(interval);
                 timer.alpha = 0.5;
                 timer.tickCount = 0;
-                timer.fill = fill;
-                timer.feature = feature;
-                timer.onTick = function () {
-                    timer.tickCount++;
-                    var alpha = timer.alpha - (timer.alpha / interval * timer.tickCount);
-                    timer.fill.setColor('rgba(255, 0, 0, ' + alpha + ')');
-
-                    wrongAnswerFeature.getSource().removeFeature(feature);
-                    wrongAnswerFeature.getSource().addFeature(feature);
-
-                    if (alpha === 0) {
+                timer.fill = wrongAnswerFeature.getStyle().getFill();
+                timer.onTick = function() {
+                    this.tickCount++;
+                    var alpha = this.alpha - (this.alpha / interval * this.tickCount);
+                    this.fill.setColor('rgba(255, 0, 0, ' + alpha + ')');
+                    var that = this;
+                    dojo.forEach(featureList, function(feature) {
+                        if (alpha === 0 && feature) {
+                            that.fill.setColor('rgba(255, 0, 0, 0)');
+                            destroyLayer(wrongAnswerFeature);
+                            if (that.isRunning) {
+                                that.stop();
+                            }
+                        }
                         wrongAnswerFeature.getSource().removeFeature(feature);
-                        timer.fill.setColor('rgba(255, 0, 0, ' + timer.alpha + ')');
-                        timer.stop();
-                    }
+                        wrongAnswerFeature.getSource().addFeature(feature);
+                    });
                 };
                 timer.start();
             };
 
-            countAnswer = function (correct) {
+            countAnswer = function(correct) {
                 if (correct) {
                     var c = dom.byId('correctCount');
                     correctCounter++;
@@ -522,7 +536,7 @@
                 }
             }
 
-            resetCounter = function () {
+            resetCounter = function() {
                 var c = dom.byId('correctCount');
                 var w = dom.byId('wrongCount');
                 c.innerHTML = "0";
@@ -534,12 +548,12 @@
     </script>
 
     <script>
-        require(["dojo/request/xhr", "dojo/ready"], function (xhr, ready) {
-            ready(function () {
+        require(["dojo/request/xhr", "dojo/ready"], function(xhr, ready) {
+            ready(function() {
                 dojo.require("dojox.timing");
                 xhr("data/countries.json",
                         {handleAs: "json"})
-                        .then(function (data) {
+                        .then(function(data) {
                             countryData = data;
                             initSettings();
                         });

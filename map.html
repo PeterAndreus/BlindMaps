@@ -11,6 +11,40 @@
     </head>
     <body class="claro bodyClass">
         <style>
+            html{
+                min-height:100%;
+                position:relative;
+            }
+            body{
+                height:100%;
+            }
+            table{
+                width: 100%;
+            }
+            .dijitTitlePaneTitleFocus{
+                text-align: right;
+                font-family: monospace;
+            }
+            .divMap{
+                position:absolute;
+                top:0;
+                bottom:0;
+                left:0;
+                right:0;
+                overflow:hidden;
+            }
+            .topDiv{
+                font-family: monospace;
+                position: absolute;
+                width: 100%;
+                top: 0;
+                right: 0;
+                background-color: rgba(62, 62, 62, 0.73);
+            }
+            .next{
+                position: absolute;
+                right: 0;
+            }
             .bodyClass{
                 background-color: black;
             }
@@ -21,9 +55,9 @@
             }
             .task{
                 color: gainsboro;
-                font-size: 2em;
+                font-family: georgia;
+                font-size: 3em;
                 font-weight: bold;
-                vertical-align: middle;
                 display: inline-block;
                 height: 100%;
             }
@@ -32,8 +66,7 @@
                 color: white;
                 font-size: 10px;
             }
-            .flagTask{
-                height: 120px;
+            .flagTask{               
             }
             .settingTr{
                 width: 30%;
@@ -56,509 +89,524 @@
             .bottomSlider .dijitSliderProgressBar{
                 background-color: red !important;
             }
+            .claro .dijitTitlePaneTitleHover,
+            .claro .dijitTitlePaneTitleOpen{
+                background-color: #232323;
+                color: white;
+            }
+            .claro .dijitTitlePaneContentOuter {
+                background: rgba(255, 255, 255, 0.57);
+                color: white;
+            }
+            .claro .dijitButton .dijitButtonNode{
+                background-color: #b6b6b6;
+            }
         </style>
+        <div class="divMap">
+            <div id="map" class="map" style="height: 100%" ></div>
+        </div>
+        <div class="topDiv">
+            <div id='settings'>
+                <div data-dojo-type="dijit/form/Form" id="settingForm">
+                    <div>
+                        <div data-dojo-type="dijit/TitlePane" title="Settings" data-dojo-props='open: false, duration: 200'>
+                            <div data-dojo-type="dijit/layout/ContentPane" >
+                                Country area:
+                                <table >
+                                    <tr>
+                                        <td>
+                                            Minimum:
+                                            <div data-dojo-type="dijit/form/TextBox"
+                                                 name = "minArea"
+                                                 onChange="changeSetting(this)"
+                                                 value="5000"
+                                                 placeHolder="minimal country area"></div>
+                                            km<sup>2</sup>
+                                        </td>
+                                        <td>
+                                            Maximum:
+                                            <div data-dojo-type="dijit/form/TextBox"
+                                                 name = "maxArea"
+                                                 onChange="changeSetting(this)"
+                                                 value="17098242"
+                                                 placeHolder="maximal country area"></div>
+                                            km<sup>2</sup>
+                                        </td>
+                                    </tr>
+                                </table>
 
-        <div id='settings'>
-            <div data-dojo-type="dijit/form/Form" id="settingForm">
-                <div>
-                    <div data-dojo-type="dijit/TitlePane" title="Settings" data-dojo-props='open: false, duration: 200'>
-                        <div data-dojo-type="dijit/layout/ContentPane" >
-                            Country area:
-                            <table  style="width: 100%">
-                                <tr>
-                                    <td>
-                                        Minimum: 
-                                        <div data-dojo-type="dijit/form/TextBox" 
-                                             name = "minArea"
-                                             onChange="changeSetting(this)"
-                                             value="5000"
-                                             placeHolder="minimal country area"></div>
-                                        km<sup>2</sup>
-                                    </td>
-                                    <td>
-                                        Maximum: 
-                                        <div data-dojo-type="dijit/form/TextBox" 
-                                             name = "maxArea"
-                                             onChange="changeSetting(this)"
-                                             value="17098242"
-                                             placeHolder="maximal country area"></div>
-                                        km<sup>2</sup>
-                                    </td>
-                                </tr>
-                            </table>
 
-
-                            <table style="width: 100%">
-                                <tr class="settingTr">
-                                    <td>
-                                        <input id="keepAnswer" name="keepAnswer" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                        <label for="keepAnswer">Keep correct answer highlighted</label>
-                                    </td>
-                                    <td>
-                                        <input id="americas" name="region" value="Americas" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                        <label for="americas">North and South America</label>
-                                    </td>
-                                    <td>
-                                        <input id="asia" name="region" value="Asia" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                        <label for="asia">Asia</label>
-                                    </td>
-                                </tr>
-                                <tr class="settingTr">
-                                    <td>
-                                        <input id="names" value="names" name="taskStyle" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                        <label for="names">Show name task</label>
-                                    </td>
-                                    <td>
-                                        <input id="europe" name="region" value="Europe" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                        <label for="europe">Europe</label>
-                                    </td>
-                                    <td>
-                                        <input id="africa" name="region" value="Africa" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                        <label for="africa">Africa</label>
-                                    </td>
-                                </tr>
-                                <tr class="settingTr">
-                                    <td>
-                                        <input id="flags" name="taskStyle" value="flags" data-dojo-type="dijit/form/CheckBox"  onChange="changeSetting(this)"/>
-                                        <label for="flags">Show flag task</label>
-                                    </td>
-                                    <td>
-                                        <input id="australia" name="region" value="Oceania" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                        <label for="australia">Australia & Oceania</label>
-                                    </td>
-                                </tr>
-                            </table>
-                            <button data-dojo-type="dijit/form/Button" type="button">Restart
-                                <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
-                                    initSettings();
-                                </script>
-                            </button>
+                                <table>
+                                    <tr class="settingTr">
+                                        <td>
+                                            <input id="keepAnswer" name="keepAnswer" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                            <label for="keepAnswer">Keep correct answer highlighted</label>
+                                        </td>
+                                        <td>
+                                            <input id="americas" name="region" value="Americas" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                            <label for="americas">North and South America</label>
+                                        </td>
+                                        <td>
+                                            <input id="asia" name="region" value="Asia" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                            <label for="asia">Asia</label>
+                                        </td>
+                                    </tr>
+                                    <tr class="settingTr">
+                                        <td>
+                                            <input id="names" value="names" name="taskStyle" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                            <label for="names">Show name task</label>
+                                        </td>
+                                        <td>
+                                            <input id="europe" name="region" value="Europe" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                            <label for="europe">Europe</label>
+                                        </td>
+                                        <td>
+                                            <input id="africa" name="region" value="Africa" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                            <label for="africa">Africa</label>
+                                        </td>
+                                    </tr>
+                                    <tr class="settingTr">
+                                        <td>
+                                            <input id="flags" name="taskStyle" value="flags" data-dojo-type="dijit/form/CheckBox"  onChange="changeSetting(this)"/>
+                                            <label for="flags">Show flag task</label>
+                                        </td>
+                                        <td>
+                                            <input id="australia" name="region" value="Oceania" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                            <label for="australia">Australia & Oceania</label>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <button data-dojo-type="dijit/form/Button" type="button">Restart
+                                    <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
+                                        initSettings();
+                                    </script>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <center>
+                <div id='taskDiv'>
+                    <span class='taskInfo' id='taskInfoSpan'></span>
+                    <span class='task' id='taskSpan'></span>
+                    <div class='answerInfo' id='answerInfoSpan'>
+                        <table>
+                            <tr>
+                                <td>Correct:&nbsp;</td>
+                                <td>
+                                    <span id='correctCount'>0</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Wrong:&nbsp;</td>
+                                <td><span id='wrongCount'>0</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="next">
+                        <a href="javascript:void(0)" onClick="nextTask()">
+                            <img src="data/images/nextTask.png" alt="Next task">
+                        </a>
+                    </div>
+                </div>
+            </center>
         </div>
-    <center>
-        <div id='taskDiv'>
-            <span class='taskInfo' id='taskInfoSpan'></span>
-            <span class='task' id='taskSpan'></span>
-            <div class='answerInfo' id='answerInfoSpan'>
-                <table>
-                    <tr>
-                        <td>Correct:&nbsp;</td>
-                        <td>
-                            <span id='correctCount'>0</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Wrong:&nbsp;</td>
-                        <td><span id='wrongCount'>0</span></td>
-                    </tr>
-                </table>
-            </div>
-            <div>
-                <a href="javascript:void(0)" onClick="nextTask()">Next task</a>
-            </div>
-        </div>
-    </center>
-    <center>
-        <div id="map" class="map" style="width: 80%"></div>
-    </center>
-    <script>
+        <script>
 
-        var settings;
-        var countryData;
-        var correctAnswers = [];
-        var filteredData;
-        var taskCountry;
-        var highlightFeature;
-        var wrongCounter = 0;
-        var correctCounter = 0;
-        var opacity = 0.7;
-        var UNCODE = "wb_a3_2";
-        var colorMap = {
-            1: 'rgba(255, 255, 255, ' + (opacity - 0.3) + ')',
-            2: 'rgba(50, 205, 50, ' + opacity + ')',
-            3: 'rgba(255, 215, 0, ' + opacity + ')',
-            4: 'rgba(255, 127, 0, ' + opacity + ')',
-            5: 'rgba(255, 36, 0, ' + opacity + ')',
-        };
-
-        var map = new ol.Map({
-            layers: [
-                new ol.layer.Tile({
-                    source: new ol.source.MapQuest({layer: 'sat'})
-                }),
-                new ol.layer.Vector({
-                    source: new ol.source.Vector({
-                        loader: function() {
-                            var source = this;
-                            var format = new ol.format.TopoJSON();
-                            dojo.xhrGet({
-                                url: "data/countries_topojson.json",
-                                handleAs: "json",
-                                load: function(data) {
-                                    var features = format.readFeatures(data, {
-                                        featureProjection: 'EPSG:3857'
-                                    });
-                                    source.addFeatures(separateMultiPolygon(features));
-                                }
-                            });
-                        }
-                    }),
-                    style: function(feature) {
-                        return fillCountry();
-                    }
-                })
-            ],
-            target: 'map',
-            view: new ol.View({
-                center: ol.proj.fromLonLat([19, 48]),
-                zoom: 5,
-                maxZoom: 11,
-                minZoom: 3
-            })
-        });
-
-        var overlayFeature = new ol.layer.Vector({
-            source: new ol.source.Vector(),
-            map: map,
-            style: new ol.style.Style({
-                stroke: new ol.style.Stroke({
-                    color: 'rgba(0,0,0,1)',
-                    width: 2
-                }),
-                fill: new ol.style.Fill({
-                    color: 'rgba(0,0,0,0.3)'
-                })
-            })
-        });
-
-        var correctAnswerFeature = new ol.layer.Vector({
-            source: new ol.source.Vector(),
-            map: map,
-            style: new ol.style.Style({
-                fill: new ol.style.Fill({
-                    color: 'rgba(0, 255, 0, 0.5)'
-                })
-            })
-        });
-
-
-
-        function generateUUID() {
-            var S4 = function() {
-                return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+            var settings;
+            var countryData;
+            var correctAnswers = [];
+            var filteredData;
+            var taskCountry;
+            var highlightFeature;
+            var wrongCounter = 0;
+            var correctCounter = 0;
+            var opacity = 0.7;
+            var UNCODE = "wb_a3_2";
+            var colorMap = {
+                1: 'rgba(255, 255, 255, ' + (opacity - 0.3) + ')',
+                2: 'rgba(50, 205, 50, ' + opacity + ')',
+                3: 'rgba(255, 215, 0, ' + opacity + ')',
+                4: 'rgba(255, 127, 0, ' + opacity + ')',
+                5: 'rgba(255, 36, 0, ' + opacity + ')',
             };
-            return (S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4());
-        }
 
-        function separateMultiPolygon(features) {
-            var result = [];
-            dojo.forEach(features, function(feature) {
-                var geom = feature.getGeometry();
-                if (geom.getType() === 'MultiPolygon') {
-                    var mainFeature;
-                    var mainArea = 0;
-                    dojo.forEach(geom.getPolygons(), function(polygon) {
-                        if (polygon.getArea() > mainArea) {
-                            var clone = feature.clone();
-                            clone.setGeometry(polygon);
-                            mainFeature = clone;
-                            mainArea = polygon.getArea();
+            var map = new ol.Map({
+                layers: [
+                    new ol.layer.Tile({
+                        source: new ol.source.MapQuest({layer: 'sat'})
+                    }),
+                    new ol.layer.Vector({
+                        source: new ol.source.Vector({
+                            loader: function() {
+                                var source = this;
+                                var format = new ol.format.TopoJSON();
+                                dojo.xhrGet({
+                                    url: "data/countries_topojson.json",
+                                    handleAs: "json",
+                                    load: function(data) {
+                                        var features = format.readFeatures(data, {
+                                            featureProjection: 'EPSG:3857'
+                                        });
+                                        source.addFeatures(separateMultiPolygon(features));
+                                    }
+                                });
+                            }
+                        }),
+                        style: function(feature) {
+                            return fillCountry();
                         }
-                    });
-
-                    mainFeature.childFeatures = [mainFeature];
-                    mainFeature.mainFeature = true;
-
-                    dojo.forEach(geom.getPolygons(), function(polygon) {
-                        if (polygon.getArea() !== mainArea) {
-                            var clone = feature.clone();
-                            clone.setGeometry(polygon);
-                            clone.parentFeature = mainFeature;
-                            clone.mainFeature = false;
-                            clone.setId(generateUUID());
-                            result.push(clone);
-                            mainFeature.childFeatures.push(clone);
-                        }
-                    });
-
-                    result.push(mainFeature);
-                } else {
-                    feature.mainFeature = true;
-                    feature.childFeatures = [feature];
-                    feature.setId(generateUUID());
-                    result.push(feature);
-                }
-            });
-
-            return result;
-        }
-
-        function fillCountry() {
-            var color = colorMap[1];
-            var s = new ol.style.Style({
-                fill: new ol.style.Fill({
-                    color: color
-                }),
-                stroke: new ol.style.Stroke({
-                    color: 'rgba(0, 0, 0, 1)',
-                    width: 0.4
+                    })
+                ],
+                target: 'map',
+                view: new ol.View({
+                    center: ol.proj.fromLonLat([19, 48]),
+                    zoom: 5,
+                    maxZoom: 11,
+                    minZoom: 3
                 })
-            })
-            return  s;
-        }
-
-
-        function highlightFeatureInfo(pixel) {
-            var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
-                return feature;
             });
 
-            if (feature !== highlightFeature) {
-                if (highlightFeature) {
-                    overlayFeature.getSource().removeFeature(highlightFeature);
-                }
-                if (feature) {
-                    overlayFeature.getSource().addFeature(feature);
-                } else {
-                }
-                highlightFeature = feature;
-            }
-        }
-        function getWrongVectorLayer() {
+            var overlayFeature = new ol.layer.Vector({
+                source: new ol.source.Vector(),
+                map: map,
+                style: new ol.style.Style({
+                    stroke: new ol.style.Stroke({
+                        color: 'rgba(0,0,0,1)',
+                        width: 2
+                    }),
+                    fill: new ol.style.Fill({
+                        color: 'rgba(0,0,0,0.3)'
+                    })
+                })
+            });
 
-            var vLayer = new ol.layer.Vector({
+            var correctAnswerFeature = new ol.layer.Vector({
                 source: new ol.source.Vector(),
                 map: map,
                 style: new ol.style.Style({
                     fill: new ol.style.Fill({
-                        color: 'rgba(255, 0, 0, 0.5)'
+                        color: 'rgba(0, 255, 0, 0.5)'
                     })
                 })
             });
-            return vLayer;
-        }
 
-        function checkCorrectAnswer(pixel) {
-            var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
-                return feature;
-            });
 
-            if (!feature.mainFeature) {
-                feature = feature.parentFeature;
+
+            function generateUUID() {
+                var S4 = function() {
+                    return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+                };
+                return (S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4());
             }
 
-            if (feature && correctAnswers.indexOf(feature.get(UNCODE)) !== -1) {
-                wrongAnswer(feature);
-                return;
+            function separateMultiPolygon(features) {
+                var result = [];
+                dojo.forEach(features, function(feature) {
+                    var geom = feature.getGeometry();
+                    if (geom.getType() === 'MultiPolygon') {
+                        var mainFeature;
+                        var mainArea = 0;
+                        dojo.forEach(geom.getPolygons(), function(polygon) {
+                            if (polygon.getArea() > mainArea) {
+                                var clone = feature.clone();
+                                clone.setGeometry(polygon);
+                                mainFeature = clone;
+                                mainArea = polygon.getArea();
+                            }
+                        });
+
+                        mainFeature.childFeatures = [mainFeature];
+                        mainFeature.mainFeature = true;
+
+                        dojo.forEach(geom.getPolygons(), function(polygon) {
+                            if (polygon.getArea() !== mainArea) {
+                                var clone = feature.clone();
+                                clone.setGeometry(polygon);
+                                clone.parentFeature = mainFeature;
+                                clone.mainFeature = false;
+                                clone.setId(generateUUID());
+                                result.push(clone);
+                                mainFeature.childFeatures.push(clone);
+                            }
+                        });
+
+                        result.push(mainFeature);
+                    } else {
+                        feature.mainFeature = true;
+                        feature.childFeatures = [feature];
+                        feature.setId(generateUUID());
+                        result.push(feature);
+                    }
+                });
+
+                return result;
             }
 
-            if (taskCountry && feature && feature.get(UNCODE) === taskCountry.ccn3) {
-                var fill = correctAnswerFeature.getStyle().getFill();
-                var keepHighlight = settings.keepAnswer.length === 0;
+            function fillCountry() {
+                var color = colorMap[1];
+                var s = new ol.style.Style({
+                    fill: new ol.style.Fill({
+                        color: color
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: 'rgba(0, 0, 0, 1)',
+                        width: 0.4
+                    })
+                })
+                return  s;
+            }
+
+
+            function highlightFeatureInfo(pixel) {
+                var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
+                    return feature;
+                });
+
+                if (feature !== highlightFeature) {
+                    if (highlightFeature) {
+                        overlayFeature.getSource().removeFeature(highlightFeature);
+                    }
+                    if (feature) {
+                        overlayFeature.getSource().addFeature(feature);
+                    } else {
+                    }
+                    highlightFeature = feature;
+                }
+            }
+            function getWrongVectorLayer() {
+
+                var vLayer = new ol.layer.Vector({
+                    source: new ol.source.Vector(),
+                    map: map,
+                    style: new ol.style.Style({
+                        fill: new ol.style.Fill({
+                            color: 'rgba(255, 0, 0, 0.5)'
+                        })
+                    })
+                });
+                return vLayer;
+            }
+
+            function checkCorrectAnswer(pixel) {
+                var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
+                    return feature;
+                });
+
+                if (!feature.mainFeature) {
+                    feature = feature.parentFeature;
+                }
+
+                if (feature && correctAnswers.indexOf(feature.get(UNCODE)) !== -1) {
+                    wrongAnswer(feature);
+                    return;
+                }
+
+                if (taskCountry && feature && feature.get(UNCODE) === taskCountry.ccn3) {
+                    var fill = correctAnswerFeature.getStyle().getFill();
+                    var keepHighlight = settings.keepAnswer.length === 0;
+
+                    dojo.forEach(feature.childFeatures, function(childFeature) {
+                        correctAnswerFeature.getSource().addFeature(childFeature);
+                        if (keepHighlight) {
+                            correctAnswerAnimate(fill, childFeature);
+                        }
+                    });
+
+                    correctAnswers.push(taskCountry.ccn3);
+                    countAnswer(true);
+                    initializeTask();
+                } else if (feature) {
+                    wrongAnswer(feature);
+                }
+            }
+
+            function wrongAnswer(feature) {
+                var wrongAnswerFeature = getWrongVectorLayer();
 
                 dojo.forEach(feature.childFeatures, function(childFeature) {
-                    correctAnswerFeature.getSource().addFeature(childFeature);
-                    if (keepHighlight) {
-                        correctAnswerAnimate(fill, childFeature);
-                    }
+                    wrongAnswerFeature.getSource().addFeature(childFeature);
                 });
+                wrongAnswerAnimate(wrongAnswerFeature, feature.childFeatures);
+                countAnswer(false);
+            }
 
-                correctAnswers.push(taskCountry.ccn3);
-                countAnswer(true);
+            function restart() {
+                var vectorSource = correctAnswerFeature.getSource();
+                dojo.forEach(vectorSource.getFeatures(), function(feature) {
+                    vectorSource.removeFeature(feature);
+                });
+                correctAnswers = [];
+                resetCounter();
+                filterDataByCriteria();
+            }
+
+            function nextTask() {
                 initializeTask();
-            } else if (feature) {
-                wrongAnswer(feature);
-            }
-        }
-
-        function wrongAnswer(feature) {
-            var wrongAnswerFeature = getWrongVectorLayer();
-
-            dojo.forEach(feature.childFeatures, function(childFeature) {
-                wrongAnswerFeature.getSource().addFeature(childFeature);
-            });
-            wrongAnswerAnimate(wrongAnswerFeature, feature.childFeatures);
-            countAnswer(false);
-        }
-
-        function restart() {
-            var vectorSource = correctAnswerFeature.getSource();
-            dojo.forEach(vectorSource.getFeatures(), function(feature) {
-                vectorSource.removeFeature(feature);
-            });
-            correctAnswers = [];
-            resetCounter();
-            filterDataByCriteria();
-        }
-
-        function nextTask() {
-            initializeTask();
-        }
-
-        function destroyLayer(layer) {
-            if (layer) {
-                map.removeLayer(layer);
-                layer = null;
-            }
-        }
-
-        map.on('pointermove', function(evt) {
-            if (evt.dragging) {
-                return;
-            }
-            var pixel = map.getEventPixel(evt.originalEvent);
-            highlightFeatureInfo(pixel);
-        });
-
-        map.on('click', function(evt) {
-            checkCorrectAnswer(evt.pixel);
-        });
-    </script>
-    <script>
-        require(["dojo/dom", "dijit/registry", "dojo/dom-class"], function(dom, registry, domClass) {
-            changeSetting = function() {
-                initSettings();
             }
 
-            initSettings = function() {
-                var form = registry.byId("settingForm");
-                settings = form.get("value");
-                if (settings.taskStyle.indexOf("flags") !== -1) {
-                    domClass.add("taskDiv", "flagTask");
-                } else {
-                    domClass.remove("taskDiv", "flagTask");
+            function destroyLayer(layer) {
+                if (layer) {
+                    map.removeLayer(layer);
+                    layer = null;
                 }
-                restart();
             }
 
-            filterDataByCriteria = function() {
-                filteredData = dojo.filter(countryData.features, function(item) {
-                    return settings.region.indexOf(item.region) !== -1 &&
-                            item.area <= settings.maxArea &&
-                            item.area >= settings.minArea;
-                });
-                initializeTask();
-            }
+            map.on('pointermove', function(evt) {
+                if (evt.dragging) {
+                    return;
+                }
+                var pixel = map.getEventPixel(evt.originalEvent);
+                highlightFeatureInfo(pixel);
+            });
 
-            initializeTask = function() {
-                var taskSpan = dom.byId("taskSpan");
-                var taskInfoSpan = dom.byId("taskInfoSpan");
-                if (correctAnswers.length !== filteredData.length) {
-                    var country = getRandomCountry();
-                    var taskSpanValue = "";
+            map.on('click', function(evt) {
+                checkCorrectAnswer(evt.pixel);
+            });
+        </script>
+        <script>
+            require(["dojo/dom", "dijit/registry", "dojo/dom-class"], function(dom, registry, domClass) {
+                changeSetting = function() {
+                    initSettings();
+                }
 
-                    taskInfoSpan.innerHTML = "Click on:";
+                initSettings = function() {
+                    var form = registry.byId("settingForm");
+                    settings = form.get("value");
                     if (settings.taskStyle.indexOf("flags") !== -1) {
-                        taskSpanValue += "<img src='http://www.geonames.org/flags/x/" + country.cca2.toLowerCase() + ".gif' width='100px'/> <br/>";
+                        domClass.add("taskDiv", "flagTask");
+                    } else {
+                        domClass.remove("taskDiv", "flagTask");
                     }
-                    if (settings.taskStyle.indexOf("names") !== -1) {
-                        taskSpanValue += country.name.common;
-                    }
-                    taskSpan.innerHTML = taskSpanValue;
-                    taskCountry = country;
-                } else {
-                    taskInfoSpan.innerHTML = "";
-                    taskSpan.innerHTML = "All answered";
+                    restart();
                 }
-            };
 
-            getRandomCountry = function() {
-                var randomNum = Math.floor(Math.random() * filteredData.length);
-                var country = filteredData[randomNum];
-                if (correctAnswers.indexOf(country.ccn3) !== -1 || country.ccn3 === "") {
-                    country = getRandomCountry();
-                }
-                return country;
-            }
-
-            correctAnswerAnimate = function(fill, feature) {
-                var interval = 25;
-                var timer = new dojox.timing.Timer(interval);
-                timer.alpha = 0.5;
-                timer.tickCount = 0;
-                timer.fill = fill;
-                timer.feature = feature;
-                timer.onTick = function() {
-                    timer.tickCount++;
-                    var alpha = timer.alpha - (timer.alpha / interval * timer.tickCount);
-                    timer.fill.setColor('rgba(0, 255, 0, ' + alpha + ')');
-
-                    correctAnswerFeature.getSource().removeFeature(feature);
-                    correctAnswerFeature.getSource().addFeature(feature);
-
-                    if (alpha === 0) {
-                        correctAnswerFeature.getSource().removeFeature(feature);
-                        timer.fill.setColor('rgba(0, 255, 0, ' + timer.alpha + ')');
-                        timer.stop();
-                    }
-                };
-                timer.start();
-            };
-
-            wrongAnswerAnimate = function(wrongAnswerFeature, featureList) {
-                var interval = 25;
-                var timer = new dojox.timing.Timer(interval);
-                timer.alpha = 0.5;
-                timer.tickCount = 0;
-                timer.fill = wrongAnswerFeature.getStyle().getFill();
-                timer.onTick = function() {
-                    this.tickCount++;
-                    var alpha = this.alpha - (this.alpha / interval * this.tickCount);
-                    this.fill.setColor('rgba(255, 0, 0, ' + alpha + ')');
-                    var that = this;
-                    dojo.forEach(featureList, function(feature) {
-                        if (alpha === 0 && feature) {
-                            that.fill.setColor('rgba(255, 0, 0, 0)');
-                            destroyLayer(wrongAnswerFeature);
-                            if (that.isRunning) {
-                                that.stop();
-                            }
-                        }
-                        wrongAnswerFeature.getSource().removeFeature(feature);
-                        wrongAnswerFeature.getSource().addFeature(feature);
+                filterDataByCriteria = function() {
+                    filteredData = dojo.filter(countryData.features, function(item) {
+                        return settings.region.indexOf(item.region) !== -1 &&
+                                item.area <= settings.maxArea &&
+                                item.area >= settings.minArea;
                     });
-                };
-                timer.start();
-            };
-
-            countAnswer = function(correct) {
-                if (correct) {
-                    var c = dom.byId('correctCount');
-                    correctCounter++;
-                    c.innerHTML = correctCounter;
-                } else {
-                    var w = dom.byId('wrongCount');
-                    wrongCounter++;
-                    w.innerHTML = wrongCounter;
+                    initializeTask();
                 }
-            }
 
-            resetCounter = function() {
-                var c = dom.byId('correctCount');
-                var w = dom.byId('wrongCount');
-                c.innerHTML = "0";
-                w.innerHTML = "0";
-                wrongCounter = 0;
-                correctCounter = 0;
-            }
-        });
-    </script>
+                initializeTask = function() {
+                    var taskSpan = dom.byId("taskSpan");
+                    var taskInfoSpan = dom.byId("taskInfoSpan");
+                    if (correctAnswers.length !== filteredData.length) {
+                        var country = getRandomCountry();
+                        var taskSpanValue = "";
 
-    <script>
-        require(["dojo/request/xhr", "dojo/ready"], function(xhr, ready) {
-            ready(function() {
-                dojo.require("dojox.timing");
-                xhr("data/countries.json",
-                        {handleAs: "json"})
-                        .then(function(data) {
-                            countryData = data;
-                            initSettings();
+                        taskInfoSpan.innerHTML = "Click on:";
+                        if (settings.taskStyle.indexOf("flags") !== -1) {
+                            taskSpanValue += "<img src='http://www.geonames.org/flags/x/" + country.cca2.toLowerCase() + ".gif' height='60px'/> &nbsp;";
+                        }
+                        if (settings.taskStyle.indexOf("names") !== -1) {
+                            taskSpanValue += country.name.common;
+                        }
+                        taskSpan.innerHTML = taskSpanValue;
+                        taskCountry = country;
+                    } else {
+                        taskInfoSpan.innerHTML = "";
+                        taskSpan.innerHTML = "All answered";
+                    }
+                };
+
+                getRandomCountry = function() {
+                    var randomNum = Math.floor(Math.random() * filteredData.length);
+                    var country = filteredData[randomNum];
+                    if (correctAnswers.indexOf(country.ccn3) !== -1 || country.ccn3 === "") {
+                        country = getRandomCountry();
+                    }
+                    return country;
+                }
+
+                correctAnswerAnimate = function(fill, feature) {
+                    var interval = 25;
+                    var timer = new dojox.timing.Timer(interval);
+                    timer.alpha = 0.5;
+                    timer.tickCount = 0;
+                    timer.fill = fill;
+                    timer.feature = feature;
+                    timer.onTick = function() {
+                        timer.tickCount++;
+                        var alpha = timer.alpha - (timer.alpha / interval * timer.tickCount);
+                        timer.fill.setColor('rgba(0, 255, 0, ' + alpha + ')');
+
+                        correctAnswerFeature.getSource().removeFeature(feature);
+                        correctAnswerFeature.getSource().addFeature(feature);
+
+                        if (alpha === 0) {
+                            correctAnswerFeature.getSource().removeFeature(feature);
+                            timer.fill.setColor('rgba(0, 255, 0, ' + timer.alpha + ')');
+                            timer.stop();
+                        }
+                    };
+                    timer.start();
+                };
+
+                wrongAnswerAnimate = function(wrongAnswerFeature, featureList) {
+                    var interval = 25;
+                    var timer = new dojox.timing.Timer(interval);
+                    timer.alpha = 0.5;
+                    timer.tickCount = 0;
+                    timer.fill = wrongAnswerFeature.getStyle().getFill();
+                    timer.onTick = function() {
+                        this.tickCount++;
+                        var alpha = this.alpha - (this.alpha / interval * this.tickCount);
+                        this.fill.setColor('rgba(255, 0, 0, ' + alpha + ')');
+                        var that = this;
+                        dojo.forEach(featureList, function(feature) {
+                            if (alpha === 0 && feature) {
+                                that.fill.setColor('rgba(255, 0, 0, 0)');
+                                destroyLayer(wrongAnswerFeature);
+                                if (that.isRunning) {
+                                    that.stop();
+                                }
+                            }
+                            wrongAnswerFeature.getSource().removeFeature(feature);
+                            wrongAnswerFeature.getSource().addFeature(feature);
                         });
-            })
-        });
-    </script>
-</body>
+                    };
+                    timer.start();
+                };
+
+                countAnswer = function(correct) {
+                    if (correct) {
+                        var c = dom.byId('correctCount');
+                        correctCounter++;
+                        c.innerHTML = correctCounter;
+                    } else {
+                        var w = dom.byId('wrongCount');
+                        wrongCounter++;
+                        w.innerHTML = wrongCounter;
+                    }
+                }
+
+                resetCounter = function() {
+                    var c = dom.byId('correctCount');
+                    var w = dom.byId('wrongCount');
+                    c.innerHTML = "0";
+                    w.innerHTML = "0";
+                    wrongCounter = 0;
+                    correctCounter = 0;
+                }
+            });
+        </script>
+
+        <script>
+            require(["dojo/request/xhr", "dojo/ready"], function(xhr, ready) {
+                ready(function() {
+                    dojo.require("dojox.timing");
+                    xhr("data/countries.json",
+                            {handleAs: "json"})
+                            .then(function(data) {
+                                countryData = data;
+                                initSettings();
+                            });
+                })
+            });
+        </script>
+    </body>
 </html>

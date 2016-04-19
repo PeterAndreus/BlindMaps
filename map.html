@@ -21,6 +21,9 @@
             table{
                 width: 100%;
             }
+            td{
+                height: 20px;
+            }
             .dijitTitlePaneTitleFocus{
                 text-align: right;
                 font-family: monospace;
@@ -80,9 +83,6 @@
             }
             .flagTask{               
             }
-            .settingTr{
-                width: 30%;
-            }
             .areaTr{
                 width: 15%;
             }
@@ -118,7 +118,7 @@
                         <div data-dojo-type="dijit/TitlePane" title="Settings" data-dojo-props='open: false, duration: 200'>
                             <div data-dojo-type="dijit/layout/ContentPane" >
                                 Country area:
-                                <table >
+                                <table>
                                     <tr>
                                         <td>
                                             Minimum:
@@ -130,6 +130,34 @@
                                             km<sup>2</sup>
                                         </td>
                                         <td>
+                                            <input id="keepAnswer" name="keepAnswer" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                            <label for="keepAnswer">Keep correct answer highlighted</label>
+                                        </td>
+                                        <td>
+                                            <input id="americas" name="region" value="Americas" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                            <label for="americas">North and South America</label>
+                                        </td>
+                                        <td class="center" rowspan="5">
+                                            <a href="javascript:void(0)" onClick="simpleMode()">
+                                                <img class="whiteBorder" src="data/images/simple.png" alt="simple"><br/>
+                                                Simple Mode
+                                            </a>
+                                        </td>
+                                        <td class="center" rowspan="5">
+                                            <a href="javascript:void(0)" onClick="satMode()">
+                                                <img class="whiteBorder" src="data/images/sat.png" alt="satellite"><br/>
+                                                Satellite Mode
+                                            </a>
+                                        </td>
+                                        <td class="center" rowspan="5">
+                                            <a href="javascript:void(0)" onClick="godMode()">
+                                                <img class="whiteBorder" src="data/images/god.png" alt="god mode"><br/>
+                                                GOD Mode
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
                                             Maximum:
                                             <div data-dojo-type="dijit/form/TextBox"
                                                  name = "maxArea"
@@ -138,44 +166,6 @@
                                                  placeHolder="maximal country area"></div>
                                             km<sup>2</sup>
                                         </td>
-                                    </tr>
-                                </table>
-
-
-                                <table>
-                                    <tr class="settingTr">
-                                        <td>
-                                            <input id="keepAnswer" name="keepAnswer" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                            <label for="keepAnswer">Keep correct answer highlighted</label>
-                                        </td>
-                                        <td>
-                                            <input id="americas" name="region" value="Americas" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                            <label for="americas">North and South America</label>
-                                        </td>
-                                        <td>
-                                            <input id="asia" name="region" value="Asia" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                            <label for="asia">Asia</label>
-                                        </td>
-                                        <td class="center" rowspan="3">
-                                            <a href="javascript:void(0)" onClick="simpleMode()">
-                                                <img class="whiteBorder" src="data/images/simple.png" alt="simple"><br/>
-                                                Simple Mode
-                                            </a>
-                                        </td>
-                                        <td class="center" rowspan="3">
-                                            <a href="javascript:void(0)" onClick="satMode()">
-                                                <img class="whiteBorder" src="data/images/sat.png" alt="satellite"><br/>
-                                                Satellite Mode
-                                            </a>
-                                        </td>
-                                        <td class="center" rowspan="3">
-                                            <a href="javascript:void(0)" onClick="godMode()">
-                                                <img class="whiteBorder" src="data/images/god.png" alt="god mode"><br/>
-                                                GOD Mode
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr class="settingTr">
                                         <td>
                                             <input id="names" value="names" name="taskStyle" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
                                             <label for="names">Show name task</label>
@@ -184,12 +174,9 @@
                                             <input id="europe" name="region" value="Europe" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
                                             <label for="europe">Europe</label>
                                         </td>
-                                        <td>
-                                            <input id="africa" name="region" value="Africa" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                            <label for="africa">Africa</label>
-                                        </td>
                                     </tr>
-                                    <tr class="settingTr">
+                                    <tr>
+                                        <td></td>
                                         <td>
                                             <input id="flags" name="taskStyle" value="flags" data-dojo-type="dijit/form/CheckBox"  onChange="changeSetting(this)"/>
                                             <label for="flags">Show flag task</label>
@@ -197,6 +184,25 @@
                                         <td>
                                             <input id="australia" name="region" value="Oceania" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
                                             <label for="australia">Australia & Oceania</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <input id="capital" name="capitalStyle" value="capital" data-dojo-type="dijit/form/CheckBox"  onChange="changeSetting(this)"/>
+                                            <label for="capital">Show capital city</label>
+                                        </td>
+                                        <td>
+                                            <input id="asia" name="region" value="Asia" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                            <label for="asia">Asia</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <input id="africa" name="region" value="Africa" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
+                                            <label for="africa">Africa</label>
                                         </td>
                                     </tr>
                                 </table>
@@ -339,8 +345,8 @@
                 vectorLayer.setStyle(noStyle());
                 godModeActivated = true;
 
-                dojo.forEach(overlayFeature.getSource().getFeatures(), function(feature){
-                   overlayFeature.getSource().removeFeature(feature);
+                dojo.forEach(overlayFeature.getSource().getFeatures(), function(feature) {
+                    overlayFeature.getSource().removeFeature(feature);
                 });
 
                 dijit.byId('keepAnswer').set('checked', false);
@@ -573,6 +579,13 @@
                         }
                         if (settings.taskStyle.indexOf("names") !== -1) {
                             taskSpanValue += country.name.common;
+                        }
+                        if (settings.capitalStyle.indexOf("capital") !== -1){
+                            if (settings.taskStyle.indexOf("names") !== -1
+                                || settings.taskStyle.indexOf("flags") !== -1) {
+                                taskSpanValue += "&nbsp - &nbsp";
+                            }
+                            taskSpanValue += country.capital;
                         }
                         taskSpan.innerHTML = taskSpanValue;
                         taskCountry = country;

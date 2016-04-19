@@ -438,7 +438,7 @@
                 });
 
                 if (feature !== highlightFeature) {
-                    if (highlightFeature) {
+                    if (highlightFeature &&  overlayFeature.getSource().getFeatures().length !== 0) {
                         overlayFeature.getSource().removeFeature(highlightFeature);
                     }
                     if (feature) {

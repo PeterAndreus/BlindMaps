@@ -39,14 +39,21 @@
                 width: 100%;
                 top: 0;
                 right: 0;
-                background-color: rgba(62, 62, 62, 0.73);
+                background-color: RGBA(61, 98, 121, 0.85);
+            }
+            .center{
+                text-align: center;
             }
             .next{
                 position: absolute;
                 right: 0;
+                margin-top: 5px;
+            }
+            .whiteBorder{
+                border: 2px solid white;
             }
             .bodyClass{
-                background-color: black;
+                background-color: #B3E5FC;
             }
             .taskInfo{
                 color: white;
@@ -65,6 +72,11 @@
                 float: right;
                 color: white;
                 font-size: 10px;
+                margin-right: 7px;
+            }
+            #taskDiv{
+                margin-top: 10px;
+                margin-bottom: 4px;
             }
             .flagTask{               
             }
@@ -77,21 +89,14 @@
             .slider{
                 width: 90%;
             }
-            .topSlider .dijitSliderRemainingBar{
-                background-color: red !important;
-            }
-            .topSlider .dijitSliderProgressBar{
-                background-color: white !important;
-            }
-            .bottomSlider .dijitSliderRemainingBar{
-                background-color: white !important;
-            }
-            .bottomSlider .dijitSliderProgressBar{
-                background-color: red !important;
+            .claro .dijitTitlePaneTitle{
+                background-color: #6599BA;
+                background-image: none;
+                color:white;
             }
             .claro .dijitTitlePaneTitleHover,
             .claro .dijitTitlePaneTitleOpen{
-                background-color: rgba(62, 62, 62, 0.73);
+                background-color: RGBA(61, 98, 121, 0.85);
                 background-image: none;
                 color: white;
             }
@@ -151,6 +156,24 @@
                                             <input id="asia" name="region" value="Asia" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
                                             <label for="asia">Asia</label>
                                         </td>
+                                        <td class="center" rowspan="3">
+                                            <a href="javascript:void(0)" onClick="simpleMode()">
+                                                <img class="whiteBorder" src="data/images/simple.png" alt="simple"><br/>
+                                                Simple Mode
+                                            </a>
+                                        </td>
+                                        <td class="center" rowspan="3">
+                                            <a href="javascript:void(0)" onClick="satMode()">
+                                                <img class="whiteBorder" src="data/images/sat.png" alt="satellite"><br/>
+                                                Satellite Mode
+                                            </a>
+                                        </td>
+                                        <td class="center" rowspan="3">
+                                            <a href="javascript:void(0)" onClick="godMode()">
+                                                <img class="whiteBorder" src="data/images/god.png" alt="god mode"><br/>
+                                                GOD Mode
+                                            </a>
+                                        </td>
                                     </tr>
                                     <tr class="settingTr">
                                         <td>
@@ -187,31 +210,29 @@
                     </div>
                 </div>
             </div>
-            <center>
-                <div id='taskDiv'>
-                    <span class='taskInfo' id='taskInfoSpan'></span>
-                    <span class='task' id='taskSpan'></span>
-                    <div class='answerInfo' id='answerInfoSpan'>
-                        <table>
-                            <tr>
-                                <td>Correct:&nbsp;</td>
-                                <td>
-                                    <span id='correctCount'>0</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Wrong:&nbsp;</td>
-                                <td><span id='wrongCount'>0</span></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="next">
-                        <a href="javascript:void(0)" onClick="nextTask()">
-                            <img src="data/images/nextTask.png" alt="Next task">
-                        </a>
-                    </div>
+            <div id='taskDiv' class="center">
+                <span class='taskInfo' id='taskInfoSpan'></span>
+                <span class='task' id='taskSpan'></span>
+                <div class='answerInfo' id='answerInfoSpan'>
+                    <table>
+                        <tr>
+                            <td>Correct:&nbsp;</td>
+                            <td>
+                                <span id='correctCount'>0</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Wrong:&nbsp;</td>
+                            <td><span id='wrongCount'>0</span></td>
+                        </tr>
+                    </table>
                 </div>
-            </center>
+                <div class="next">
+                    <a href="javascript:void(0)" onClick="nextTask()">
+                        <img src="data/images/nextTask.png" alt="Next task">
+                    </a>
+                </div>
+            </div>
         </div>
         <script>
 
@@ -223,42 +244,38 @@
             var highlightFeature;
             var wrongCounter = 0;
             var correctCounter = 0;
-            var opacity = 0.7;
             var UNCODE = "wb_a3_2";
-            var colorMap = {
-                1: 'rgba(255, 255, 255, ' + (opacity - 0.3) + ')',
-                2: 'rgba(50, 205, 50, ' + opacity + ')',
-                3: 'rgba(255, 215, 0, ' + opacity + ')',
-                4: 'rgba(255, 127, 0, ' + opacity + ')',
-                5: 'rgba(255, 36, 0, ' + opacity + ')',
-            };
+            var godModeActivated = false;
+
+            var satLayer = new ol.layer.Tile({
+                source: new ol.source.MapQuest({layer: 'sat'})
+            });
+
+            var vectorLayer = new ol.layer.Vector({
+                source: new ol.source.Vector({
+                    loader: function() {
+                        var source = this;
+                        var format = new ol.format.TopoJSON();
+                        dojo.xhrGet({
+                            url: "data/countries_topojson.json",
+                            handleAs: "json",
+                            load: function(data) {
+                                var features = format.readFeatures(data, {
+                                    featureProjection: 'EPSG:3857'
+                                });
+                                source.addFeatures(separateMultiPolygon(features));
+                            }
+                        });
+                    }
+                }),
+                style: function(feature) {
+                    return fillCountry(true);
+                }
+            });
 
             var map = new ol.Map({
                 layers: [
-                    new ol.layer.Tile({
-                        source: new ol.source.MapQuest({layer: 'sat'})
-                    }),
-                    new ol.layer.Vector({
-                        source: new ol.source.Vector({
-                            loader: function() {
-                                var source = this;
-                                var format = new ol.format.TopoJSON();
-                                dojo.xhrGet({
-                                    url: "data/countries_topojson.json",
-                                    handleAs: "json",
-                                    load: function(data) {
-                                        var features = format.readFeatures(data, {
-                                            featureProjection: 'EPSG:3857'
-                                        });
-                                        source.addFeatures(separateMultiPolygon(features));
-                                    }
-                                });
-                            }
-                        }),
-                        style: function(feature) {
-                            return fillCountry();
-                        }
-                    })
+                    vectorLayer
                 ],
                 target: 'map',
                 view: new ol.View({
@@ -293,7 +310,41 @@
                 })
             });
 
+            function simpleMode() {
+                vectorLayer.setStyle(fillCountry(true));
+                if (map.getLayers().getArray().indexOf(vectorLayer) === -1) {
+                    map.getLayers().insertAt(1, vectorLayer);
+                }
+                map.removeLayer(satLayer);
+                godModeActivated = false;
+                dijit.byId('keepAnswer').set('checked', true);
+            }
 
+            function satMode() {
+                vectorLayer.setStyle(fillCountry(false));
+                if (map.getLayers().getArray().indexOf(vectorLayer) === -1) {
+                    map.getLayers().insertAt(1, vectorLayer);
+                }
+                if (map.getLayers().getArray().indexOf(satLayer) === -1) {
+                    map.getLayers().insertAt(0, satLayer);
+                }
+                godModeActivated = false;
+                dijit.byId('keepAnswer').set('checked', true);
+            }
+
+            function godMode() {
+                if (map.getLayers().getArray().indexOf(satLayer) === -1) {
+                    map.getLayers().insertAt(0, satLayer);
+                }
+                vectorLayer.setStyle(noStyle());
+                godModeActivated = true;
+
+                dojo.forEach(overlayFeature.getSource().getFeatures(), function(feature){
+                   overlayFeature.getSource().removeFeature(feature);
+                });
+
+                dijit.byId('keepAnswer').set('checked', false);
+            }
 
             function generateUUID() {
                 var S4 = function() {
@@ -345,8 +396,24 @@
                 return result;
             }
 
-            function fillCountry() {
-                var color = colorMap[1];
+            function noStyle() {
+                var s = new ol.style.Style({
+                    fill: new ol.style.Fill({
+                        color: 'rgba(0, 0, 0, 0)'
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: 'rgba(0, 0, 0, 0)',
+                        width: 0.4
+                    })
+                });
+                return  s;
+            }
+
+            function fillCountry(sat) {
+                var color = 'rgba(255, 255, 255, 0.4)';
+                if (sat) {
+                    color = '#FFF8E1';
+                }
                 var s = new ol.style.Style({
                     fill: new ol.style.Fill({
                         color: color
@@ -355,10 +422,9 @@
                         color: 'rgba(0, 0, 0, 1)',
                         width: 0.4
                     })
-                })
+                });
                 return  s;
             }
-
 
             function highlightFeatureInfo(pixel) {
                 var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
@@ -459,7 +525,9 @@
                     return;
                 }
                 var pixel = map.getEventPixel(evt.originalEvent);
-                highlightFeatureInfo(pixel);
+                if (!godModeActivated) {
+                    highlightFeatureInfo(pixel);
+                }
             });
 
             map.on('click', function(evt) {
@@ -501,7 +569,7 @@
 
                         taskInfoSpan.innerHTML = "Click on:";
                         if (settings.taskStyle.indexOf("flags") !== -1) {
-                            taskSpanValue += "<img src='http://www.geonames.org/flags/x/" + country.cca2.toLowerCase() + ".gif' height='60px'/> &nbsp;";
+                            taskSpanValue += "<img class='whiteBorder' src='http://www.geonames.org/flags/x/" + country.cca2.toLowerCase() + ".gif' height='60px'/> &nbsp;";
                         }
                         if (settings.taskStyle.indexOf("names") !== -1) {
                             taskSpanValue += country.name.common;

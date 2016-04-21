@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Image Vector Layer</title>
+        <title>BlindMap</title>
+        <link rel="icon" href="data/images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css">
         <link rel="stylesheet" href="http://openlayers.org/en/v3.13.1/css/ol.css" type="text/css">
         <script src="http://openlayers.org/en/v3.13.1/build/ol.js"></script>
@@ -50,7 +51,7 @@
             .next{
                 position: absolute;
                 right: 0;
-                margin-top: 5px;
+                margin-top: 10px;
             }
             .whiteBorder{
                 border: 2px solid white;
@@ -68,7 +69,6 @@
                 font-family: georgia;
                 font-size: 3em;
                 font-weight: bold;
-                display: inline-block;
                 height: 100%;
             }
             .answerInfo{
@@ -106,6 +106,42 @@
             }
             .claro .dijitButton .dijitButtonNode{
                 background-color: #b6b6b6;
+            }
+            .claro .dijitDialogPaneContent{
+                background: rgba(255, 255, 255, 0);
+            }
+            .claro .dijitDialogTitleBar{
+                border: none;
+                background-image: none;
+                padding: 0;
+                background-color: #6599BA;
+            }
+            .claro .dijitDialogCloseIcon{
+                margin-top: 1px;
+                right: 1px;
+            }
+            .aboutIcon{
+                position: absolute;
+                right: 15px;
+                bottom: 65px;
+            }
+            .aboutDialog{
+                width: 500px;
+                background-color: rgba(184, 197, 204, 0.85);
+                font-size: 11px;
+            }
+            .aboutName{
+                font-size: 50px;
+                font-family: georgia;
+                font-weight: bold;
+            }
+            .about{
+                font-size: 3em;
+            }
+            .donateButton{
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
             }
         </style>
         <div class="divMap">
@@ -211,6 +247,13 @@
                                         initSettings();
                                     </script>
                                 </button>
+                                <div class="aboutIcon">
+                                    <a href="javascript:void(0)" onclick="new function() {
+                                    aboutDialog.show();
+                                }">
+                                        <img src="data/images/about.png" alt="about">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -239,6 +282,35 @@
                     </a>
                 </div>
             </div>
+        </div>
+        <div data-dojo-type="dijit/Dialog" 
+             data-dojo-id="aboutDialog"
+             class="aboutDialog">
+            <div class="center aboutName">
+                Blind Map
+            </div>
+            <div class="center">
+                by Peter Andreus
+            </div>
+            <div><br/>
+                Created with:
+                <ul>
+                    <li>OpenLayers 3:&nbsp;<a href="http://openlayers.org/" target="_blank">http://openlayers.org/</a></li>
+                    <li>Dojo:&nbsp;<a href="https://dojotoolkit.org" target="_blank">https://dojotoolkit.org</a> </li>
+                </ul>
+            </div>
+            <div class="donateButton">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+
+            </div>
+            <script type="dojo/method" data-dojo-event="onBlur" data-dojo-args="evt">
+                this.hide();
+            </script>
         </div>
         <script>
 
@@ -438,7 +510,7 @@
                 });
 
                 if (feature !== highlightFeature) {
-                    if (highlightFeature &&  overlayFeature.getSource().getFeatures().length !== 0) {
+                    if (highlightFeature && overlayFeature.getSource().getFeatures().length !== 0) {
                         overlayFeature.getSource().removeFeature(highlightFeature);
                     }
                     if (feature) {
@@ -580,9 +652,9 @@
                         if (settings.taskStyle.indexOf("names") !== -1) {
                             taskSpanValue += country.name.common;
                         }
-                        if (settings.capitalStyle.indexOf("capital") !== -1){
+                        if (settings.capitalStyle.indexOf("capital") !== -1) {
                             if (settings.taskStyle.indexOf("names") !== -1
-                                || settings.taskStyle.indexOf("flags") !== -1) {
+                                    || settings.taskStyle.indexOf("flags") !== -1) {
                                 taskSpanValue += "&nbsp - &nbsp";
                             }
                             taskSpanValue += country.capital;

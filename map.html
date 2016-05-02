@@ -48,6 +48,9 @@
             .center{
                 text-align: center;
             }
+            .right{
+                text-align: right;
+            }
             .next{
                 position: absolute;
                 right: 0;
@@ -120,11 +123,6 @@
                 margin-top: 1px;
                 right: 1px;
             }
-            .aboutIcon{
-                position: absolute;
-                right: 15px;
-                bottom: 65px;
-            }
             .aboutDialog{
                 width: 500px;
                 background-color: rgba(184, 197, 204, 0.85);
@@ -153,6 +151,25 @@
                     <div>
                         <div data-dojo-type="dijit/TitlePane" title="Settings" data-dojo-props='open: false, duration: 200'>
                             <div data-dojo-type="dijit/layout/ContentPane" >
+                                <div class="right">
+                                    <input data-dojo-type="dijit/form/TextBox" type="hidden" name="lang" id="langInput" value="eng">
+                                    <a href="javascript:void(0)" onclick="setLanguage('eng');">
+                                        <img class='whiteBorder' src='http://www.geonames.org/flags/x/gb.gif' height='15px'/></a>
+                                    <a href="javascript:void(0)" onclick="setLanguage('deu');">
+                                        <img class='whiteBorder' src='http://www.geonames.org/flags/x/de.gif' height='15px'/></a>
+                                    <a href="javascript:void(0)" onclick="setLanguage('spa');">
+                                        <img class='whiteBorder' src='http://www.geonames.org/flags/x/es.gif' height='15px'/></a>
+                                    <a href="javascript:void(0)" onclick="setLanguage('fra');">
+                                        <img class='whiteBorder' src='http://www.geonames.org/flags/x/fr.gif' height='15px'/></a>
+                                    <a href="javascript:void(0)" onclick="setLanguage('ces');">
+                                        <img class='whiteBorder' src='http://www.geonames.org/flags/x/cz.gif' height='15px'/></a>
+                                    <a href="javascript:void(0)" onclick="setLanguage('slk');">
+                                        <img class='whiteBorder' src='http://www.geonames.org/flags/x/sk.gif' height='15px'/></a>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a href="javascript:void(0)" onclick="aboutDialog.show();">
+                                        <img src="data/images/about.png" alt="about">
+                                    </a>
+                                </div>
                                 Country area:
                                 <table>
                                     <tr>
@@ -247,13 +264,6 @@
                                         initSettings();
                                     </script>
                                 </button>
-                                <div class="aboutIcon">
-                                    <a href="javascript:void(0)" onclick="new function() {
-                                                aboutDialog.show();
-                                            }">
-                                        <img src="data/images/about.png" alt="about">
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -359,7 +369,7 @@
                 target: 'map',
                 view: new ol.View({
                     center: ol.proj.fromLonLat([19, 48]),
-                    extent: [-9999999999,-20920774, 99999999999,18800987],
+                    extent: [-9999999999, -20920774, 99999999999, 18800987],
                     zoom: 5,
                     maxZoom: 11,
                     minZoom: 3
@@ -474,6 +484,11 @@
                 });
 
                 return result;
+            }
+
+            function setLanguage(lang) {
+                dojo.byId("langInput").value = lang;
+                initSettings();
             }
 
             function noStyle() {
@@ -623,6 +638,9 @@
                 initSettings = function() {
                     var form = registry.byId("settingForm");
                     settings = form.get("value");
+                    if (!settings.lang) {
+                        settings.lang = "en";
+                    }
                     if (settings.taskStyle.indexOf("flags") !== -1) {
                         domClass.add("taskDiv", "flagTask");
                     } else {
@@ -652,14 +670,22 @@
                             taskSpanValue += "<img class='whiteBorder' src='http://www.geonames.org/flags/x/" + country.cca2.toLowerCase() + ".gif' height='60px'/> &nbsp;";
                         }
                         if (settings.taskStyle.indexOf("names") !== -1) {
-                            taskSpanValue += country.name.common;
+                            if (country.name.translations[settings.lang]) {
+                                taskSpanValue += country.name.translations[settings.lang];
+                            } else {
+                                taskSpanValue += country.name.common;
+                            }
                         }
                         if (settings.capitalStyle.indexOf("capital") !== -1) {
                             if (settings.taskStyle.indexOf("names") !== -1
                                     || settings.taskStyle.indexOf("flags") !== -1) {
                                 taskSpanValue += "&nbsp - &nbsp";
                             }
-                            taskSpanValue += country.capital;
+                            if (country.capital.translations[settings.lang]) {
+                                taskSpanValue += country.capital.translations[settings.lang];
+                            } else {
+                                taskSpanValue += country.capital.official;
+                            }
                         }
                         taskSpan.innerHTML = taskSpanValue;
                         taskCountry = country;

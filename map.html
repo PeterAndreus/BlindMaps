@@ -141,6 +141,33 @@
                 bottom: 0px;
                 right: 0px;
             }
+            .overlay{
+                background-color: #40647c;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+            .overlayImg{
+                text-align: center;
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -310px;
+                margin-top: -200px;
+            }
+            .overlaySettings{
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
+            .overlayText{
+                position: absolute;
+                right: 32px;
+                top: 38px;
+            }
         </style>
         <div class="divMap">
             <div id="map" class="map" style="height: 100%" ></div>
@@ -778,7 +805,7 @@
         </script>
 
         <script>
-            require(["dojo/request/xhr", "dojo/ready"], function(xhr, ready) {
+            require(["dojo/request/xhr", "dojo/_base/fx", "dojo/ready"], function(xhr, fx, ready) {
                 ready(function() {
                     dojo.require("dojox.timing");
                     xhr("data/countries.json",
@@ -786,9 +813,33 @@
                             .then(function(data) {
                                 countryData = data;
                                 initSettings();
+                                fx.animateProperty({
+                                    node: "overlay",
+                                    duration: 1300,
+                                    properties: {
+                                        opacity: {start: 1, end: 0}
+                                    },
+                                    onEnd: function() {
+                                        dojo.destroy('overlay');
+                                    }
+                                }).play();
                             });
                 })
             });
         </script>
+
+        <div id="overlay" class="overlay">
+            <div class="overlayImg">
+                <img src="data/images/overlay_pic.png" alt="overlayMap">
+                <br/><br/>
+                <img src="data/images/Loading.gif" alt="loading">
+            </div>
+            <div class="overlaySettings">
+                <img src="data/images/overlaySettings.png" alt="setting">
+            </div>
+            <div class="overlayText">
+                <img src="data/images/textArrow.png" alt="txtArrow">
+            </div>
+        </div>
     </body>
 </html>

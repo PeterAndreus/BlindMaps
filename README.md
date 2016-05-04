@@ -7,7 +7,8 @@ http://andreus.valec.net/stuff/blindMap/map.html
 
 
 TODO & Ideas
-  - Localization of country names and capitals
+  - <strike>Localization of country names and capitals</strike>
+  - Text localization
   - Something like Learn mode
   - <strike>Hints when guessed wrong for like.. 5 times?</strike>
   - Random mode (show random task type)

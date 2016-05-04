@@ -45,6 +45,9 @@
                 right: 0;
                 background-color: RGBA(61, 98, 121, 0.85);
             }
+            .guessInput{
+                width: 30px;
+            }
             .center{
                 text-align: center;
             }
@@ -279,7 +282,13 @@
                                     </tr>
                                     <tr>
                                         <td></td>
-                                        <td></td>
+                                        <td>
+                                            <input id="hint" name="hint" value="hint" data-dojo-type="dijit/form/CheckBox" checked onChange="dijit.byId('guessCount').set('disabled', !this.checked); changeSetting(this); "/>
+                                            <label for="hint">Show a hint after
+                                                <input class="guessInput" id="guessCount" name="guessCount" value="3" data-dojo-type="dijit/form/NumberTextBox" onChange="changeSetting(this)" data-dojo-props="constraints:{min:1,max:19,places:0}"/>
+                                                wrong guesses
+                                            </label>
+                                        </td>
                                         <td>
                                             <input id="africa" name="region" value="Africa" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
                                             <label for="africa">Africa</label>
@@ -359,6 +368,7 @@
             var taskCountry;
             var highlightFeature;
             var wrongCounter = 0;
+            var wrongGuess = 0;
             var correctCounter = 0;
             var UNCODE = "wb_a3_2";
             var godModeActivated = false;
@@ -423,6 +433,16 @@
                 style: new ol.style.Style({
                     fill: new ol.style.Fill({
                         color: 'rgba(0, 255, 0, 0.5)'
+                    })
+                })
+            });
+
+            var hintFeature = new ol.layer.Vector({
+                source: new ol.source.Vector(),
+                map: map,
+                style: new ol.style.Style({
+                    fill: new ol.style.Fill({
+                        color: 'rgba(0, 0, 255, 0.5)'
                     })
                 })
             });
@@ -593,6 +613,7 @@
                 }
 
                 if (taskCountry && feature && feature.get(UNCODE) === taskCountry.ccn3) {
+                    clearHintFeature();
                     var fill = correctAnswerFeature.getStyle().getFill();
                     var keepHighlight = settings.keepAnswer.length === 0;
 
@@ -606,6 +627,7 @@
                     correctAnswers.push(taskCountry.ccn3);
                     countAnswer(true);
                     initializeTask();
+                    wrongGuess = 0;
                 } else if (feature) {
                     wrongAnswer(feature);
                 }
@@ -619,13 +641,26 @@
                 });
                 wrongAnswerAnimate(wrongAnswerFeature, feature.childFeatures);
                 countAnswer(false);
+                wrongGuess++;
+                if (settings.hint.length > 0 && wrongGuess >= settings.guessCount) {
+                    showHintFeature();
+                }
             }
+
+            function clearHintFeature() {
+                var featureArray = hintFeature.getSource().getFeatures();
+                dojo.forEach(featureArray, function(feature) {
+                    hintFeature.getSource().removeFeature(feature);
+                });
+            }
+
 
             function restart() {
                 var vectorSource = correctAnswerFeature.getSource();
                 dojo.forEach(vectorSource.getFeatures(), function(feature) {
                     vectorSource.removeFeature(feature);
                 });
+                clearHintFeature();
                 correctAnswers = [];
                 resetCounter();
                 filterDataByCriteria();
@@ -657,7 +692,7 @@
             });
         </script>
         <script>
-            require(["dojo/dom", "dijit/registry", "dojo/dom-class"], function(dom, registry, domClass) {
+            require(["dojo/_base/array", "dojo/dom", "dijit/registry", "dojo/dom-class"], function(array, dom, registry, domClass) {
                 changeSetting = function() {
                     initSettings();
                 }
@@ -686,6 +721,7 @@
                 }
 
                 initializeTask = function() {
+                    wrongGuess = 0;
                     var taskSpan = dom.byId("taskSpan");
                     var taskInfoSpan = dom.byId("taskInfoSpan");
                     if (correctAnswers.length !== filteredData.length) {
@@ -729,6 +765,25 @@
                         country = getRandomCountry();
                     }
                     return country;
+                }
+
+                showHintFeature = function() {
+                    var alreadyPainted = false;
+                    var mainFeature = array.filter(vectorLayer.getSource().getFeatures(), function(feature) {
+                        if (feature.get(UNCODE) === taskCountry.ccn3) {
+                            return feature.mainFeature;
+                        }
+                    });
+                    array.forEach(hintFeature.getSource().getFeatures(), function(feature) {
+                        if (feature === mainFeature[0]) {
+                            alreadyPainted = true;
+                        }
+                    })
+                    if (!alreadyPainted) {
+                        array.forEach(mainFeature[0].childFeatures, function(childFeature) {
+                            hintFeature.getSource().addFeature(childFeature);
+                        });
+                    }
                 }
 
                 correctAnswerAnimate = function(fill, feature) {

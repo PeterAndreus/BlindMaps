@@ -2095,12 +2095,12 @@
     "area": 242900,
     "capital": {
       "translations": {
-        "ces": "Velká Británie",
-        "slk": "Veľká Británia",
-        "fra": "Grande-Bretagne",
-        "spa": "Gran Bretaña",
-        "deu": "Großbritannien",
-        "eng": "Great Britain"
+        "ces": "Londýn",
+        "slk": "Londýn",
+        "fra": "Londres",
+        "spa": "Londres",
+        "deu": "London",
+        "eng": "London"
       },
       "official": "London"
     },

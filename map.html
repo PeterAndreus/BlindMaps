@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>BlindMap</title>
         <link rel="icon" href="data/images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css">
@@ -179,7 +180,7 @@
             <div id='settings'>
                 <div data-dojo-type="dijit/form/Form" id="settingForm">
                     <div>
-                        <div data-dojo-type="dijit/TitlePane" title="Settings" data-dojo-props='open: false, duration: 200'>
+                        <div data-dojo-type="dijit/TitlePane" title="Settings" id="settingPane" data-dojo-props='open: false, duration: 200'>
                             <div data-dojo-type="dijit/layout/ContentPane" >
                                 <div class="right">
                                     <input data-dojo-type="dijit/form/TextBox" type="hidden" name="lang" id="langInput" value="eng">
@@ -200,11 +201,11 @@
                                         <img src="data/images/about.png" alt="about">
                                     </a>
                                 </div>
-                                Country area:
+                                <span localization="CountryArea"></span>
                                 <table>
                                     <tr>
                                         <td>
-                                            Minimum:
+                                            <span localization="Minimum"></span>
                                             <div data-dojo-type="dijit/form/TextBox"
                                                  name = "minArea"
                                                  onChange="changeSetting(this)"
@@ -214,34 +215,34 @@
                                         </td>
                                         <td>
                                             <input id="keepAnswer" name="keepAnswer" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                            <label for="keepAnswer">Keep correct answer highlighted</label>
+                                            <label for="keepAnswer"><span localization="HighlightAnswer"></span></label>
                                         </td>
                                         <td>
                                             <input id="americas" name="region" value="Americas" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                            <label for="americas">North and South America</label>
+                                            <label for="americas"><span localization="America"></span></label>
                                         </td>
                                         <td class="center" rowspan="5">
                                             <a href="javascript:void(0)" onClick="simpleMode()">
                                                 <img class="whiteBorder" src="data/images/simple.png" alt="simple"><br/>
-                                                Simple Mode
+                                                <span localization="SimpleMode"></span>
                                             </a>
                                         </td>
                                         <td class="center" rowspan="5">
                                             <a href="javascript:void(0)" onClick="satMode()">
                                                 <img class="whiteBorder" src="data/images/sat.png" alt="satellite"><br/>
-                                                Satellite Mode
+                                                <span localization="SatelliteMode"></span>
                                             </a>
                                         </td>
                                         <td class="center" rowspan="5">
                                             <a href="javascript:void(0)" onClick="godMode()">
                                                 <img class="whiteBorder" src="data/images/god.png" alt="god mode"><br/>
-                                                GOD Mode
+                                                <span localization="GodMode"></span>
                                             </a>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            Maximum:
+                                            <span localization="Maximum"></span>
                                             <div data-dojo-type="dijit/form/TextBox"
                                                  name = "maxArea"
                                                  onChange="changeSetting(this)"
@@ -251,51 +252,54 @@
                                         </td>
                                         <td>
                                             <input id="names" value="names" name="taskStyle" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                            <label for="names">Show name task</label>
+                                            <label for="names"><span localization="NameTask"></span></label>
                                         </td>
                                         <td>
                                             <input id="europe" name="region" value="Europe" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                            <label for="europe">Europe</label>
+                                            <label for="europe"><span localization="Europe"></span></label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td>
                                             <input id="flags" name="taskStyle" value="flags" data-dojo-type="dijit/form/CheckBox"  onChange="changeSetting(this)"/>
-                                            <label for="flags">Show flag task</label>
+                                            <label for="flags"><span localization="FlagTask"></span></label>
                                         </td>
                                         <td>
                                             <input id="australia" name="region" value="Oceania" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                            <label for="australia">Australia & Oceania</label>
+                                            <label for="australia"><span localization="Australia"></span></label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td>
                                             <input id="capital" name="capitalStyle" value="capital" data-dojo-type="dijit/form/CheckBox"  onChange="changeSetting(this)"/>
-                                            <label for="capital">Show capital city</label>
+                                            <label for="capital"><span localization="CapitalCity"></span></label>
                                         </td>
                                         <td>
                                             <input id="asia" name="region" value="Asia" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                            <label for="asia">Asia</label>
+                                            <label for="asia"><span localization="Asia"></span></label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td></td>
                                         <td>
-                                            <input id="hint" name="hint" value="hint" data-dojo-type="dijit/form/CheckBox" checked onChange="dijit.byId('guessCount').set('disabled', !this.checked); changeSetting(this); "/>
-                                            <label for="hint">Show a hint after
+                                            <input id="hint" name="hint" value="hint" data-dojo-type="dijit/form/CheckBox" checked onChange="dijit.byId('guessCount').set('disabled', !this.checked);
+                                                    changeSetting(this);
+                                                   "/>
+                                            <label for="hint">
+                                                <span localization="HintStart"></span>
                                                 <input class="guessInput" id="guessCount" name="guessCount" value="3" data-dojo-type="dijit/form/NumberTextBox" onChange="changeSetting(this)" data-dojo-props="constraints:{min:1,max:19,places:0}"/>
-                                                wrong guesses
+                                                <span localization="HintEnd"></span>
                                             </label>
                                         </td>
                                         <td>
                                             <input id="africa" name="region" value="Africa" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
-                                            <label for="africa">Africa</label>
+                                            <label for="africa"><span localization="Africa"></span></label>
                                         </td>
                                     </tr>
                                 </table>
-                                <button data-dojo-type="dijit/form/Button" type="button">Restart
+                                <button data-dojo-type="dijit/form/Button" type="button"><span localization="Restart"></span>
                                     <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
                                         initSettings();
                                     </script>
@@ -311,13 +315,13 @@
                 <div class='answerInfo' id='answerInfoSpan'>
                     <table>
                         <tr>
-                            <td>Correct:&nbsp;</td>
+                            <td><span localization="Correct"></span>&nbsp;</td>
                             <td>
                                 <span id='correctCount'>0</span>
                             </td>
                         </tr>
                         <tr>
-                            <td>Wrong:&nbsp;</td>
+                            <td><span localization="Wrong"></span>&nbsp;</td>
                             <td><span id='wrongCount'>0</span></td>
                         </tr>
                     </table>
@@ -360,6 +364,82 @@
             </script>
         </div>
         <script>
+
+            nls = {
+                "eng": {
+                    "CountryArea": "Country area:",
+                    "Minimum": "Minimum",
+                    "Maximum": "Maximum",
+                    "HighlightAnswer": "Keep correct answer highlighted",
+                    "NameTask": "Show name task",
+                    "FlagTask": "Show flag task",
+                    "CapitalCity": "Show capital city",
+                    "HintStart": "Show a hint after",
+                    "HintEnd": "wrong guesses",
+                    "America": "North and South America",
+                    "Europe": "Europe",
+                    "Australia": "Australia",
+                    "Asia": "Asia",
+                    "Africa": "Africa",
+                    "SimpleMode": "Simple Mode",
+                    "SatelliteMode": "Sattelite Mode",
+                    "GodMode": "GOD Mode",
+                    "Settings": "Settings",
+                    "Correct": "Correct",
+                    "Wrong": "Wrong",
+                    "Click": "Click on:",
+                    "Restart": "Restart",
+                    "AllAnswered":"All answered"
+                },
+                "slk": {
+                    "CountryArea": "Rozloha:",
+                    "HighlightAnswer": "Ponechaj označené správne odpovede",
+                    "NameTask": "Úloha s menom krajiny",
+                    "FlagTask": "Úloha s vlajkou krajiny",
+                    "CapitalCity": "Úloha s hlavným mestom",
+                    "HintStart": "Zobraz nápovedu po",
+                    "HintEnd": "zlých tipoch",
+                    "America": "Severná a Južná Amerika",
+                    "Europe": "Európa",
+                    "Australia": "Austrália",
+                    "Asia": "Ázia",
+                    "Africa": "Afrika",
+                    "SimpleMode": "Jednoduchý Mód",
+                    "SatelliteMode": "Satelitný Mód",
+                    "GodMode": "GOD Mód",
+                    "Settings": "Nastavenia",
+                    "Correct": "Správne",
+                    "Wrong": "Nesprávne",
+                    "Click": "Klikni na:",
+                    "Restart": "Reštart",
+                    "AllAnswered":"Všetko zodpovedané"
+                },
+                "ces": {
+                    "CountryArea": "Rozloha krajiny",
+                    "Minimum": "Minimum",
+                    "Maximum": "Maximum",
+                    "HighlightAnswer": "Držet správnou odpověď vyznačen",
+                    "NameTask": "Úkol se zobrazením názvu",
+                    "FlagTask": "Úkol se zobrazením vlajek",
+                    "CapitalCity": "Zobraz hlavní město",
+                    "HintStart": "Zobraz nápovědu po",
+                    "HintEnd": "špatních odhadech",
+                    "America": "Severní a Jižná Amerika",
+                    "Europe": "Evropa",
+                    "Australia": "Austrálie",
+                    "Asia": "Asie",
+                    "Africa": "Afrika",
+                    "SimpleMode": "Jednoduchý mód",
+                    "SatelliteMode": "Satelitní mód",
+                    "GodMode": "GOD mód",
+                    "Settings": "Nastavení:",
+                    "Correct": "Správně:",
+                    "Wrong": "Špatně:",
+                    "Click": "Klikni na",
+                    "Restart": "Restartuj",
+                    "AllAnswered":"Vše zodpovedané"
+                }
+            }
 
             var settings;
             var countryData;
@@ -536,6 +616,7 @@
             function setLanguage(lang) {
                 dojo.byId("langInput").value = lang;
                 initSettings();
+                localizeText();
             }
 
             function noStyle() {
@@ -692,16 +773,18 @@
             });
         </script>
         <script>
-            require(["dojo/_base/array", "dojo/dom", "dijit/registry", "dojo/dom-class"], function(array, dom, registry, domClass) {
+            require(["dojo/_base/array", "dojo/dom", "dijit/registry", "dojo/dom-class", "dojo/hash"], function(array, dom, registry, domClass, hash) {
                 changeSetting = function() {
                     initSettings();
                 }
 
-                initSettings = function() {
+                initSettings = function(lang) {
                     var form = registry.byId("settingForm");
                     settings = form.get("value");
-                    if (!settings.lang) {
-                        settings.lang = "en";
+                    if (lang) {
+                        settings.lang = lang;
+                    } else if (!settings.lang) {
+                        settings.lang = "eng";
                     }
                     if (settings.taskStyle.indexOf("flags") !== -1) {
                         domClass.add("taskDiv", "flagTask");
@@ -727,8 +810,11 @@
                     if (correctAnswers.length !== filteredData.length) {
                         var country = getRandomCountry();
                         var taskSpanValue = "";
-
-                        taskInfoSpan.innerHTML = "Click on:";
+                        if (settings && nls[settings.lang].Click) {
+                            taskInfoSpan.innerHTML = nls[settings.lang].Click;
+                        } else {
+                            taskInfoSpan.innerHTML = nls.eng.Click;
+                        }
                         if (settings.taskStyle.indexOf("flags") !== -1) {
                             taskSpanValue += "<img class='whiteBorder' src='http://www.geonames.org/flags/x/" + country.cca2.toLowerCase() + ".gif' height='60px'/> &nbsp;";
                         }
@@ -754,7 +840,11 @@
                         taskCountry = country;
                     } else {
                         taskInfoSpan.innerHTML = "";
-                        taskSpan.innerHTML = "All answered";
+                        if (settings && nls[settings.lang].AllAnswered) {
+                            taskSpan.innerHTML = nls[settings.lang].AllAnswered;
+                        } else {
+                            taskSpan.innerHTML = nls.eng.AllAnswered;
+                        }
                     }
                 };
 
@@ -856,18 +946,40 @@
                     wrongCounter = 0;
                     correctCounter = 0;
                 }
+
+                localizeText = function() {
+                    dojo.query("span[localization]").forEach(function(span) {
+                        var l = dojo.attr(span, "localization");
+                        var v;
+                        if (nls[settings.lang][l]) {
+                            v = nls[settings.lang][l];
+                        } else {
+                            v = nls.eng[l];
+                        }
+                        span.innerHTML = v;
+                    });
+                    if (nls[settings.lang].Settings) {
+                        dijit.byId("settingPane").set("title", nls[settings.lang].Settings);
+                    } else {
+                        dijit.byId("settingPane").set("title", nls["eng"].Settings);
+                    }
+                    hash(settings.lang);
+                }
             });
         </script>
 
         <script>
-            require(["dojo/request/xhr", "dojo/_base/fx", "dojo/ready"], function(xhr, fx, ready) {
+            require(["dojo/request/xhr", "dojo/_base/fx", "dojo/ready", "dojo/hash"], function(xhr, fx, ready, hash) {
                 ready(function() {
                     dojo.require("dojox.timing");
                     xhr("data/countries.json",
                             {handleAs: "json"})
                             .then(function(data) {
+                                var availableLang = ["slk", "eng", "ces", "spa", "fra", "deu"];
+                                var lang = availableLang.indexOf(hash()) !== -1 ? hash() : "eng";
                                 countryData = data;
-                                initSettings();
+                                initSettings(lang);
+                                localizeText();
                                 fx.animateProperty({
                                     node: "overlay",
                                     duration: 1300,

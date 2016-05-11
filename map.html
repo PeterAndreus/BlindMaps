@@ -55,10 +55,23 @@
             .right{
                 text-align: right;
             }
-            .next{
+            .nextTaskDiv{
                 position: absolute;
-                right: 0;
-                margin-top: 10px;
+                bottom: -28px;
+                height: 19px;
+                text-align: center;
+                color: white;
+                background-color: rgba(135, 173, 198, 0.85);
+                font-size: 16px;
+                font-weight: bold;
+                border: 1px solid white;
+                font-family: georgia;
+                right: 7px;
+                padding-left: 12px;
+                padding-right: 12px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                border-radius: 5px;
             }
             .whiteBorder{
                 border: 2px solid white;
@@ -336,12 +349,12 @@
                         </tr>
                     </table>
                 </div>
-                <div class="next">
-                    <a href="javascript:void(0)" onClick="nextTask()">
-                        <img src="data/images/nextTask.png" alt="Next task">
-                    </a>
-                </div>
             </div>
+            <a href="javascript:void(0)" onClick="nextTask()">
+                <div class="nextTaskDiv">
+                    <span localization="NextTask"></span>
+                </div>
+            </a>    
         </div>
         <div data-dojo-type="dijit/Dialog" 
              data-dojo-id="aboutDialog"
@@ -418,7 +431,8 @@
                     "Wrong": "Wrong",
                     "Click": "Click on:",
                     "Restart": "Restart",
-                    "AllAnswered": "All answered"
+                    "AllAnswered": "All answered",
+                    "NextTask": "Next Task"
                 },
                 "slk": {
                     "CountryArea": "Rozloha:",
@@ -441,7 +455,8 @@
                     "Wrong": "Nesprávne",
                     "Click": "Klikni na:",
                     "Restart": "Reštart",
-                    "AllAnswered": "Všetko zodpovedané"
+                    "AllAnswered": "Všetko zodpovedané",
+                    "NextTask": "Ďalšia úloha"
                 },
                 "ces": {
                     "CountryArea": "Rozloha krajiny",
@@ -461,12 +476,86 @@
                     "SimpleMode": "Jednoduchý mód",
                     "SatelliteMode": "Satelitní mód",
                     "GodMode": "GOD mód",
-                    "Settings": "Nastavení:",
+                    "Settings": "Nastavení",
                     "Correct": "Správně:",
                     "Wrong": "Špatně:",
                     "Click": "Klikni na",
                     "Restart": "Restartuj",
-                    "AllAnswered": "Vše zodpovedané"
+                    "AllAnswered": "Vše zodpovedané",
+                    "NextTask": "Další úkol"
+                },
+                "spa": {
+                    "CountryArea": "Superficie del país:",
+                    "Minimum": "Mínimo",
+                    "Maximum": "Máximo",
+                    "HighlightAnswer": "Mantenga respuesta correcta destacado",
+                    "NameTask": "Mostrar nombre de tarea",
+                    "FlagTask": "Mostrar tarea bandera",
+                    "CapitalCity": "Mostrar la capital",
+                    "HintStart": "Mostró un poco después de ",
+                    "HintEnd": "intentos incorrectos",
+                    "America": "Norte y América del Sur",
+                    "Europe": "Europa",
+                    "Africa": "África",
+                    "SimpleMode": "Modo simple",
+                    "SatelliteMode": "Modo satélite",
+                    "GodMode": "Modo GOD",
+                    "Settings": "Ajustes",
+                    "Correct": "Correcto:",
+                    "Wrong": "Incorrecto:",
+                    "Click": "Clic en",
+                    "Restart": "Reanudar",
+                    "AllAnswered": "Todo contestado",
+                    "NextTask": "Siguiente tarea"
+                },
+                "deu": {
+                    "CountryArea": "Landesgrösse:",
+                    "Maximum": "Mindestens",
+                    "Minimum": "Meistens",
+                    "HighlightAnswer": "Richtige Antwort angezeigt lassen",
+                    "NameTask": "Namen anzeigen",
+                    "FlagTask": "Landesflagge anzeigen",
+                    "CapitalCity": "Hauptstadt anzeigen",
+                    "HintStart": "Tipp nach ",
+                    "HintEnd": "falschen Antworten",
+                    "America": "Nord und Süd Amerika",
+                    "Europe": "Europa",
+                    "Australia": "Australien",
+                    "Asia": "Asien",
+                    "Africa": "Afrika",
+                    "SimpleMode": "Einfacher Modus",
+                    "SatelliteMode": "Satelliten-Modus",
+                    "GodMode": "Gott-Modus",
+                    "Settings": "Einstellungen",
+                    "Correct": "Richtig:",
+                    "Wrong": "Falsch:",
+                    "Click": "Clicken sie:",
+                    "Restart": "Neustarten",
+                    "AllAnswered": "Alle beantwortet",
+                    "NextTask": "Nächste Aufgabe"
+                },
+                "fra": {
+                    "CountryArea": "Zone Pays:",
+                    "Minimum": "Le minimum",
+                    "HighlightAnswer": "Gardez réponse correcte en surbrillance",
+                    "NameTask": "Afficher le nom tâche",
+                    "FlagTask": "Afficher la tâche de drapeau",
+                    "CapitalCity": "Afficher la capitale",
+                    "HintStart": "Afficher un soupçon après ",
+                    "HintEnd": "suppositions erronées",
+                    "America": "Du Nord et Amérique du Sud",
+                    "Australia": "Australie",
+                    "Asia": "Asie",
+                    "Africa": "Afrique",
+                    "SimpleMode": "Mode simple",
+                    "SatelliteMode": "Mode de sattelite",
+                    "GodMode": "Mode de DIEU",
+                    "Settings": "Paramètres",
+                    "Wrong": "Faux:",
+                    "Click": "Cliquer sur:",
+                    "Restart": "Redémarrer",
+                    "AllAnswered": "Tous répondu",
+                    "NextTask": "Tâche suivante"
                 }
             }
 
@@ -825,7 +914,15 @@
 
                 filterDataByCriteria = function() {
                     filteredData = dojo.filter(countryData.features, function(item) {
-                        return settings.region.indexOf(item.region) !== -1 &&
+                        var region = settings.region.indexOf(item.region) !== -1;
+                        if (item.region instanceof Array) {
+                            dojo.forEach(item.region, function(regionItem) {
+                                if (settings.region.indexOf(regionItem) !== -1) {
+                                    region = true;
+                                }
+                            })
+                        }
+                        return region &&
                                 item.area <= settings.maxArea &&
                                 item.area >= settings.minArea;
                     });

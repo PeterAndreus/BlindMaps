@@ -3,7 +3,7 @@ Fan and fun education project. Created with dojo and OpenLayers 3
 
 
 You can try your skills at:
-http://andreus.valec.net/stuff/blindMap/map.html
+http://www.blind-map.eu
 
 
 TODO & Ideas

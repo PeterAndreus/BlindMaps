@@ -389,8 +389,10 @@
                 <ul>
                     <li>OpenLayers 3:&nbsp;<a href="http://openlayers.org/" target="_blank">http://openlayers.org/</a></li>
                     <li>Dojo:&nbsp;<a href="https://dojotoolkit.org" target="_blank">https://dojotoolkit.org</a> </li>
-                    <li>Flags are from:&nbsp;<a href="http://www.geonames.org/">http://www.geonames.org/</a></li>
+                    <li>Flags are from:&nbsp;<a href="http://www.geonames.org/" target="_blank">http://www.geonames.org/</a></li>
                 </ul>
+                <strong>Github:</strong> <a href="https://github.com/PeterAndreus/BlindMaps" target="_blank"> https://github.com/PeterAndreus/BlindMaps</a> <br/>
+                <strong>Contact:</strong> peter.andreus@gmail.com
             </div>
             <div class="donateButton">
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -769,17 +771,19 @@
                 return  s;
             }
 
-            function fillCountry(sat) {
-                var color = 'rgba(255, 255, 255, 0.4)';
-                if (sat) {
+            function fillCountry(simple) {
+                var color = 'rgba(255, 255, 255, 0.2)';
+                var stroke = 'rgba(255,255,255, 1)';
+                if (simple) {
                     color = '#FFF8E1';
+                    stroke = 'rgba(0,0,0, 1)';
                 }
                 var s = new ol.style.Style({
                     fill: new ol.style.Fill({
                         color: color
                     }),
                     stroke: new ol.style.Stroke({
-                        color: 'rgba(0, 0, 0, 1)',
+                        color: stroke,
                         width: 0.4
                     })
                 });

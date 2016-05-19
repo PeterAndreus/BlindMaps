@@ -1,6 +1,7 @@
 # BlindMaps
 Fan and fun education project. Created with dojo and OpenLayers 3
 
+Controls: Just click on country site suggest you and dont forget to check settings for your own "Game type"
 
 You can try your skills at:
 http://www.blind-map.eu

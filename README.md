@@ -14,6 +14,7 @@ TODO & Ideas
   - <strike>Hints when guessed wrong for like.. 5 times?</strike>
   - Random mode (show random task type)
   - Competetive mode (num. of correct answers in 30s.. for example)
+  - Refactor code to separate files
 
 Sources:
 Openlayers - http://openlayers.org/ <br/>
@@ -23,3 +24,5 @@ Borders are from - http://www.naturalearthdata.com/ (and then edited little bit 
 Translation thanks to: Pipo, Topol, Sonya, Google
 
 One of very first version for comparision is uploaded here: http://andreus.valec.net/stuff/oldMap/map.html
+
+

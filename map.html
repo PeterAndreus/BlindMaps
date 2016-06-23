@@ -546,7 +546,7 @@
                     "AllAnswered": "All answered",
                     "NextTask": "Next Task",
                     "Score": "Score",
-                    "Congratulation":"Congratulation"
+                    "Congratulation": "Congratulation"
                 },
                 "slk": {
                     "CountryArea": "Rozloha:",
@@ -572,7 +572,7 @@
                     "AllAnswered": "Všetko zodpovedané",
                     "NextTask": "Ďalšia úloha",
                     "Score": "Výsledok",
-                    "Congratulation":"Blahoželám!"
+                    "Congratulation": "Blahoželám!"
                 },
                 "ces": {
                     "CountryArea": "Rozloha krajiny",
@@ -600,7 +600,7 @@
                     "AllAnswered": "Vše zodpovedané",
                     "NextTask": "Další úkol",
                     "Score": "Výsledek",
-                    "Congratulation":"Gratuluji!"
+                    "Congratulation": "Gratuluji!"
                 },
                 "spa": {
                     "CountryArea": "Superficie del país:",
@@ -626,7 +626,7 @@
                     "AllAnswered": "Todo contestado",
                     "NextTask": "Siguiente tarea",
                     "Score": "Resultado",
-                    "Congratulation":"Felicitaciones!"
+                    "Congratulation": "Felicitaciones!"
                 },
                 "deu": {
                     "CountryArea": "Landesgrösse:",
@@ -654,7 +654,7 @@
                     "AllAnswered": "Alle beantwortet",
                     "NextTask": "Nächste Aufgabe",
                     "Score": "Ergebnis",
-                    "Congratulation":"Glückwunsch!"
+                    "Congratulation": "Glückwunsch!"
                 },
                 "fra": {
                     "CountryArea": "Zone Pays:",
@@ -678,7 +678,7 @@
                     "Restart": "Redémarrer",
                     "AllAnswered": "Tous répondu",
                     "NextTask": "Tâche suivante",
-                    "Congratulation":"Félicitation!"
+                    "Congratulation": "Félicitation!"
                 }
             }
 
@@ -763,7 +763,11 @@
                 map: map,
                 style: new ol.style.Style({
                     fill: new ol.style.Fill({
-                        color: 'rgba(0, 0, 255, 0.5)'
+                        color: 'rgba(0, 0, 255, 0.3)'
+                    }),
+                    stroke: new ol.style.Stroke({
+                        color: 'rgba(0, 0, 255, 1)',
+                        width: 2
                     })
                 })
             });
@@ -1137,9 +1141,19 @@
                         }
                     })
                     if (!alreadyPainted) {
-                        array.forEach(mainFeature[0].childFeatures, function(childFeature) {
-                            hintFeature.getSource().addFeature(childFeature);
-                        });
+                        if (taskCountry.area < 6000) {
+                            var coor = ol.extent.getCenter(mainFeature[0].getGeometry().getExtent());
+                            var circle = new ol.geom.Circle(coor, 70000, 'XY');
+                            var cFeature = new ol.Feature({geometry: circle});
+                            cFeature.set(UNCODE, mainFeature[0].get(UNCODE));
+                            cFeature.parentFeature = mainFeature[0];
+                            cFeature.mainFeature = false;
+                            hintFeature.getSource().addFeature(cFeature);
+                        } else {
+                            array.forEach(mainFeature[0].childFeatures, function(childFeature) {
+                                hintFeature.getSource().addFeature(childFeature);
+                            });
+                        }
                     }
                 }
 

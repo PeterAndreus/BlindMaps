@@ -1112,7 +1112,9 @@
 
                 initSettings = function(lang) {
                     var form = registry.byId("settingForm");
+                    var learn =  settings ? settings.learn : false ;
                     settings = form.get("value");
+                    settings.learn = learn;
                     settings.answered = false;
                     if (lang) {
                         settings.lang = lang;
@@ -1285,8 +1287,8 @@
                                 that.nameTextStroke.setColor('rgba(0, 0, 0, 0)');
                                 destroyLayer(nameFeature);
                             }
-                            this.nameTextFill.setColor('rgba(255, 255, 255, ' + alpha*2 + ')');
-                            this.nameTextStroke.setColor('rgba(0, 0, 0, ' + alpha*2 + ')');
+                            this.nameTextFill.setColor('rgba(255, 255, 255, ' + alpha * 2 + ')');
+                            this.nameTextStroke.setColor('rgba(0, 0, 0, ' + alpha * 2 + ')');
                             nameFeature.getSource().removeFeature(cFeature);
                             nameFeature.getSource().addFeature(cFeature);
                         }

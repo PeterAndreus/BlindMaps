@@ -318,6 +318,12 @@
                                                 <span localization="GodMode"></span>
                                             </a>
                                         </td>
+                                        <td class="center" rowspan="5">
+                                            <a href="javascript:void(0)" onClick="learnMode()">
+                                                <img class="whiteBorder" src="data/images/simple.png" alt="learn mode"><br/>
+                                                <span localization="LearnMode"></span>
+                                            </a>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -538,6 +544,7 @@
                     "SimpleMode": "Simple Mode",
                     "SatelliteMode": "Sattelite Mode",
                     "GodMode": "GOD Mode",
+                    "LearnMode": "Learn Mode",
                     "Settings": "Settings",
                     "Correct": "Correct",
                     "Wrong": "Wrong",
@@ -564,6 +571,7 @@
                     "SimpleMode": "Jednoduchý Mód",
                     "SatelliteMode": "Satelitný Mód",
                     "GodMode": "GOD Mód",
+                    "LearnMode": "Mód Učenia",
                     "Settings": "Nastavenia",
                     "Correct": "Správne",
                     "Wrong": "Nesprávne",
@@ -592,6 +600,7 @@
                     "SimpleMode": "Jednoduchý mód",
                     "SatelliteMode": "Satelitní mód",
                     "GodMode": "GOD mód",
+                    "LearnMode": "Učíci mód",
                     "Settings": "Nastavení",
                     "Correct": "Správně:",
                     "Wrong": "Špatně:",
@@ -618,6 +627,7 @@
                     "SimpleMode": "Modo simple",
                     "SatelliteMode": "Modo satélite",
                     "GodMode": "Modo GOD",
+                    "LearnMode": "Modo Aprender",
                     "Settings": "Ajustes",
                     "Correct": "Correcto:",
                     "Wrong": "Incorrecto:",
@@ -646,6 +656,7 @@
                     "SimpleMode": "Einfacher Modus",
                     "SatelliteMode": "Satelliten-Modus",
                     "GodMode": "Gott-Modus",
+                    "LearnMode": "Lerner-Modus",
                     "Settings": "Einstellungen",
                     "Correct": "Richtig:",
                     "Wrong": "Falsch:",
@@ -672,6 +683,7 @@
                     "SimpleMode": "Mode simple",
                     "SatelliteMode": "Mode de sattelite",
                     "GodMode": "Mode de DIEU",
+                    "LearnMode": "Mode de apprendre",
                     "Settings": "Paramètres",
                     "Wrong": "Faux:",
                     "Click": "Cliquer sur:",
@@ -772,7 +784,13 @@
                 })
             });
 
+            function learnMode() {
+                simpleMode();
+                settings.learn = true;
+            }
+
             function simpleMode() {
+                settings.learn = false;
                 vectorLayer.setStyle(fillCountry(true));
                 if (map.getLayers().getArray().indexOf(vectorLayer) === -1) {
                     map.getLayers().insertAt(1, vectorLayer);
@@ -783,6 +801,7 @@
             }
 
             function satMode() {
+                settings.learn = false;
                 vectorLayer.setStyle(fillCountry(false));
                 if (map.getLayers().getArray().indexOf(vectorLayer) === -1) {
                     map.getLayers().insertAt(1, vectorLayer);
@@ -795,6 +814,7 @@
             }
 
             function godMode() {
+                settings.learn = false;
                 if (map.getLayers().getArray().indexOf(satLayer) === -1) {
                     map.getLayers().insertAt(0, satLayer);
                 }
@@ -912,8 +932,38 @@
                     highlightFeature = feature;
                 }
             }
-            function getWrongVectorLayer() {
 
+            function nameHintLayer(feature) {
+                var countryName = "";
+                if (feature) {
+                    var country = findCountry(feature);
+                    if (country.name.translations[settings.lang]) {
+                        countryName = country.name.translations[settings.lang];
+                    } else {
+                        countryName = country.name.common;
+                    }
+                }
+
+                var nameLayer = new ol.layer.Vector({
+                    source: new ol.source.Vector(),
+                    map: map,
+                    style: new ol.style.Style({
+                        text: new ol.style.Text({
+                            fill: new ol.style.Fill({
+                                color: 'rgba(255, 255, 255, 1)'
+                            }),
+                            stroke: new ol.style.Stroke({
+                                color: 'rgba(0, 0, 0, 1)'
+                            }),
+                            text: countryName,
+                            font: '20px sans-serif'
+                        })
+                    })
+                });
+                return nameLayer;
+            }
+
+            function getWrongVectorLayer() {
                 var vLayer = new ol.layer.Vector({
                     source: new ol.source.Vector(),
                     map: map,
@@ -926,6 +976,16 @@
                 return vLayer;
             }
 
+            function findCountry(feature) {
+                var result;
+                dojo.forEach(countryData.features, function(country) {
+                    if (feature.get(UNCODE) === country.ccn3) {
+                        result = country;
+                    }
+                });
+                return result;
+            }
+
             function checkCorrectAnswer(pixel) {
                 var feature = map.forEachFeatureAtPixel(pixel, function(feature) {
                     return feature;
@@ -936,7 +996,7 @@
                 }
 
                 if (feature && correctAnswers.indexOf(feature.get(UNCODE)) !== -1) {
-                    wrongAnswer(feature);
+                    wrongAnswer(feature, pixel);
                     return;
                 }
 
@@ -957,17 +1017,28 @@
                     initializeTask();
                     wrongGuess = 0;
                 } else if (feature) {
-                    wrongAnswer(feature);
+                    wrongAnswer(feature, pixel);
                 }
             }
 
-            function wrongAnswer(feature) {
+            function wrongAnswer(feature, pixel) {
+                var nameLayer;
+                var cFeature;
                 var wrongAnswerFeature = getWrongVectorLayer();
 
                 dojo.forEach(feature.childFeatures, function(childFeature) {
                     wrongAnswerFeature.getSource().addFeature(childFeature);
                 });
-                wrongAnswerAnimate(wrongAnswerFeature, feature.childFeatures);
+                if (settings.learn) {
+                    nameLayer = nameHintLayer(feature);
+
+                    var coor = map.getCoordinateFromPixel(pixel);
+                    var circle = new ol.geom.Circle(coor, 1, 'XY');
+                    cFeature = new ol.Feature({geometry: circle});
+
+                    nameLayer.getSource().addFeature(cFeature);
+                }
+                wrongAnswerAnimate(wrongAnswerFeature, nameLayer, feature.childFeatures, cFeature);
                 countAnswer(false);
                 wrongGuess++;
                 if (settings.hint.length > 0 && wrongGuess >= settings.guessCount) {
@@ -1181,12 +1252,16 @@
                     timer.start();
                 };
 
-                wrongAnswerAnimate = function(wrongAnswerFeature, featureList) {
+                wrongAnswerAnimate = function(wrongAnswerFeature, nameFeature, featureList, cFeature) {
                     var interval = 25;
                     var timer = new dojox.timing.Timer(interval);
                     timer.alpha = 0.5;
                     timer.tickCount = 0;
                     timer.fill = wrongAnswerFeature.getStyle().getFill();
+                    if (nameFeature) {
+                        timer.nameTextFill = nameFeature.getStyle().getText().getFill();
+                        timer.nameTextStroke = nameFeature.getStyle().getText().getStroke();
+                    }
                     timer.onTick = function() {
                         this.tickCount++;
                         var alpha = this.alpha - (this.alpha / interval * this.tickCount);
@@ -1203,6 +1278,17 @@
                             wrongAnswerFeature.getSource().removeFeature(feature);
                             wrongAnswerFeature.getSource().addFeature(feature);
                         });
+                        if (nameFeature) {
+                            if (alpha === 0) {
+                                that.nameTextFill.setColor('rgba(255, 255, 255, 0)');
+                                that.nameTextStroke.setColor('rgba(0, 0, 0, 0)');
+                                destroyLayer(nameFeature);
+                            }
+                            this.nameTextFill.setColor('rgba(255, 255, 255, ' + alpha*2 + ')');
+                            this.nameTextStroke.setColor('rgba(0, 0, 0, ' + alpha*2 + ')');
+                            nameFeature.getSource().removeFeature(cFeature);
+                            nameFeature.getSource().addFeature(cFeature);
+                        }
                     };
                     timer.start();
                 };

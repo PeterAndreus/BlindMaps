@@ -3,8 +3,7 @@ Fan and fun education project. Created with dojo and OpenLayers 3
 
 Controls: Just click on country site suggest you and dont forget to check settings for your own "Game type"
 
-You can try your skills at:
-http://www.blind-map.eu
+<h2>You can try your skills at: http://www.blind-map.eu</h2>
 
 
 TODO & Ideas
@@ -23,6 +22,5 @@ Flags are linked from - http://www.geonames.org/ <br/>
 Borders are from - http://www.naturalearthdata.com/ (and then edited little bit in QGIS)<br/>
 Translation thanks to: Pipo, Topol, Sonya, Google
 
-One of very first version for comparision is uploaded here: http://andreus.valec.net/stuff/oldMap/map.html
 
 

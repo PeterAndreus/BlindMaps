@@ -9,7 +9,7 @@ Controls: Just click on country site suggest you and dont forget to check settin
 TODO & Ideas
   - <strike>Localization of country names and capitals</strike>
   - <strike>Text localization</strike>
-  - Something like Learn mode
+  - <strike>Something like Learn mode</strike>
   - <strike>Hints when guessed wrong for like.. 5 times?</strike>
   - Random mode (show random task type)
   - Competetive mode (num. of correct answers in 30s.. for example)

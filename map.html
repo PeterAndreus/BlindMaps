@@ -708,7 +708,10 @@
             var godModeActivated = false;
 
             var satLayer = new ol.layer.Tile({
-                source: new ol.source.MapQuest({layer: 'sat'})
+                source: new ol.source.BingMaps({
+                    key: 'AmEVj-KGhoWve5_QCHdobhC-iOs1YMk07Q60Of4KRejgJ40Dv9jzm-ZJmCIYUuPz',
+                    imagerySet: "aerial"
+                })
             });
 
             var vectorLayer = new ol.layer.Vector({
@@ -1112,7 +1115,7 @@
 
                 initSettings = function(lang) {
                     var form = registry.byId("settingForm");
-                    var learn =  settings ? settings.learn : false ;
+                    var learn = settings ? settings.learn : false;
                     settings = form.get("value");
                     settings.learn = learn;
                     settings.answered = false;

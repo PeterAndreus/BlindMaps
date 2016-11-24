@@ -13,7 +13,7 @@ TODO & Ideas
   - <strike>Hints when guessed wrong for like.. 5 times?</strike>
   - Random mode (show random task type)
   - Competetive mode (num. of correct answers in 30s.. for example)
-  - Refactor code to separate files
+  - <strike>Refactor code to separate files</strike>
 
 Sources:
 Openlayers - http://openlayers.org/ <br/>

@@ -3,13 +3,14 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>BlindMap</title>
+        <title>BlindMap - online geography quiz game</title>
         <link rel="icon" href="data/images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dijit/themes/claro/claro.css">
         <link rel="stylesheet" href="http://openlayers.org/en/v3.13.1/css/ol.css" type="text/css">
         <script src="http://openlayers.org/en/v3.13.1/build/ol.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="parseOnLoad: true"></script>
 
+	<meta name="description" content="Try your skills in geography and show how good you know our Earth">
         <meta property="og:image" content="http://www.blind-map.eu/data/images/overlay_pic.png" />
         <meta property="og:title" content="Where's that country?" />
         <meta property="og:description" content="Show how good you are with geography" />
@@ -249,11 +250,13 @@
             .finalDonate{
                 float: right;
             }
+            .map{
+                height: 100%;
+            }
         </style>
 
-        <canvas style="display: none" id="imgCanvas"></canvas>
         <div class="divMap">
-            <div id="map" class="map" style="height: 100%" ></div>
+            <div id="map" class="map"></div>
         </div>
         <div class="topDiv">
             <div id='settings'>
@@ -445,7 +448,7 @@
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
                     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    <img alt="paypal" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                 </form>
 
             </div>
@@ -469,7 +472,7 @@
                             <input type="hidden" name="cmd" value="_s-xclick">
                             <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
                             <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                            <img alt="paypal" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
                         </form>
                     </div>
                     <div class="finalShare">
@@ -1338,36 +1341,6 @@
                         dojo.query("[property='og:description']")[0].content = newDesc;
                     }
                 }
-
-//                generateImage = function() {
-//                    var finalScore = 100 - (200 * wrongCounter / correctCounter);
-//                    finalScore = finalScore < 0 ? 0 : finalScore;
-//                    var text = "Score: ";
-//                    if (settings && nls[settings.lang].Score) {
-//                        text = nls[settings.lang].Score + ": ";
-//                    }
-//
-//                    var canvas = document.getElementById("imgCanvas");
-//                    canvas.width = 619;
-//                    canvas.height = 400;
-//                    var context = canvas.getContext("2d");
-//
-//                    var imageObj = new Image();
-//                    imageObj.onload = function() {
-//                        context.drawImage(imageObj, 0, 0);
-//                        context.font = "90px Georgia";
-//                        context.fillStyle = "gainsboro";
-//                        context.fillText(text, 80, 220);
-//                        context.strokeStyle = "white";
-//                        context.strokeText(text, 80, 220);
-//
-//                        context.fillStyle = "rgb(" + Math.ceil((168 - finalScore)) + ", " + Math.ceil((0 + finalScore)) + ", 0";
-//                        context.fillText(finalScore, 200, 320);
-//                        context.strokeText(finalScore, 200, 320);
-//                    };
-//                    imageObj.src = "data/images/overlay_pic.png";
-//
-//                }
 
                 countAnswer = function(correct) {
                     if (correct) {

@@ -158,6 +158,7 @@ td{
     font-size: 50px;
     font-family: georgia;
     font-weight: bold;
+    margin: 30px;
 }
 .about{
     font-size: 3em;
@@ -232,4 +233,7 @@ td{
 }
 .map{
     height: 100%;
+}
+.hidden{
+    display: none;
 }

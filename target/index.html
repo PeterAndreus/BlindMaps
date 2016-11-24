@@ -11,7 +11,7 @@
         <script src="http://openlayers.org/en/v3.13.1/build/ol.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.10.4/dojo/dojo.js" data-dojo-config="parseOnLoad: true"></script>
 
-        <meta name="description" content="Try your skills in geography and show how good you know our Earth">
+        <meta name="description" content="Try your skills in online blind map quiz game based on geography and show how good you know our Earth">
         <meta property="og:image" content="http://www.blind-map.eu/data/images/overlay_pic.png" />
         <meta property="og:title" content="Where's that country?" />
         <meta property="og:description" content="Show how good you are with geography" />
@@ -22,6 +22,12 @@
             <div id="map" class="map"></div>
         </div>
         <div class="topDiv">
+            <div class="hidden">
+                <h1>Online geography Earth map quiz game</h1>
+                <h2>Guess countries on blind Earth map</h2>
+                Learn Earth geography through this blind map quiz game. Which country you can guess based on name, capital city or flag. Game is fan-made with no adds or funding.
+            </div>
+
             <div id='settings'>
                 <div data-dojo-type="dijit/form/Form" id="settingForm">
                     <div>
@@ -204,7 +210,7 @@
                     <li>Flags are from:&nbsp;<a href="http://www.geonames.org/" target="_blank">http://www.geonames.org/</a></li>
                 </ul>
                 <strong>Github:</strong> <a href="https://github.com/PeterAndreus/BlindMaps" target="_blank"> https://github.com/PeterAndreus/BlindMaps</a> <br/>
-                <strong>Contact:</strong> peter.andreus@gmail.com
+                <strong>Contact:</strong> peter (dot) andreus (at) gmail (dot) com
             </div>
             <div class="donateButton">
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -222,7 +228,7 @@
         <div data-dojo-type="dijit/Dialog"
              data-dojo-id="finalDialog"
              class="finalDialog">
-            <h1 class="center finalName"><span localization="Congratulation"></span></h1>
+            <div class="center finalName"><span localization="Congratulation"></span></div>
             <div class="score" id="score"></div>
             <div>
                 <div>

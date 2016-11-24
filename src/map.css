@@ -1,0 +1,235 @@
+html{
+    min-height:100%;
+    position:relative;
+}
+body{
+    height:100%;
+}
+table{
+    width: 100%;
+}
+td{
+    height: 20px;
+}
+.dijitTitlePaneTitleFocus{
+    text-align: right;
+    font-family: monospace;
+}
+.divMap{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+}
+.topDiv{
+    font-family: monospace;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: RGBA(61, 98, 121, 0.85);
+}
+.guessInput{
+    width: 30px;
+}
+.center{
+    text-align: center;
+}
+.right{
+    text-align: right;
+}
+.height15{
+    height: 15px;
+}
+.nextTaskDiv{
+    position: absolute;
+    bottom: -28px;
+    height: 19px;
+    text-align: center;
+    color: white;
+    background-color: rgba(135, 173, 198, 0.85);
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid white;
+    font-family: georgia;
+    right: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+}
+.whiteBorder{
+    border: 2px solid white;
+}
+.bodyClass{
+    background-color: #B3E5FC;
+}
+.taskInfo{
+    color: white;
+    font-family: monospace;
+    font-size: 1.6em;
+}
+.task{
+    color: gainsboro;
+    font-family: georgia;
+    font-size: 3em;
+    font-weight: bold;
+    height: 100%;
+}
+.answerInfo{
+    float: right;
+    color: white;
+    font-size: 10px;
+    margin-right: 7px;
+}
+#taskDiv{
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+.flagTask{
+}
+.areaTr{
+    width: 15%;
+}
+.slider{
+    width: 90%;
+}
+.claro .dijitTitlePaneTitle{
+    background-color: #6599BA;
+    background-image: none;
+    color:white;
+}
+.claro .dijitTitlePaneTitleHover,
+.claro .dijitTitlePaneTitleOpen{
+    background-color: RGBA(61, 98, 121, 0.85);
+    background-image: none;
+    color: white;
+}
+.claro .dijitTitlePaneContentOuter {
+    background: rgba(255, 255, 255, 0.57);
+    color: white;
+}
+.claro .dijitTitlePaneTitleClosed .dijitArrowNode{
+    background-position: inherit;
+}
+.claro .dijitTitlePane .dijitArrowNode{
+    background-image: url("data/images/menu.png");
+    width: 27px;
+    height: 17px;
+    float: right;
+    margin-top: 2px;
+    margin-left: 6px;
+}
+.claro .dijitButton .dijitButtonNode{
+    border: 1px solid white;
+    background-color: #40647c;
+    background-image: none;
+    color: white;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+.claro .dijitDialogPaneContent{
+    background: rgba(255, 255, 255, 0);
+}
+.claro .dijitDialogTitleBar{
+    border: none;
+    background-image: none;
+    padding: 0;
+    background-color: #6599BA;
+}
+.claro .dijitDialogCloseIcon{
+    margin-top: 1px;
+    right: 1px;
+}
+.aboutDialog,
+.finalDialog{
+    width: 500px;
+    background-color: rgba(184, 197, 204, 0.85);
+    font-size: 11px;
+}
+.aboutName,
+.finalName{
+    font-size: 50px;
+    font-family: georgia;
+    font-weight: bold;
+}
+.about{
+    font-size: 3em;
+}
+.donateButton{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.cookieBanner{
+    position: absolute;
+    bottom: 0px;
+    background-color:  #40647c;
+    width: 100%;
+    left: 0px;
+    font-size: 11px;
+    color: white;
+    text-align: center;
+}
+.overlay{
+    background-color: #40647c;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.overlayImg{
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -310px;
+    margin-top: -200px;
+}
+.overlaySettings{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.overlayText{
+    position: absolute;
+    right: 32px;
+    top: 38px;
+}
+.shareBtn{
+    float: right;
+}
+.score{
+    font-size: 20px;
+    text-align: center;
+}
+.finalOkBtn
+.dijitButtonNode{
+    width: 300px
+}
+.finalResetBtn
+.dijitButtonNode{
+    width: 125px
+}
+.finalShareDonate{
+    position: absolute;
+    right: 5px;
+    bottom: 41px;
+}
+.finalShare{
+    float: right;
+}
+.finalDonate{
+    float: right;
+}
+.map{
+    height: 100%;
+}

@@ -1,0 +1,6605 @@
+{"features": [
+  {
+    "area": 180,
+    "capital": {
+      "translations": "",
+      "official": "Oranjestad"
+    },
+    "cioc": "ARU",
+    "name": {
+      "common": "Aruba",
+      "translations": "",
+      "official": "Aruba"
+    },
+    "ccn3": "533",
+    "cca3": "ABW",
+    "region": "Americas",
+    "cca2": "AW"
+  },
+  {
+    "area": 652230,
+    "capital": {
+      "translations": {
+        "ces": "Kábul",
+        "slk": "Kábul",
+        "fra": "Kaboul",
+        "deu": "Kabul",
+        "eng": "Kabul"
+      },
+      "official": "Kabul"
+    },
+    "cioc": "AFG",
+    "name": {
+      "common": "Afghanistan",
+      "translations": {
+        "ces": "Afghánistán",
+        "slk": "Afganistan",
+        "fra": "Afghanistan",
+        "spa": "Afganistán",
+        "deu": "Afghanistan",
+        "eng": "Afghanistan"
+      },
+      "official": "Islamic Republic of Afghanistan"
+    },
+    "ccn3": "004",
+    "cca3": "AFG",
+    "region": "Asia",
+    "cca2": "AF"
+  },
+  {
+    "area": 1246700,
+    "capital": {
+      "translations": {
+        "fra": "Luanda",
+        "deu": "Luanda",
+        "eng": "Luanda"
+      },
+      "official": "Luanda"
+    },
+    "cioc": "ANG",
+    "name": {
+      "common": "Angola",
+      "translations": {
+        "ces": "Angola",
+        "slk": "Angola",
+        "fra": "Angola",
+        "spa": "Angola",
+        "deu": "Angola",
+        "eng": "Angola"
+      },
+      "official": "Republic of Angola"
+    },
+    "ccn3": "024",
+    "cca3": "AGO",
+    "region": "Africa",
+    "cca2": "AO"
+  },
+  {
+    "area": 91,
+    "capital": {
+      "translations": "",
+      "official": "The Valley"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Anguilla",
+      "translations": "",
+      "official": "Anguilla"
+    },
+    "ccn3": "660",
+    "cca3": "AIA",
+    "region": "Americas",
+    "cca2": "AI"
+  },
+  {
+    "area": 1580,
+    "capital": {
+      "translations": "",
+      "official": "Mariehamn"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Åland Islands",
+      "translations": "",
+      "official": "Åland Islands"
+    },
+    "ccn3": "248",
+    "cca3": "ALA",
+    "region": "Europe",
+    "cca2": "AX"
+  },
+  {
+    "area": 28748,
+    "capital": {
+      "translations": {
+        "fra": "Tirana",
+        "deu": "Tirana",
+        "eng": "Tirana"
+      },
+      "official": "Tirana"
+    },
+    "cioc": "ALB",
+    "name": {
+      "common": "Albania",
+      "translations": {
+        "ces": "Albánie",
+        "slk": "Albánsko",
+        "fra": "Albanie",
+        "spa": "Albania",
+        "deu": "Albanien",
+        "eng": "Albania"
+      },
+      "official": "Republic of Albania"
+    },
+    "ccn3": "008",
+    "cca3": "ALB",
+    "region": "Europe",
+    "cca2": "AL"
+  },
+  {
+    "area": 468,
+    "capital": {
+      "translations": {
+        "fra": "Andorre-la-Vieille",
+        "deu": "Andorra la Vella",
+        "spa": "Andorra la Vieja",
+        "eng": "Andorra la Vella"
+      },
+      "official": "Andorra la Vella"
+    },
+    "cioc": "AND",
+    "name": {
+      "common": "Andorra",
+      "translations": {
+        "ces": "Andorra",
+        "slk": "Andorra",
+        "fra": "Andorre",
+        "spa": "Andorra",
+        "deu": "Andorra",
+        "eng": "Andorra"
+      },
+      "official": "Principality of Andorra"
+    },
+    "ccn3": "020",
+    "cca3": "AND",
+    "region": "Europe",
+    "cca2": "AD"
+  },
+  {
+    "area": 83600,
+    "capital": {
+      "translations": {
+        "ces": "Abú Dhabí",
+        "slk": "Abú Zabí",
+        "fra": "Abou Dhabi",
+        "deu": "Abu Dhabi",
+        "spa": "Abu Daby",
+        "eng": "Abu Dhabi"
+      },
+      "official": "Abu Dhabi"
+    },
+    "cioc": "UAE",
+    "name": {
+      "common": "United Arab Emirates",
+      "translations": {
+        "ces": "Spojené arabské emiráty",
+        "slk": "Spojené arabské emiráty",
+        "fra": "Émirats arabes unis",
+        "spa": "Emiratos Árabes Unidos",
+        "deu": "Vereinigte Arabische Emirate",
+        "eng": "United Arab Emirates"
+      },
+      "official": "United Arab Emirates"
+    },
+    "ccn3": "784",
+    "cca3": "ARE",
+    "region": "Asia",
+    "cca2": "AE"
+  },
+  {
+    "area": 2780400,
+    "capital": {
+      "translations": {
+        "fra": "Buenos Aires",
+        "spa": "Buenos Aires",
+        "deu": "Buenos Aires",
+        "eng": "Buenos Aires"
+      },
+      "official": "Buenos Aires"
+    },
+    "cioc": "ARG",
+    "name": {
+      "common": "Argentina",
+      "translations": {
+        "ces": "Argentina",
+        "slk": "Argentína",
+        "fra": "Argentine",
+        "spa": "Argentina",
+        "deu": "Argentinien",
+        "eng": "Argentina"
+      },
+      "official": "Argentine Republic"
+    },
+    "ccn3": "032",
+    "cca3": "ARG",
+    "region": "Americas",
+    "cca2": "AR"
+  },
+  {
+    "area": 29743,
+    "capital": {
+      "translations": {
+        "ces": "Jerevan",
+        "slk": "Jerevan",
+        "fra": "Erevan",
+        "deu": "Eriwan",
+        "spa": "Ereván",
+        "eng": "Yerevan"
+      },
+      "official": "Yerevan"
+    },
+    "cioc": "ARM",
+    "name": {
+      "common": "Armenia",
+      "translations": {
+        "ces": "Arménie",
+        "slk": "Arménsko",
+        "fra": "Arménie",
+        "spa": "Armenia",
+        "deu": "Armenien",
+        "eng": "Armenia"
+      },
+      "official": "Republic of Armenia"
+    },
+    "ccn3": "051",
+    "cca3": "ARM",
+    "region": "Asia",
+    "cca2": "AM"
+  },
+  {
+    "area": 199,
+    "capital": {
+      "translations": "",
+      "official": "Pago Pago"
+    },
+    "cioc": "ASA",
+    "name": {
+      "common": "American Samoa",
+      "translations": "",
+      "official": "American Samoa"
+    },
+    "ccn3": "016",
+    "cca3": "ASM",
+    "region": "Oceania",
+    "cca2": "AS"
+  },
+  {
+    "area": 14000000,
+    "capital": {
+      "translations": "",
+      "official": ""
+    },
+    "cioc": "",
+    "name": {
+      "common": "Antarctica",
+      "translations": "",
+      "official": "Antarctica"
+    },
+    "ccn3": "010",
+    "cca3": "ATA",
+    "region": "",
+    "cca2": "AQ"
+  },
+  {
+    "area": 7747,
+    "capital": {
+      "translations": "",
+      "official": "Port-aux-Français"
+    },
+    "cioc": "",
+    "name": {
+      "common": "French Southern and Antarctic Lands",
+      "translations": "",
+      "official": "Territory of the French Southern and Antarctic Lands"
+    },
+    "ccn3": "260",
+    "cca3": "ATF",
+    "region": "",
+    "cca2": "TF"
+  },
+  {
+    "area": 442,
+    "capital": {
+      "translations": {
+        "fra": "Saint John\u2019s",
+        "deu": "Saint John\u2019s",
+        "eng": "Saint John\u2019s"
+      },
+      "official": "Saint John's"
+    },
+    "cioc": "ANT",
+    "name": {
+      "common": "Antigua and Barbuda",
+      "translations": {
+        "ces": "Antigua a Barbuda",
+        "slk": "Antigua a Barbuda",
+        "fra": "Antigua-et-Barbuda",
+        "spa": "Antigua y Barbuda",
+        "deu": "Antigua und Barbuda",
+        "eng": "Antigua and Barbuda"
+      },
+      "official": "Antigua and Barbuda"
+    },
+    "ccn3": "028",
+    "cca3": "ATG",
+    "region": "Americas",
+    "cca2": "AG"
+  },
+  {
+    "area": 7692024,
+    "capital": {
+      "translations": {
+        "fra": "Canberra",
+        "deu": "Canberra",
+        "eng": "Canberra"
+      },
+      "official": "Canberra"
+    },
+    "cioc": "AUS",
+    "name": {
+      "common": "Australia",
+      "translations": {
+        "ces": "Austrálie",
+        "slk": "Austrália",
+        "fra": "Australie",
+        "spa": "Australia",
+        "deu": "Australien",
+        "eng": "Australia"
+      },
+      "official": "Commonwealth of Australia"
+    },
+    "ccn3": "036",
+    "cca3": "AUS",
+    "region": "Oceania",
+    "cca2": "AU"
+  },
+  {
+    "area": 83871,
+    "capital": {
+      "translations": {
+        "ces": "Vídeň",
+        "slk": "Viedeň",
+        "fra": "Vienne",
+        "spa": "Viena",
+        "deu": "Wien",
+        "eng": "Vienna"
+      },
+      "official": "Vienna"
+    },
+    "cioc": "AUT",
+    "name": {
+      "common": "Austria",
+      "translations": {
+        "ces": "Rakousko",
+        "slk": "Rakúsko",
+        "fra": "Autriche",
+        "spa": "Austria",
+        "deu": "Österreich",
+        "eng": "Austria"
+      },
+      "official": "Republic of Austria"
+    },
+    "ccn3": "040",
+    "cca3": "AUT",
+    "region": "Europe",
+    "cca2": "AT"
+  },
+  {
+    "area": 86600,
+    "capital": {
+      "translations": {
+        "fra": "Bakou",
+        "spa": "Bakú",
+        "deu": "Baku",
+        "eng": "Baku"
+      },
+      "official": "Baku"
+    },
+    "cioc": "AZE",
+    "name": {
+      "common": "Azerbaijan",
+      "translations": {
+        "ces": "Ázerbajdžán",
+        "slk": "Azerbajdžán",
+        "fra": "Azerbaïdjan",
+        "deu": "Aserbeidschan",
+        "spa": "Azerbaiyán",
+        "eng": "Azerbaijan"
+      },
+      "official": "Republic of Azerbaijan"
+    },
+    "ccn3": "031",
+    "cca3": "AZE",
+    "region": "Asia",
+    "cca2": "AZ"
+  },
+  {
+    "area": 27834,
+    "capital": {
+      "translations": {
+        "fra": "Bujumbura",
+        "deu": "Bujumbura",
+        "eng": "Bujumbura"
+      },
+      "official": "Bujumbura"
+    },
+    "cioc": "BDI",
+    "name": {
+      "common": "Burundi",
+      "translations": {
+        "ces": "Burundi",
+        "slk": "Burundi",
+        "fra": "Burundi",
+        "spa": "Burundi",
+        "deu": "Burundi",
+        "eng": "Burundi"
+      },
+      "official": "Republic of Burundi"
+    },
+    "ccn3": "108",
+    "cca3": "BDI",
+    "region": "Africa",
+    "cca2": "BI"
+  },
+  {
+    "area": 30528,
+    "capital": {
+      "translations": {
+        "ces": "Brusel",
+        "slk": "Brusel",
+        "fra": "Bruxelles",
+        "deu": "Brüssel",
+        "spa": "Bruselas",
+        "eng": "Brussels"
+      },
+      "official": "Brussels"
+    },
+    "cioc": "BEL",
+    "name": {
+      "common": "Belgium",
+      "translations": {
+        "ces": "Belgie",
+        "slk": "Belgicko",
+        "fra": "Belgique",
+        "deu": "Belgien",
+        "spa": "Bélgica",
+        "eng": "Belgium"
+      },
+      "official": "Kingdom of Belgium"
+    },
+    "ccn3": "056",
+    "cca3": "BEL",
+    "region": "Europe",
+    "cca2": "BE"
+  },
+  {
+    "area": 112622,
+    "capital": {
+      "translations": {
+        "fra": "Porto Novo",
+        "deu": "Porto Novo",
+        "eng": "Porto Novo"
+      },
+      "official": "Porto-Novo"
+    },
+    "cioc": "BEN",
+    "name": {
+      "common": "Benin",
+      "translations": {
+        "ces": "Benin",
+        "slk": "Benin",
+        "fra": "Bénin",
+        "spa": "Benin",
+        "deu": "Benin",
+        "eng": "Benin"
+      },
+      "official": "Republic of Benin"
+    },
+    "ccn3": "204",
+    "cca3": "BEN",
+    "region": "Africa",
+    "cca2": "BJ"
+  },
+  {
+    "area": 328,
+    "capital": {
+      "translations": "",
+      "official": "Kralendijk"
+    },
+    "cioc": "BES",
+    "name": {
+      "common": "Bonaire, Sint Eustatius and Saba",
+      "translations": "",
+      "official": "Bonaire, Sint Eustatius and Saba"
+    },
+    "ccn3": "535",
+    "cca3": "BES",
+    "region": "Americas",
+    "cca2": "BQ"
+  },
+  {
+    "area": 272967,
+    "capital": {
+      "translations": {
+        "fra": "Ouagadougou",
+        "spa": "Uagadugú",
+        "deu": "Ouagadougou",
+        "eng": "Ouagadougou"
+      },
+      "official": "Ouagadougou"
+    },
+    "cioc": "BUR",
+    "name": {
+      "common": "Burkina Faso",
+      "translations": {
+        "ces": "Burkina Faso",
+        "slk": "Burkina Faso",
+        "fra": "Burkina Faso",
+        "spa": "Burkina Faso",
+        "deu": "Burkina Faso",
+        "eng": "Burkina Faso"
+      },
+      "official": "Burkina Faso"
+    },
+    "ccn3": "854",
+    "cca3": "BFA",
+    "region": "Africa",
+    "cca2": "BF"
+  },
+  {
+    "area": 147570,
+    "capital": {
+      "translations": {
+        "ces": "Dháka",
+        "slk": "Dháka",
+        "fra": "Dhaka",
+        "deu": "Dakka",
+        "eng": "Dhaka"
+      },
+      "official": "Dhaka"
+    },
+    "cioc": "BAN",
+    "name": {
+      "common": "Bangladesh",
+      "translations": {
+        "ces": "Bangladéš",
+        "slk": "Bangladéš",
+        "fra": "Bangladesh",
+        "spa": "Bangladesh",
+        "deu": "Bangladesch",
+        "eng": "Bangladesh"
+      },
+      "official": "People's Republic of Bangladesh"
+    },
+    "ccn3": "050",
+    "cca3": "BGD",
+    "region": "Asia",
+    "cca2": "BD"
+  },
+  {
+    "area": 110879,
+    "capital": {
+      "translations": {
+        "ces": "Sofie",
+        "slk": "Sofia",
+        "fra": "Sofia",
+        "deu": "Sofia",
+        "spa": "Sofía",
+        "eng": "Sofia"
+      },
+      "official": "Sofia"
+    },
+    "cioc": "BUL",
+    "name": {
+      "common": "Bulgaria",
+      "translations": {
+        "ces": "Bulharsko",
+        "slk": "Bulharsko",
+        "fra": "Bulgarie",
+        "spa": "Bulgaria",
+        "deu": "Bulgarien",
+        "eng": "Bulgaria"
+      },
+      "official": "Republic of Bulgaria"
+    },
+    "ccn3": "100",
+    "cca3": "BGR",
+    "region": "Europe",
+    "cca2": "BG"
+  },
+  {
+    "area": 765,
+    "capital": {
+      "translations": {
+        "ces": "Manáma",
+        "slk": "Manáma",
+        "fra": "Manama",
+        "deu": "Manama",
+        "eng": "Manama"
+      },
+      "official": "Manama"
+    },
+    "cioc": "BRN",
+    "name": {
+      "common": "Bahrain",
+      "translations": {
+        "ces": "Bahrejn",
+        "slk": "Bahrejn",
+        "fra": "Bahreïn",
+        "spa": "Bahrain",
+        "deu": "Bahrein",
+        "eng": "Bahrain"
+      },
+      "official": "Kingdom of Bahrain"
+    },
+    "ccn3": "048",
+    "cca3": "BHR",
+    "region": "Asia",
+    "cca2": "BH"
+  },
+  {
+    "area": 13943,
+    "capital": {
+      "translations": {
+        "fra": "Nassau",
+        "deu": "Nassau",
+        "eng": "Nassau"
+      },
+      "official": "Nassau"
+    },
+    "cioc": "BAH",
+    "name": {
+      "common": "Bahamas",
+      "translations": {
+        "ces": "Bahamy",
+        "slk": "Bahamy",
+        "fra": "Bahamas",
+        "spa": "Bahamas",
+        "deu": "Bahamas",
+        "eng": "Bahamas"
+      },
+      "official": "Commonwealth of the Bahamas"
+    },
+    "ccn3": "044",
+    "cca3": "BHS",
+    "region": "Americas",
+    "cca2": "BS"
+  },
+  {
+    "area": 51209,
+    "capital": {
+      "translations": {
+        "fra": "Sarajevo",
+        "deu": "Sarajewo",
+        "eng": "Sarajevo"
+      },
+      "official": "Sarajevo"
+    },
+    "cioc": "BIH",
+    "name": {
+      "common": "Bosnia and Herzegovina",
+      "translations": {
+        "ces": "Bosna a Hercegovina",
+        "slk": "Bosna a Hercegovina",
+        "fra": "Bosnie-Herzégovine",
+        "deu": "Bosnien-Herzegowina",
+        "spa": "Bosnia y Herzegovina",
+        "eng": "Bosnia and Herzegovina"
+      },
+      "official": "Bosnia and Herzegovina"
+    },
+    "ccn3": "070",
+    "cca3": "BIH",
+    "region": "Europe",
+    "cca2": "BA"
+  },
+  {
+    "area": 21,
+    "capital": {
+      "translations": "",
+      "official": "Gustavia"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Saint Barthélemy",
+      "translations": "",
+      "official": "Collectivity of Saint Barthélemy"
+    },
+    "ccn3": "652",
+    "cca3": "BLM",
+    "region": "Americas",
+    "cca2": "BL"
+  },
+  {
+    "area": 207600,
+    "capital": {
+      "translations": {
+        "fra": "Minsk",
+        "deu": "Minsk",
+        "eng": "Minsk"
+      },
+      "official": "Minsk"
+    },
+    "cioc": "BLR",
+    "name": {
+      "common": "Belarus",
+      "translations": {
+        "ces": "Bělorusko",
+        "slk": "Bielorusko",
+        "fra": "Belarus",
+        "deu": "Weißrussland",
+        "spa": "Belarús",
+        "eng": "Belarus"
+      },
+      "official": "Republic of Belarus"
+    },
+    "ccn3": "112",
+    "cca3": "BLR",
+    "region": "Europe",
+    "cca2": "BY"
+  },
+  {
+    "area": 22966,
+    "capital": {
+      "translations": {
+        "fra": "Belmopan",
+        "deu": "Belmopan",
+        "spa": "Belmopán",
+        "eng": "Belmopan"
+      },
+      "official": "Belmopan"
+    },
+    "cioc": "BIZ",
+    "name": {
+      "common": "Belize",
+      "translations": {
+        "ces": "Belize",
+        "slk": "Belize",
+        "fra": "Bélize",
+        "spa": "Belice",
+        "deu": "Belize",
+        "eng": "Belize"
+      },
+      "official": "Belize"
+    },
+    "ccn3": "084",
+    "cca3": "BLZ",
+    "region": "Americas",
+    "cca2": "BZ"
+  },
+  {
+    "area": 54,
+    "capital": {
+      "translations": "",
+      "official": "Hamilton"
+    },
+    "cioc": "BER",
+    "name": {
+      "common": "Bermuda",
+      "translations": "",
+      "official": "Bermuda"
+    },
+    "ccn3": "060",
+    "cca3": "BMU",
+    "region": "Americas",
+    "cca2": "BM"
+  },
+  {
+    "area": 1098581,
+    "capital": {
+      "translations": {
+        "fra": "Sucre",
+        "spa": "Sucre",
+        "deu": "Sucre",
+        "eng": "Sucre"
+      },
+      "official": "Sucre"
+    },
+    "cioc": "BOL",
+    "name": {
+      "common": "Bolivia",
+      "translations": {
+        "ces": "Bolívie",
+        "slk": "Bolívia",
+        "fra": "Bolivie",
+        "spa": "Bolivia",
+        "deu": "Bolivien",
+        "eng": "Bolivia"
+      },
+      "official": "Plurinational State of Bolivia"
+    },
+    "ccn3": "068",
+    "cca3": "BOL",
+    "region": "Americas",
+    "cca2": "BO"
+  },
+  {
+    "area": 8515767,
+    "capital": {
+      "translations": {
+        "ces": "Brasília",
+        "slk": "Brazília",
+        "fra": "Brasilia",
+        "spa": "Brasilia",
+        "deu": "Brasilia",
+        "eng": "Brasilia"
+      },
+      "official": "Brasília"
+    },
+    "cioc": "BRA",
+    "name": {
+      "common": "Brazil",
+      "translations": {
+        "ces": "Brazílie",
+        "slk": "Brazília",
+        "fra": "Brésil",
+        "spa": "Brasil",
+        "deu": "Brasilien",
+        "eng": "Brazil"
+      },
+      "official": "Federative Republic of Brazil"
+    },
+    "ccn3": "076",
+    "cca3": "BRA",
+    "region": "Americas",
+    "cca2": "BR"
+  },
+  {
+    "area": 430,
+    "capital": {
+      "translations": {
+        "fra": "Bridgetown",
+        "deu": "Bridgetown",
+        "eng": "Bridgetown"
+      },
+      "official": "Bridgetown"
+    },
+    "cioc": "BAR",
+    "name": {
+      "common": "Barbados",
+      "translations": {
+        "ces": "Barbados",
+        "slk": "Barbados",
+        "fra": "Barbade",
+        "spa": "Barbados",
+        "deu": "Barbados",
+        "eng": "Barbados"
+      },
+      "official": "Barbados"
+    },
+    "ccn3": "052",
+    "cca3": "BRB",
+    "region": "Americas",
+    "cca2": "BB"
+  },
+  {
+    "area": 5765,
+    "capital": {
+      "translations": {
+        "fra": "Bandar Seri Begawan",
+        "deu": "Bandar Seri Begawan",
+        "eng": "Bandar Seri Begawan"
+      },
+      "official": "Bandar Seri Begawan"
+    },
+    "cioc": "BRU",
+    "name": {
+      "common": "Brunei",
+      "translations": {
+        "ces": "Brunej",
+        "slk": "Brunej",
+        "fra": "Brunei",
+        "deu": "Brunei",
+        "spa": "Brunéi",
+        "eng": "Brunei"
+      },
+      "official": "Nation of Brunei, Abode of Peace"
+    },
+    "ccn3": "096",
+    "cca3": "BRN",
+    "region": "Asia",
+    "cca2": "BN"
+  },
+  {
+    "area": 38394,
+    "capital": {
+      "translations": {
+        "fra": "Thimphou",
+        "deu": "Thimphu",
+        "spa": "Timbu",
+        "eng": "Thimphu"
+      },
+      "official": "Thimphu"
+    },
+    "cioc": "BHU",
+    "name": {
+      "common": "Bhutan",
+      "translations": {
+        "ces": "Bhútán",
+        "slk": "Bhután",
+        "fra": "Bhoutan",
+        "spa": "Bután",
+        "deu": "Bhutan",
+        "eng": "Bhutan"
+      },
+      "official": "Kingdom of Bhutan"
+    },
+    "ccn3": "064",
+    "cca3": "BTN",
+    "region": "Asia",
+    "cca2": "BT"
+  },
+  {
+    "area": 49,
+    "capital": {
+      "translations": "",
+      "official": ""
+    },
+    "cioc": "",
+    "name": {
+      "common": "Bouvet Island",
+      "translations": "",
+      "official": "Bouvet Island"
+    },
+    "ccn3": "074",
+    "cca3": "BVT",
+    "region": "",
+    "cca2": "BV"
+  },
+  {
+    "area": 582000,
+    "capital": {
+      "translations": {
+        "fra": "Gaborone",
+        "deu": "Gaborone",
+        "eng": "Gaborone"
+      },
+      "official": "Gaborone"
+    },
+    "cioc": "BOT",
+    "name": {
+      "common": "Botswana",
+      "translations": {
+        "ces": "Botswana",
+        "slk": "Botswana",
+        "fra": "Botswana",
+        "spa": "Botsuana",
+        "deu": "Botsuana",
+        "eng": "Botswana"
+      },
+      "official": "Republic of Botswana"
+    },
+    "ccn3": "072",
+    "cca3": "BWA",
+    "region": "Africa",
+    "cca2": "BW"
+  },
+  {
+    "area": 622984,
+    "capital": {
+      "translations": {
+        "fra": "Bangui",
+        "deu": "Bangui",
+        "eng": "Bangui"
+      },
+      "official": "Bangui"
+    },
+    "cioc": "CAF",
+    "name": {
+      "common": "Central African Republic",
+      "translations": {
+        "ces": "Středoafrická republika",
+        "slk": "Stredoafrická republika",
+        "fra": "République centrafricaine",
+        "spa": "República Centroafricana",
+        "deu": "Zentralafrikanische Republik",
+        "eng": "Central African Republic"
+      },
+      "official": "Central African Republic"
+    },
+    "ccn3": "140",
+    "cca3": "CAF",
+    "region": "Africa",
+    "cca2": "CF"
+  },
+  {
+    "area": 9984670,
+    "capital": {
+      "translations": {
+        "ces": "Otava",
+        "fra": "Ottawa",
+        "deu": "Ottawa",
+        "eng": "Ottawa"
+      },
+      "official": "Ottawa"
+    },
+    "cioc": "CAN",
+    "name": {
+      "common": "Canada",
+      "translations": {
+        "ces": "Kanada",
+        "slk": "Kanada",
+        "fra": "Canada",
+        "spa": "Canadá",
+        "deu": "Kanada",
+        "eng": "Canada"
+      },
+      "official": "Canada"
+    },
+    "ccn3": "124",
+    "cca3": "CAN",
+    "region": "Americas",
+    "cca2": "CA"
+  },
+  {
+    "area": 14,
+    "capital": {
+      "translations": "",
+      "official": "West Island"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Cocos (Keeling) Islands",
+      "translations": "",
+      "official": "Territory of the Cocos (Keeling) Islands"
+    },
+    "ccn3": "166",
+    "cca3": "CCK",
+    "region": "Oceania",
+    "cca2": "CC"
+  },
+  {
+    "area": 41284,
+    "capital": {
+      "translations": {
+        "ces": "Bern",
+        "slk": "Bern",
+        "fra": "Berne",
+        "spa": "Berna",
+        "deu": "Bern",
+        "eng": "Berne"
+      },
+      "official": "Bern"
+    },
+    "cioc": "SUI",
+    "name": {
+      "common": "Switzerland",
+      "translations": {
+        "ces": "Švýcarsko",
+        "slk": "Švajčiarsko",
+        "fra": "Suisse",
+        "spa": "Suiza",
+        "deu": "Schweiz",
+        "eng": "Switzerland"
+      },
+      "official": "Swiss Confederation"
+    },
+    "ccn3": "756",
+    "cca3": "CHE",
+    "region": "Europe",
+    "cca2": "CH"
+  },
+  {
+    "area": 756102,
+    "capital": {
+      "translations": {
+        "fra": "Santiago",
+        "spa": "Santiago",
+        "deu": "Santiago",
+        "eng": "Santiago"
+      },
+      "official": "Santiago"
+    },
+    "cioc": "CHI",
+    "name": {
+      "common": "Chile",
+      "translations": {
+        "ces": "Chile",
+        "slk": "Čile",
+        "fra": "Chili",
+        "spa": "Chile",
+        "deu": "Chile",
+        "eng": "Chile"
+      },
+      "official": "Republic of Chile"
+    },
+    "ccn3": "152",
+    "cca3": "CHL",
+    "region": "Americas",
+    "cca2": "CL"
+  },
+  {
+    "area": 9706961,
+    "capital": {
+      "translations": {
+        "ces": "Peking",
+        "slk": "Peking",
+        "fra": "Pékin",
+        "spa": "Pekín",
+        "deu": "Peking",
+        "eng": "Beijing"
+      },
+      "official": "Beijing"
+    },
+    "cioc": "CHN",
+    "name": {
+      "common": "China",
+      "translations": {
+        "ces": "Čína",
+        "slk": "Čína",
+        "fra": "Chine",
+        "spa": "China",
+        "deu": "China",
+        "eng": "China"
+      },
+      "official": "People's Republic of China"
+    },
+    "ccn3": "156",
+    "cca3": "CHN",
+    "region": "Asia",
+    "cca2": "CN"
+  },
+  {
+    "area": 322463,
+    "capital": {
+      "translations": {
+        "fra": "Yamoussoukro",
+        "deu": "Jamussukro",
+        "eng": "Yamoussoukro"
+      },
+      "official": "Yamoussoukro"
+    },
+    "cioc": "CIV",
+    "name": {
+      "common": "Ivory Coast",
+      "translations": {
+        "ces": "Pobřeží slonoviny",
+        "slk": "Pobrežie Slonoviny",
+        "fra": "Côte d\u2019Ivoire",
+        "deu": "Elfenbeinküste",
+        "spa": "Costa de Marfil",
+        "eng": "Ivory Coast"
+      },
+      "official": "Republic of Côte d'Ivoire"
+    },
+    "ccn3": "384",
+    "cca3": "CIV",
+    "region": "Africa",
+    "cca2": "CI"
+  },
+  {
+    "area": 475442,
+    "capital": {
+      "translations": {
+        "fra": "Yaoundé",
+        "spa": "Yaundé",
+        "deu": "Jaunde",
+        "eng": "Yaounde"
+      },
+      "official": "Yaoundé"
+    },
+    "cioc": "CMR",
+    "name": {
+      "common": "Cameroon",
+      "translations": {
+        "ces": "Kamerun",
+        "slk": "Kamerun",
+        "fra": "Cameroun",
+        "spa": "Camerún",
+        "deu": "Kamerun",
+        "eng": "Cameroon"
+      },
+      "official": "Republic of Cameroon"
+    },
+    "ccn3": "120",
+    "cca3": "CMR",
+    "region": "Africa",
+    "cca2": "CM"
+  },
+  {
+    "area": 2344858,
+    "capital": {
+      "translations": {},
+      "official": "Kinshasa"
+    },
+    "cioc": "COD",
+    "name": {
+      "common": "DR Congo",
+      "translations": {
+        "fra": "République démocratique du Congo",
+        "deu": "Demokratische Republik Kongo",
+        "eng": "Democratic Republic of the Congo"
+      },
+      "official": "Democratic Republic of the Congo"
+    },
+    "ccn3": "180",
+    "cca3": "COD",
+    "region": "Africa",
+    "cca2": "CD"
+  },
+  {
+    "area": 342000,
+    "capital": {
+      "translations": {
+        "fra": "Brazzaville",
+        "deu": "Brazzaville",
+        "eng": "Brazzaville"
+      },
+      "official": "Brazzaville"
+    },
+    "cioc": "CGO",
+    "name": {
+      "common": "Republic of the Congo",
+      "translations": {
+        "ces": "Kongo",
+        "slk": "Kongo",
+        "fra": "Congo",
+        "spa": "Congo",
+        "deu": "Kongo",
+        "eng": "Congo"
+      },
+      "official": "Republic of the Congo"
+    },
+    "ccn3": "178",
+    "cca3": "COG",
+    "region": "Africa",
+    "cca2": "CG"
+  },
+  {
+    "area": 236,
+    "capital": {
+      "translations": "",
+      "official": "Avarua"
+    },
+    "cioc": "COK",
+    "name": {
+      "common": "Cook Islands",
+      "translations": "",
+      "official": "Cook Islands"
+    },
+    "ccn3": "184",
+    "cca3": "COK",
+    "region": "Oceania",
+    "cca2": "CK"
+  },
+  {
+    "area": 1141748,
+    "capital": {
+      "translations": {
+        "ces": "Bogotá",
+        "slk": "Bogota",
+        "fra": "Bogota",
+        "spa": "Bogotá",
+        "deu": "Bogota",
+        "eng": "Bogota"
+      },
+      "official": "Bogotá"
+    },
+    "cioc": "COL",
+    "name": {
+      "common": "Colombia",
+      "translations": {
+        "ces": "Kolumbie",
+        "slk": "Kolumbia",
+        "fra": "Colombie",
+        "spa": "Colombia",
+        "deu": "Kolumbien",
+        "eng": "Colombia"
+      },
+      "official": "Republic of Colombia"
+    },
+    "ccn3": "170",
+    "cca3": "COL",
+    "region": "Americas",
+    "cca2": "CO"
+  },
+  {
+    "area": 1862,
+    "capital": {
+      "translations": {
+        "fra": "Moroni",
+        "deu": "Moroni",
+        "eng": "Moroni"
+      },
+      "official": "Moroni"
+    },
+    "cioc": "COM",
+    "name": {
+      "common": "Comoros",
+      "translations": {
+        "ces": "Komory",
+        "slk": "Komory",
+        "fra": "Comores",
+        "spa": "Comoras",
+        "deu": "Komoren",
+        "eng": "Comoros"
+      },
+      "official": "Union of the Comoros"
+    },
+    "ccn3": "174",
+    "cca3": "COM",
+    "region": "Africa",
+    "cca2": "KM"
+  },
+  {
+    "area": 4033,
+    "capital": {
+      "translations": {
+        "fra": "Praia",
+        "deu": "Praia",
+        "eng": "Praia"
+      },
+      "official": "Praia"
+    },
+    "cioc": "CPV",
+    "name": {
+      "common": "Cape Verde",
+      "translations": {
+        "ces": "Kapverdy",
+        "slk": "Kapverdy",
+        "fra": "Cap-Vert",
+        "spa": "Cabo Verde",
+        "deu": "Kap Verde",
+        "eng": "Cape Verde"
+      },
+      "official": "Republic of Cabo Verde"
+    },
+    "ccn3": "132",
+    "cca3": "CPV",
+    "region": "Africa",
+    "cca2": "CV"
+  },
+  {
+    "area": 51100,
+    "capital": {
+      "translations": {
+        "fra": "San José",
+        "deu": "San José",
+        "spa": "San José",
+        "eng": "San Jose"
+      },
+      "official": "San José"
+    },
+    "cioc": "CRC",
+    "name": {
+      "common": "Costa Rica",
+      "translations": {
+        "ces": "Kostarika",
+        "slk": "Kostarika",
+        "fra": "Costa Rica",
+        "spa": "Costa Rica",
+        "deu": "Kostarika",
+        "eng": "Costa Rica"
+      },
+      "official": "Republic of Costa Rica"
+    },
+    "ccn3": "188",
+    "cca3": "CRI",
+    "region": "Americas",
+    "cca2": "CR"
+  },
+  {
+    "area": 109884,
+    "capital": {
+      "translations": {
+        "ces": "Havana",
+        "slk": "Havana",
+        "fra": "La Havane",
+        "deu": "Havanna",
+        "spa": "La Habana",
+        "eng": "Havana"
+      },
+      "official": "Havana"
+    },
+    "cioc": "CUB",
+    "name": {
+      "common": "Cuba",
+      "translations": {
+        "ces": "Kuba",
+        "slk": "Kuba",
+        "fra": "Cuba",
+        "spa": "Cuba",
+        "deu": "Kuba",
+        "eng": "Cuba"
+      },
+      "official": "Republic of Cuba"
+    },
+    "ccn3": "192",
+    "cca3": "CUB",
+    "region": "Americas",
+    "cca2": "CU"
+  },
+  {
+    "area": 444,
+    "capital": {
+      "translations": "",
+      "official": "Willemstad"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Curaçao",
+      "translations": "",
+      "official": "Country of Curaçao"
+    },
+    "ccn3": "531",
+    "cca3": "CUW",
+    "region": "Americas",
+    "cca2": "CW"
+  },
+  {
+    "area": 135,
+    "capital": {
+      "translations": "",
+      "official": "Flying Fish Cove"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Christmas Island",
+      "translations": "",
+      "official": "Territory of Christmas Island"
+    },
+    "ccn3": "162",
+    "cca3": "CXR",
+    "region": "Oceania",
+    "cca2": "CX"
+  },
+  {
+    "area": 264,
+    "capital": {
+      "translations": "",
+      "official": "George Town"
+    },
+    "cioc": "CAY",
+    "name": {
+      "common": "Cayman Islands",
+      "translations": "",
+      "official": "Cayman Islands"
+    },
+    "ccn3": "136",
+    "cca3": "CYM",
+    "region": "Americas",
+    "cca2": "KY"
+  },
+  {
+    "area": 9251,
+    "capital": {
+      "translations": {
+        "ces": "Nikosie",
+        "slk": "Nikózia",
+        "fra": "Nicosie",
+        "spa": "Nicosia",
+        "deu": "Nikosia",
+        "eng": "Nicosia"
+      },
+      "official": "Nicosia"
+    },
+    "cioc": "CYP",
+    "name": {
+      "common": "Cyprus",
+      "translations": {
+        "ces": "Kypr",
+        "slk": "Cyprus",
+        "fra": "Chypre",
+        "spa": "Chipre",
+        "deu": "Zypern",
+        "eng": "Cyprus"
+      },
+      "official": "Republic of Cyprus"
+    },
+    "ccn3": "196",
+    "cca3": "CYP",
+    "region": "Europe",
+    "cca2": "CY"
+  },
+  {
+    "area": 78865,
+    "capital": {
+      "translations": {
+        "ces": "Praha",
+        "slk": "Praha",
+        "fra": "Prague",
+        "spa": "Praga",
+        "deu": "Prag",
+        "eng": "Prague"
+      },
+      "official": "Prague"
+    },
+    "cioc": "CZE",
+    "name": {
+      "common": "Czech Republic",
+      "translations": {
+        "ces": "Česko",
+        "slk": "Česko",
+        "fra": "Tchéquie",
+        "spa": "Chequia",
+        "deu": "Tschechien",
+        "eng": "Czechia"
+      },
+      "official": "Czech Republic"
+    },
+    "ccn3": "203",
+    "cca3": "CZE",
+    "region": "Europe",
+    "cca2": "CZ"
+  },
+  {
+    "area": 357114,
+    "capital": {
+      "translations": {
+        "ces": "Berlín",
+        "slk": "Berlín",
+        "fra": "Berlin",
+        "spa": "Berlín",
+        "deu": "Berlin",
+        "eng": "Berlin"
+      },
+      "official": "Berlin"
+    },
+    "cioc": "GER",
+    "name": {
+      "common": "Germany",
+      "translations": {
+        "ces": "Německo",
+        "slk": "Nemecko",
+        "fra": "Allemagne",
+        "spa": "Alemania",
+        "deu": "Deutschland",
+        "eng": "Germany"
+      },
+      "official": "Federal Republic of Germany"
+    },
+    "ccn3": "276",
+    "cca3": "DEU",
+    "region": "Europe",
+    "cca2": "DE"
+  },
+  {
+    "area": 23200,
+    "capital": {
+      "translations": {},
+      "official": "Djibouti"
+    },
+    "cioc": "DJI",
+    "name": {
+      "common": "Djibouti",
+      "translations": {
+        "ces": "Džibutsko",
+        "slk": "Džibutsko",
+        "fra": "Djibouti",
+        "spa": "Yibuti",
+        "deu": "Dschibuti",
+        "eng": "Djibouti"
+      },
+      "official": "Republic of Djibouti"
+    },
+    "ccn3": "262",
+    "cca3": "DJI",
+    "region": "Africa",
+    "cca2": "DJ"
+  },
+  {
+    "area": 751,
+    "capital": {
+      "translations": {
+        "fra": "Roseau",
+        "deu": "Roseau",
+        "eng": "Roseau"
+      },
+      "official": "Roseau"
+    },
+    "cioc": "DMA",
+    "name": {
+      "common": "Dominica",
+      "translations": {
+        "ces": "Dominika",
+        "slk": "Dominika",
+        "fra": "Dominique",
+        "spa": "Dominica",
+        "deu": "Dominika",
+        "eng": "Dominica"
+      },
+      "official": "Commonwealth of Dominica"
+    },
+    "ccn3": "212",
+    "cca3": "DMA",
+    "region": "Americas",
+    "cca2": "DM"
+  },
+  {
+    "area": 43094,
+    "capital": {
+      "translations": {
+        "ces": "Kodaň",
+        "slk": "Kodaň",
+        "fra": "Copenhague",
+        "spa": "Copenhague",
+        "deu": "Kopenhagen",
+        "eng": "Copenhagen"
+      },
+      "official": "Copenhagen"
+    },
+    "cioc": "DEN",
+    "name": {
+      "common": "Denmark",
+      "translations": {
+        "ces": "Dánsko",
+        "slk": "Dánsko",
+        "fra": "Danemark",
+        "spa": "Dinamarca",
+        "deu": "Dänemark",
+        "eng": "Denmark"
+      },
+      "official": "Kingdom of Denmark"
+    },
+    "ccn3": "208",
+    "cca3": "DNK",
+    "region": "Europe",
+    "cca2": "DK"
+  },
+  {
+    "area": 48671,
+    "capital": {
+      "translations": {
+        "fra": "Saint-Domingue",
+        "spa": "Santo Domingo",
+        "deu": "Santo Domingo",
+        "eng": "Santo Domingo"
+      },
+      "official": "Santo Domingo"
+    },
+    "cioc": "DOM",
+    "name": {
+      "common": "Dominican Republic",
+      "translations": {
+        "ces": "Dominikánská republika",
+        "slk": "Dominikánska republika",
+        "fra": "République dominicaine",
+        "spa": "República Dominicana",
+        "deu": "Dominikanische Republik",
+        "eng": "Dominican Republic"
+      },
+      "official": "Dominican Republic"
+    },
+    "ccn3": "214",
+    "cca3": "DOM",
+    "region": "Americas",
+    "cca2": "DO"
+  },
+  {
+    "area": 2381741,
+    "capital": {
+      "translations": {
+        "ces": "Alžír",
+        "slk": "Alžír",
+        "fra": "Alger",
+        "deu": "Algier",
+        "spa": "Argel",
+        "eng": "Algiers"
+      },
+      "official": "Algiers"
+    },
+    "cioc": "ALG",
+    "name": {
+      "common": "Algeria",
+      "translations": {
+        "ces": "Alžírsko",
+        "slk": "Alžírsko",
+        "fra": "Algérie",
+        "deu": "Algerien",
+        "spa": "Argelia",
+        "eng": "Algeria"
+      },
+      "official": "People's Democratic Republic of Algeria"
+    },
+    "ccn3": "012",
+    "cca3": "DZA",
+    "region": "Africa",
+    "cca2": "DZ"
+  },
+  {
+    "area": 276841,
+    "capital": {
+      "translations": {
+        "fra": "Quito",
+        "spa": "Quito",
+        "deu": "Quito",
+        "eng": "Quito"
+      },
+      "official": "Quito"
+    },
+    "cioc": "ECU",
+    "name": {
+      "common": "Ecuador",
+      "translations": {
+        "ces": "Ekvádor",
+        "slk": "Ekvádor",
+        "fra": "Équateur",
+        "spa": "Ecuador",
+        "deu": "Ekuador",
+        "eng": "Ecuador"
+      },
+      "official": "Republic of Ecuador"
+    },
+    "ccn3": "218",
+    "cca3": "ECU",
+    "region": "Americas",
+    "cca2": "EC"
+  },
+  {
+    "area": 1002450,
+    "capital": {
+      "translations": {
+        "ces": "Káhira",
+        "slk": "Káhira",
+        "fra": "Le Caire",
+        "deu": "Kairo",
+        "spa": "El Cairo",
+        "eng": "Cairo"
+      },
+      "official": "Cairo"
+    },
+    "cioc": "EGY",
+    "name": {
+      "common": "Egypt",
+      "translations": {
+        "ces": "Egypt",
+        "slk": "Egypt",
+        "fra": "Égypte",
+        "spa": "Egipto",
+        "deu": "Ägypten",
+        "eng": "Egypt"
+      },
+      "official": "Arab Republic of Egypt"
+    },
+    "ccn3": "818",
+    "cca3": "EGY",
+    "region": "Africa",
+    "cca2": "EG"
+  },
+  {
+    "area": 117600,
+    "capital": {
+      "translations": {
+        "fra": "Asmara",
+        "deu": "Asmara",
+        "eng": "Asmara"
+      },
+      "official": "Asmara"
+    },
+    "cioc": "ERI",
+    "name": {
+      "common": "Eritrea",
+      "translations": {
+        "ces": "Eritrea",
+        "slk": "Eritrea",
+        "fra": "Érythrée",
+        "spa": "Eritrea",
+        "deu": "Eritrea",
+        "eng": "Eritrea"
+      },
+      "official": "State of Eritrea"
+    },
+    "ccn3": "232",
+    "cca3": "ERI",
+    "region": "Africa",
+    "cca2": "ER"
+  },
+  {
+    "area": 266000,
+    "capital": {
+      "translations": {
+        "fra": "Laâyoune",
+        "deu": "El Aajun",
+        "spa": "El Aaiún",
+        "eng": "El Aaiun"
+      },
+      "official": "El Aaiún"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Western Sahara",
+      "translations": {
+        "ces": "Západní Sahara",
+        "slk": "Západná Sahara",
+        "fra": "Sahara occidental",
+        "spa": "Sáhara Occidental",
+        "deu": "Westsahara",
+        "eng": "Western Sahara"
+      },
+      "official": "Sahrawi Arab Democratic Republic"
+    },
+    "ccn3": "732",
+    "cca3": "ESH",
+    "region": "Africa",
+    "cca2": "EH"
+  },
+  {
+    "area": 505992,
+    "capital": {
+      "translations": {
+        "fra": "Madrid",
+        "spa": "Madrid",
+        "deu": "Madrid",
+        "eng": "Madrid"
+      },
+      "official": "Madrid"
+    },
+    "cioc": "ESP",
+    "name": {
+      "common": "Spain",
+      "translations": {
+        "ces": "Španělsko",
+        "slk": "Španielsko",
+        "fra": "Espagne",
+        "spa": "España",
+        "deu": "Spanien",
+        "eng": "Spain"
+      },
+      "official": "Kingdom of Spain"
+    },
+    "ccn3": "724",
+    "cca3": "ESP",
+    "region": "Europe",
+    "cca2": "ES"
+  },
+  {
+    "area": 45227,
+    "capital": {
+      "translations": {
+        "fra": "Tallinn",
+        "deu": "Tallinn",
+        "spa": "Tallin",
+        "eng": "Tallinn"
+      },
+      "official": "Tallinn"
+    },
+    "cioc": "EST",
+    "name": {
+      "common": "Estonia",
+      "translations": {
+        "ces": "Estonsko",
+        "slk": "Estónsko",
+        "fra": "Estonie",
+        "spa": "Estonia",
+        "deu": "Estland",
+        "eng": "Estonia"
+      },
+      "official": "Republic of Estonia"
+    },
+    "ccn3": "233",
+    "cca3": "EST",
+    "region": "Europe",
+    "cca2": "EE"
+  },
+  {
+    "area": 1104300,
+    "capital": {
+      "translations": {
+        "ces": "Addis Abeba",
+        "slk": "Addis Abeba",
+        "fra": "Addis-Abeba",
+        "deu": "Addis Abeba",
+        "spa": "Adís Abeba",
+        "eng": "Addis Ababa"
+      },
+      "official": "Addis Ababa"
+    },
+    "cioc": "ETH",
+    "name": {
+      "common": "Ethiopia",
+      "translations": {
+        "ces": "Etiopie",
+        "slk": "Ethiópia",
+        "fra": "Éthiopie",
+        "spa": "Etiopía",
+        "deu": "Äthiopien",
+        "eng": "Ethiopia"
+      },
+      "official": "Federal Democratic Republic of Ethiopia"
+    },
+    "ccn3": "231",
+    "cca3": "ETH",
+    "region": "Africa",
+    "cca2": "ET"
+  },
+  {
+    "area": 338424,
+    "capital": {
+      "translations": {
+        "ces": "Helsinky",
+        "fra": "Helsinki",
+        "spa": "Helsinki",
+        "deu": "Helsinki",
+        "eng": "Helsinki"
+      },
+      "official": "Helsinki"
+    },
+    "cioc": "FIN",
+    "name": {
+      "common": "Finland",
+      "translations": {
+        "ces": "Finsko",
+        "slk": "Fínsko",
+        "fra": "Finlande",
+        "spa": "Finlandia",
+        "deu": "Finnland",
+        "eng": "Finland"
+      },
+      "official": "Republic of Finland"
+    },
+    "ccn3": "246",
+    "cca3": "FIN",
+    "region": "Europe",
+    "cca2": "FI"
+  },
+  {
+    "area": 18272,
+    "capital": {
+      "translations": {
+        "fra": "Suva",
+        "deu": "Suva",
+        "eng": "Suva"
+      },
+      "official": "Suva"
+    },
+    "cioc": "FIJ",
+    "name": {
+      "common": "Fiji",
+      "translations": {
+        "ces": "Fidži",
+        "slk": "Fidži",
+        "fra": "Fidji",
+        "spa": "Fiyi",
+        "deu": "Fidschi",
+        "eng": "Fiji"
+      },
+      "official": "Republic of Fiji"
+    },
+    "ccn3": "242",
+    "cca3": "FJI",
+    "region": "Oceania",
+    "cca2": "FJ"
+  },
+  {
+    "area": 12173,
+    "capital": {
+      "translations": "",
+      "official": "Stanley"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Falkland Islands",
+      "translations": "",
+      "official": "Falkland Islands"
+    },
+    "ccn3": "238",
+    "cca3": "FLK",
+    "region": "Americas",
+    "cca2": "FK"
+  },
+  {
+    "area": 551695,
+    "capital": {
+      "translations": {
+        "ces": "Paříž",
+        "slk": "Paríž",
+        "fra": "Paris",
+        "spa": "París",
+        "deu": "Paris",
+        "eng": "Paris"
+      },
+      "official": "Paris"
+    },
+    "cioc": "FRA",
+    "name": {
+      "common": "France",
+      "translations": {
+        "ces": "Francie",
+        "slk": "Francúzsko",
+        "fra": "France",
+        "spa": "Francia",
+        "deu": "Frankreich",
+        "eng": "France"
+      },
+      "official": "French Republic"
+    },
+    "ccn3": "250",
+    "cca3": "FRA",
+    "region": "Europe",
+    "cca2": "FR"
+  },
+  {
+    "area": 1393,
+    "capital": {
+      "translations": "",
+      "official": "Tórshavn"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Faroe Islands",
+      "translations": "",
+      "official": "Faroe Islands"
+    },
+    "ccn3": "234",
+    "cca3": "FRO",
+    "region": "Europe",
+    "cca2": "FO"
+  },
+  {
+    "area": 702,
+    "capital": {
+      "translations": {
+        "fra": "Palikir",
+        "deu": "Palikir",
+        "eng": "Palikir"
+      },
+      "official": "Palikir"
+    },
+    "cioc": "FSM",
+    "name": {
+      "common": "Micronesia",
+      "translations": {
+        "ces": "Mikronésie",
+        "slk": "Mikronézia",
+        "fra": "Micronésie",
+        "spa": "Micronesia",
+        "deu": "Mikronesien",
+        "eng": "Micronesia"
+      },
+      "official": "Federated States of Micronesia"
+    },
+    "ccn3": "583",
+    "cca3": "FSM",
+    "region": "Oceania",
+    "cca2": "FM"
+  },
+  {
+    "area": 267668,
+    "capital": {
+      "translations": {
+        "fra": "Libreville",
+        "deu": "Libreville",
+        "eng": "Libreville"
+      },
+      "official": "Libreville"
+    },
+    "cioc": "GAB",
+    "name": {
+      "common": "Gabon",
+      "translations": {
+        "ces": "Gabun",
+        "slk": "Gabon",
+        "fra": "Gabon",
+        "spa": "Gabón",
+        "deu": "Gabun",
+        "eng": "Gabon"
+      },
+      "official": "Gabonese Republic"
+    },
+    "ccn3": "266",
+    "cca3": "GAB",
+    "region": "Africa",
+    "cca2": "GA"
+  },
+  {
+    "area": 242900,
+    "capital": {
+      "translations": {
+        "ces": "Londýn",
+        "slk": "Londýn",
+        "fra": "Londres",
+        "spa": "Londres",
+        "deu": "London",
+        "eng": "London"
+      },
+      "official": "London"
+    },
+    "cioc": "GBR",
+    "name": {
+      "common": "United Kingdom",
+      "translations": {
+        "ces": "Spojené království",
+        "slk": "Spojené kráľovstvo",
+        "fra": "Royaume-Uni",
+        "spa": "Reino Unido",
+        "deu": "Vereinigtes Königreich",
+        "eng": "United Kingdom"
+      },
+      "official": "United Kingdom of Great Britain and Northern Ireland"
+    },
+    "ccn3": "826",
+    "cca3": "GBR",
+    "region": "Europe",
+    "cca2": "GB"
+  },
+  {
+    "area": 69700,
+    "capital": {
+      "translations": {
+        "fra": "Tbilissi",
+        "deu": "Tiflis",
+        "spa": "Tiflis",
+        "eng": "Tbilisi"
+      },
+      "official": "Tbilisi"
+    },
+    "cioc": "GEO",
+    "name": {
+      "common": "Georgia",
+      "translations": {
+        "ces": "Gruzie",
+        "slk": "Gruzínsko",
+        "fra": "Géorgie",
+        "spa": "Georgia",
+        "deu": "Georgien",
+        "eng": "Georgia"
+      },
+      "official": "Georgia"
+    },
+    "ccn3": "268",
+    "cca3": "GEO",
+    "region": "Asia",
+    "cca2": "GE"
+  },
+  {
+    "area": 78,
+    "capital": {
+      "translations": "",
+      "official": "St. Peter Port"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Guernsey",
+      "translations": "",
+      "official": "Bailiwick of Guernsey"
+    },
+    "ccn3": "831",
+    "cca3": "GGY",
+    "region": "Europe",
+    "cca2": "GG"
+  },
+  {
+    "area": 238533,
+    "capital": {
+      "translations": {
+        "ces": "Akkra",
+        "slk": "Akkra",
+        "fra": "Accra",
+        "deu": "Akkra",
+        "eng": "Accra"
+      },
+      "official": "Accra"
+    },
+    "cioc": "GHA",
+    "name": {
+      "common": "Ghana",
+      "translations": {
+        "ces": "Ghana",
+        "slk": "Ghana",
+        "fra": "Ghana",
+        "spa": "Ghana",
+        "deu": "Ghana",
+        "eng": "Ghana"
+      },
+      "official": "Republic of Ghana"
+    },
+    "ccn3": "288",
+    "cca3": "GHA",
+    "region": "Africa",
+    "cca2": "GH"
+  },
+  {
+    "area": 6,
+    "capital": {
+      "translations": "",
+      "official": "Gibraltar"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Gibraltar",
+      "translations": "",
+      "official": "Gibraltar"
+    },
+    "ccn3": "292",
+    "cca3": "GIB",
+    "region": "Europe",
+    "cca2": "GI"
+  },
+  {
+    "area": 245857,
+    "capital": {
+      "translations": {
+        "ces": "Konakry",
+        "slk": "Konakry",
+        "fra": "Conakry",
+        "deu": "Konakry",
+        "eng": "Conakry"
+      },
+      "official": "Conakry"
+    },
+    "cioc": "GUI",
+    "name": {
+      "common": "Guinea",
+      "translations": {
+        "ces": "Guinea",
+        "slk": "Guinea",
+        "fra": "Guinée",
+        "spa": "Guinea",
+        "deu": "Guinea",
+        "eng": "Guinea"
+      },
+      "official": "Republic of Guinea"
+    },
+    "ccn3": "324",
+    "cca3": "GIN",
+    "region": "Africa",
+    "cca2": "GN"
+  },
+  {
+    "area": 1628,
+    "capital": {
+      "translations": "",
+      "official": "Basse-Terre"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Guadeloupe",
+      "translations": "",
+      "official": "Guadeloupe"
+    },
+    "ccn3": "312",
+    "cca3": "GLP",
+    "region": "Americas",
+    "cca2": "GP"
+  },
+  {
+    "area": 10689,
+    "capital": {
+      "translations": {
+        "fra": "Banjul",
+        "deu": "Banjul",
+        "eng": "Banjul"
+      },
+      "official": "Banjul"
+    },
+    "cioc": "GAM",
+    "name": {
+      "common": "Gambia",
+      "translations": {
+        "ces": "Gambie",
+        "slk": "Gambia",
+        "fra": "Gambie",
+        "spa": "Gambia",
+        "deu": "Gambia",
+        "eng": "Gambia"
+      },
+      "official": "Republic of the Gambia"
+    },
+    "ccn3": "270",
+    "cca3": "GMB",
+    "region": "Africa",
+    "cca2": "GM"
+  },
+  {
+    "area": 36125,
+    "capital": {
+      "translations": {
+        "fra": "Bissau",
+        "deu": "Bissau",
+        "eng": "Bissau"
+      },
+      "official": "Bissau"
+    },
+    "cioc": "GBS",
+    "name": {
+      "common": "Guinea-Bissau",
+      "translations": {
+        "ces": "Guinea-Bissau",
+        "slk": "Guinea-Bissau",
+        "fra": "Guinée-Bissau",
+        "deu": "Guinea-Bissau",
+        "spa": "Guinea-Bissáu",
+        "eng": "Guinea-Bissau"
+      },
+      "official": "Republic of Guinea-Bissau"
+    },
+    "ccn3": "624",
+    "cca3": "GNB",
+    "region": "Africa",
+    "cca2": "GW"
+  },
+  {
+    "area": 28051,
+    "capital": {
+      "translations": {
+        "fra": "Malabo",
+        "spa": "Malabo",
+        "deu": "Malabo",
+        "eng": "Malabo"
+      },
+      "official": "Malabo"
+    },
+    "cioc": "GEQ",
+    "name": {
+      "common": "Equatorial Guinea",
+      "translations": {
+        "ces": "Rovníková Guinea",
+        "slk": "Rovníková Guinea",
+        "fra": "Guinée équatoriale",
+        "spa": "Guinea Ecuatorial",
+        "deu": "Äquatorialguinea",
+        "eng": "Equatorial Guinea"
+      },
+      "official": "Republic of Equatorial Guinea"
+    },
+    "ccn3": "226",
+    "cca3": "GNQ",
+    "region": "Africa",
+    "cca2": "GQ"
+  },
+  {
+    "area": 131990,
+    "capital": {
+      "translations": {
+        "ces": "Athény",
+        "slk": "Atény",
+        "fra": "Athènes",
+        "spa": "Atenas",
+        "deu": "Athen",
+        "eng": "Athens"
+      },
+      "official": "Athens"
+    },
+    "cioc": "GRE",
+    "name": {
+      "common": "Greece",
+      "translations": {
+        "ces": "Řecko",
+        "slk": "Grécko",
+        "fra": "Grèce",
+        "spa": "Grecia",
+        "deu": "Griechenland",
+        "eng": "Greece"
+      },
+      "official": "Hellenic Republic"
+    },
+    "ccn3": "300",
+    "cca3": "GRC",
+    "region": "Europe",
+    "cca2": "GR"
+  },
+  {
+    "area": 344,
+    "capital": {
+      "translations": {
+        "fra": "Saint George\u2019s",
+        "deu": "Saint George\u2019s",
+        "eng": "Saint George\u2019s"
+      },
+      "official": "St. George's"
+    },
+    "cioc": "GRN",
+    "name": {
+      "common": "Grenada",
+      "translations": {
+        "ces": "Grenada",
+        "slk": "Grenada",
+        "fra": "Grenade",
+        "spa": "Granada",
+        "deu": "Grenada",
+        "eng": "Grenada"
+      },
+      "official": "Grenada"
+    },
+    "ccn3": "308",
+    "cca3": "GRD",
+    "region": "Americas",
+    "cca2": "GD"
+  },
+  {
+    "area": 2166086,
+    "capital": {
+      "translations": "",
+      "official": "Nuuk"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Greenland",
+      "translations": "",
+      "official": "Greenland"
+    },
+    "ccn3": "304",
+    "cca3": "GRL",
+    "region": "Americas",
+    "cca2": "GL"
+  },
+  {
+    "area": 108889,
+    "capital": {
+      "translations": {},
+      "official": "Guatemala City"
+    },
+    "cioc": "GUA",
+    "name": {
+      "common": "Guatemala",
+      "translations": {
+        "ces": "Guatemala",
+        "slk": "Guatemala",
+        "fra": "Guatemala",
+        "spa": "Guatemala",
+        "deu": "Guatemala",
+        "eng": "Guatemala"
+      },
+      "official": "Republic of Guatemala"
+    },
+    "ccn3": "320",
+    "cca3": "GTM",
+    "region": "Americas",
+    "cca2": "GT"
+  },
+  {
+    "area": 83534,
+    "capital": {
+      "translations": "",
+      "official": "Cayenne"
+    },
+    "cioc": "",
+    "name": {
+      "common": "French Guiana",
+      "translations": "",
+      "official": "Guiana"
+    },
+    "ccn3": "254",
+    "cca3": "GUF",
+    "region": "Americas",
+    "cca2": "GF"
+  },
+  {
+    "area": 549,
+    "capital": {
+      "translations": "",
+      "official": "Hagåtña"
+    },
+    "cioc": "GUM",
+    "name": {
+      "common": "Guam",
+      "translations": "",
+      "official": "Guam"
+    },
+    "ccn3": "316",
+    "cca3": "GUM",
+    "region": "Oceania",
+    "cca2": "GU"
+  },
+  {
+    "area": 214969,
+    "capital": {
+      "translations": {
+        "fra": "Georgetown",
+        "deu": "Georgetown",
+        "eng": "Georgetown"
+      },
+      "official": "Georgetown"
+    },
+    "cioc": "GUY",
+    "name": {
+      "common": "Guyana",
+      "translations": {
+        "ces": "Guyana",
+        "slk": "Guyana",
+        "fra": "Guyane",
+        "spa": "Guyana",
+        "deu": "Guyana",
+        "eng": "Guyana"
+      },
+      "official": "Co-operative Republic of Guyana"
+    },
+    "ccn3": "328",
+    "cca3": "GUY",
+    "region": "Americas",
+    "cca2": "GY"
+  },
+  {
+    "area": 1104,
+    "capital": {
+      "translations": "",
+      "official": "City of Victoria"
+    },
+    "cioc": "HKG",
+    "name": {
+      "common": "Hong Kong",
+      "translations": "",
+      "official": "Hong Kong Special Administrative Region of the People's Republic of China"
+    },
+    "ccn3": "344",
+    "cca3": "HKG",
+    "region": "Asia",
+    "cca2": "HK"
+  },
+  {
+    "area": 412,
+    "capital": {
+      "translations": "",
+      "official": ""
+    },
+    "cioc": "",
+    "name": {
+      "common": "Heard Island and McDonald Islands",
+      "translations": "",
+      "official": "Heard Island and McDonald Islands"
+    },
+    "ccn3": "334",
+    "cca3": "HMD",
+    "region": "",
+    "cca2": "HM"
+  },
+  {
+    "area": 112492,
+    "capital": {
+      "translations": {
+        "fra": "Tegucigalpa",
+        "spa": "Tegucigalpa",
+        "deu": "Tegucigalpa",
+        "eng": "Tegucigalpa"
+      },
+      "official": "Tegucigalpa"
+    },
+    "cioc": "HON",
+    "name": {
+      "common": "Honduras",
+      "translations": {
+        "ces": "Honduras",
+        "slk": "Honduras",
+        "fra": "Honduras",
+        "spa": "Honduras",
+        "deu": "Honduras",
+        "eng": "Honduras"
+      },
+      "official": "Republic of Honduras"
+    },
+    "ccn3": "340",
+    "cca3": "HND",
+    "region": "Americas",
+    "cca2": "HN"
+  },
+  {
+    "area": 56594,
+    "capital": {
+      "translations": {
+        "ces": "Záhřeb",
+        "slk": "Záhreb",
+        "fra": "Zagreb",
+        "deu": "Agram",
+        "eng": "Zagreb"
+      },
+      "official": "Zagreb"
+    },
+    "cioc": "CRO",
+    "name": {
+      "common": "Croatia",
+      "translations": {
+        "ces": "Chorvatsko",
+        "slk": "Chorvátsko",
+        "fra": "Croatie",
+        "spa": "Croacia",
+        "deu": "Kroatien",
+        "eng": "Croatia"
+      },
+      "official": "Republic of Croatia"
+    },
+    "ccn3": "191",
+    "cca3": "HRV",
+    "region": "Europe",
+    "cca2": "HR"
+  },
+  {
+    "area": 27750,
+    "capital": {
+      "translations": {
+        "fra": "Port-au-Prince",
+        "deu": "Port-au-Prince",
+        "spa": "Puerto Príncipe",
+        "eng": "Port-au-Prince"
+      },
+      "official": "Port-au-Prince"
+    },
+    "cioc": "HAI",
+    "name": {
+      "common": "Haiti",
+      "translations": {
+        "ces": "Haiti",
+        "slk": "Haiti",
+        "fra": "Haïti",
+        "spa": "Haití",
+        "deu": "Haiti",
+        "eng": "Haiti"
+      },
+      "official": "Republic of Haiti"
+    },
+    "ccn3": "332",
+    "cca3": "HTI",
+    "region": "Americas",
+    "cca2": "HT"
+  },
+  {
+    "area": 93028,
+    "capital": {
+      "translations": {
+        "ces": "Budapešť",
+        "slk": "Budapešť",
+        "fra": "Budapest",
+        "deu": "Budapest",
+        "eng": "Budapest"
+      },
+      "official": "Budapest"
+    },
+    "cioc": "HUN",
+    "name": {
+      "common": "Hungary",
+      "translations": {
+        "ces": "Maďarsko",
+        "slk": "Maďarsko",
+        "fra": "Hongrie",
+        "spa": "Hungría",
+        "deu": "Ungarn",
+        "eng": "Hungary"
+      },
+      "official": "Hungary"
+    },
+    "ccn3": "348",
+    "cca3": "HUN",
+    "region": "Europe",
+    "cca2": "HU"
+  },
+  {
+    "area": 1904569,
+    "capital": {
+      "translations": {
+        "ces": "Džakarta",
+        "fra": "Jakarta",
+        "spa": "Yakarta",
+        "deu": "Dschakarta",
+        "eng": "Jakarta"
+      },
+      "official": "Jakarta"
+    },
+    "cioc": "INA",
+    "name": {
+      "common": "Indonesia",
+      "translations": {
+        "ces": "Indonésie",
+        "slk": "Indonézia",
+        "fra": "Indonésie",
+        "spa": "Indonesia",
+        "deu": "Indonesien",
+        "eng": "Indonesia"
+      },
+      "official": "Republic of Indonesia"
+    },
+    "ccn3": "360",
+    "cca3": "IDN",
+    "region": "Asia",
+    "cca2": "ID"
+  },
+  {
+    "area": 572,
+    "capital": {
+      "translations": "",
+      "official": "Douglas"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Isle of Man",
+      "translations": "",
+      "official": "Isle of Man"
+    },
+    "ccn3": "833",
+    "cca3": "IMN",
+    "region": "Europe",
+    "cca2": "IM"
+  },
+  {
+    "area": 3287590,
+    "capital": {
+      "translations": {
+        "ces": "Nové Dillí",
+        "fra": "New Delhi",
+        "spa": "Nueva Delhi",
+        "deu": "Neu-Delhi",
+        "eng": "New Delhi"
+      },
+      "official": "New Delhi"
+    },
+    "cioc": "IND",
+    "name": {
+      "common": "India",
+      "translations": {
+        "ces": "Indie",
+        "slk": "India",
+        "fra": "Inde",
+        "spa": "India",
+        "deu": "Indien",
+        "eng": "India"
+      },
+      "official": "Republic of India"
+    },
+    "ccn3": "356",
+    "cca3": "IND",
+    "region": "Asia",
+    "cca2": "IN"
+  },
+  {
+    "area": 60,
+    "capital": {
+      "translations": "",
+      "official": "Diego Garcia"
+    },
+    "cioc": "",
+    "name": {
+      "common": "British Indian Ocean Territory",
+      "translations": "",
+      "official": "British Indian Ocean Territory"
+    },
+    "ccn3": "086",
+    "cca3": "IOT",
+    "region": "Africa",
+    "cca2": "IO"
+  },
+  {
+    "area": 70273,
+    "capital": {
+      "translations": {
+        "ces": "Dublin",
+        "slk": "Dublin",
+        "fra": "Dublin",
+        "spa": "Dublín",
+        "deu": "Dublin",
+        "eng": "Dublin"
+      },
+      "official": "Dublin"
+    },
+    "cioc": "IRL",
+    "name": {
+      "common": "Ireland",
+      "translations": {
+        "ces": "Irsko",
+        "slk": "Írsko",
+        "fra": "Irlande",
+        "spa": "Irlanda",
+        "deu": "Irland",
+        "eng": "Ireland"
+      },
+      "official": "Republic of Ireland"
+    },
+    "ccn3": "372",
+    "cca3": "IRL",
+    "region": "Europe",
+    "cca2": "IE"
+  },
+  {
+    "area": 1648195,
+    "capital": {
+      "translations": {
+        "ces": "Teherán",
+        "slk": "Teherán",
+        "fra": "Téhéran",
+        "spa": "Teherán",
+        "deu": "Teheran",
+        "eng": "Tehran"
+      },
+      "official": "Tehran"
+    },
+    "cioc": "IRI",
+    "name": {
+      "common": "Iran",
+      "translations": {
+        "ces": "Írán",
+        "slk": "Irán",
+        "fra": "Iran",
+        "spa": "Irán",
+        "deu": "Iran",
+        "eng": "Iran"
+      },
+      "official": "Islamic Republic of Iran"
+    },
+    "ccn3": "364",
+    "cca3": "IRN",
+    "region": "Asia",
+    "cca2": "IR"
+  },
+  {
+    "area": 438317,
+    "capital": {
+      "translations": {
+        "ces": "Bagdád",
+        "slk": "Bagdad",
+        "fra": "Bagdad",
+        "spa": "Bagdad",
+        "deu": "Bagdad",
+        "eng": "Baghdad"
+      },
+      "official": "Baghdad"
+    },
+    "cioc": "IRQ",
+    "name": {
+      "common": "Iraq",
+      "translations": {
+        "ces": "Irák",
+        "slk": "Irak",
+        "fra": "Iraq",
+        "spa": "Iraq",
+        "deu": "Irak",
+        "eng": "Iraq"
+      },
+      "official": "Republic of Iraq"
+    },
+    "ccn3": "368",
+    "cca3": "IRQ",
+    "region": "Asia",
+    "cca2": "IQ"
+  },
+  {
+    "area": 103000,
+    "capital": {
+      "translations": {
+        "fra": "Reykjavik",
+        "deu": "Reykjavik",
+        "spa": "Reikiavik",
+        "eng": "Reykjavik"
+      },
+      "official": "Reykjavik"
+    },
+    "cioc": "ISL",
+    "name": {
+      "common": "Iceland",
+      "translations": {
+        "ces": "Island",
+        "slk": "Island",
+        "fra": "Islande",
+        "spa": "Islandia",
+        "deu": "Island",
+        "eng": "Iceland"
+      },
+      "official": "Iceland"
+    },
+    "ccn3": "352",
+    "cca3": "ISL",
+    "region": "Europe",
+    "cca2": "IS"
+  },
+  {
+    "area": 20770,
+    "capital": {
+      "translations": {
+        "ces": "Jeruzalém",
+        "slk": "Jeruzalem",
+        "fra": "Jérusalem",
+        "deu": "Jerusalem",
+        "spa": "Jerusalén",
+        "eng": "Jerusalem"
+      },
+      "official": "Jerusalem"
+    },
+    "cioc": "ISR",
+    "name": {
+      "common": "Israel",
+      "translations": {
+        "ces": "Izrael",
+        "slk": "Izrael",
+        "fra": "Israël",
+        "spa": "Israel",
+        "deu": "Israel",
+        "eng": "Israel"
+      },
+      "official": "State of Israel"
+    },
+    "ccn3": "376",
+    "cca3": "ISR",
+    "region": "Asia",
+    "cca2": "IL"
+  },
+  {
+    "area": 301336,
+    "capital": {
+      "translations": {
+        "ces": "Řím",
+        "slk": "Rím",
+        "fra": "Rome",
+        "spa": "Roma",
+        "deu": "Rom",
+        "eng": "Rome"
+      },
+      "official": "Rome"
+    },
+    "cioc": "ITA",
+    "name": {
+      "common": "Italy",
+      "translations": {
+        "ces": "Itálie",
+        "slk": "Taliansko",
+        "fra": "Italie",
+        "spa": "Italia",
+        "deu": "Italien",
+        "eng": "Italy"
+      },
+      "official": "Italian Republic"
+    },
+    "ccn3": "380",
+    "cca3": "ITA",
+    "region": "Europe",
+    "cca2": "IT"
+  },
+  {
+    "area": 10991,
+    "capital": {
+      "translations": {
+        "fra": "Kingston",
+        "deu": "Kingston",
+        "eng": "Kingston"
+      },
+      "official": "Kingston"
+    },
+    "cioc": "JAM",
+    "name": {
+      "common": "Jamaica",
+      "translations": {
+        "ces": "Jamajka",
+        "slk": "Jamajka",
+        "fra": "Jamaïque",
+        "spa": "Jamaica",
+        "deu": "Jamaika",
+        "eng": "Jamaica"
+      },
+      "official": "Jamaica"
+    },
+    "ccn3": "388",
+    "cca3": "JAM",
+    "region": "Americas",
+    "cca2": "JM"
+  },
+  {
+    "area": 116,
+    "capital": {
+      "translations": "",
+      "official": "Saint Helier"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Jersey",
+      "translations": "",
+      "official": "Bailiwick of Jersey"
+    },
+    "ccn3": "832",
+    "cca3": "JEY",
+    "region": "Europe",
+    "cca2": "JE"
+  },
+  {
+    "area": 89342,
+    "capital": {
+      "translations": {
+        "ces": "Ammán",
+        "slk": "Ammán",
+        "fra": "Amman",
+        "spa": "Ammán",
+        "deu": "Amman",
+        "eng": "Amman"
+      },
+      "official": "Amman"
+    },
+    "cioc": "JOR",
+    "name": {
+      "common": "Jordan",
+      "translations": {
+        "ces": "Jordánsko",
+        "slk": "Jordánsko",
+        "fra": "Jordanie",
+        "spa": "Jordania",
+        "deu": "Jordanien",
+        "eng": "Jordan"
+      },
+      "official": "Hashemite Kingdom of Jordan"
+    },
+    "ccn3": "400",
+    "cca3": "JOR",
+    "region": "Asia",
+    "cca2": "JO"
+  },
+  {
+    "area": 377930,
+    "capital": {
+      "translations": {
+        "ces": "Tokio",
+        "fra": "Tokyo",
+        "spa": "Tokio",
+        "deu": "Tokio",
+        "eng": "Tokyo"
+      },
+      "official": "Tokyo"
+    },
+    "cioc": "JPN",
+    "name": {
+      "common": "Japan",
+      "translations": {
+        "ces": "Japonsko",
+        "slk": "Japonsko",
+        "fra": "Japon",
+        "deu": "Japan",
+        "spa": "Japón",
+        "eng": "Japan"
+      },
+      "official": "Japan"
+    },
+    "ccn3": "392",
+    "cca3": "JPN",
+    "region": "Asia",
+    "cca2": "JP"
+  },
+  {
+    "area": 2724900,
+    "capital": {
+      "translations": {
+        "fra": "Astana",
+        "deu": "Astana",
+        "spa": "Astaná",
+        "eng": "Astana"
+      },
+      "official": "Astana"
+    },
+    "cioc": "KAZ",
+    "name": {
+      "common": "Kazakhstan",
+      "translations": {
+        "ces": "Kazachstán",
+        "slk": "Kazachstan",
+        "fra": "Kazakhstan",
+        "deu": "Kasachstan",
+        "spa": "Kazajstán",
+        "eng": "Kazakhstan"
+      },
+      "official": "Republic of Kazakhstan"
+    },
+    "ccn3": "398",
+    "cca3": "KAZ",
+    "region": "Asia",
+    "cca2": "KZ"
+  },
+  {
+    "area": 580367,
+    "capital": {
+      "translations": {
+        "fra": "Nairobi",
+        "deu": "Nairobi",
+        "eng": "Nairobi"
+      },
+      "official": "Nairobi"
+    },
+    "cioc": "KEN",
+    "name": {
+      "common": "Kenya",
+      "translations": {
+        "ces": "Keňa",
+        "slk": "Keňa",
+        "fra": "Kenya",
+        "spa": "Kenia",
+        "deu": "Kenia",
+        "eng": "Kenya"
+      },
+      "official": "Republic of Kenya"
+    },
+    "ccn3": "404",
+    "cca3": "KEN",
+    "region": "Africa",
+    "cca2": "KE"
+  },
+  {
+    "area": 199951,
+    "capital": {
+      "translations": {
+        "ces": "Biškek",
+        "slk": "Biškek",
+        "fra": "Bichkek",
+        "deu": "Bischkek",
+        "eng": "Bishkek"
+      },
+      "official": "Bishkek"
+    },
+    "cioc": "KGZ",
+    "name": {
+      "common": "Kyrgyzstan",
+      "translations": {
+        "ces": "Kyrgyzstán",
+        "slk": "Kirgizsko",
+        "fra": "Kirghizie",
+        "deu": "Kirgisistan",
+        "spa": "Kirguistán",
+        "eng": "Kyrgyzstan"
+      },
+      "official": "Kyrgyz Republic"
+    },
+    "ccn3": "417",
+    "cca3": "KGZ",
+    "region": "Asia",
+    "cca2": "KG"
+  },
+  {
+    "area": 181035,
+    "capital": {
+      "translations": {
+        "ces": "Phnompenh",
+        "fra": "Phnom Penh",
+        "deu": "Phnom Penh",
+        "eng": "Phnom Penh"
+      },
+      "official": "Phnom Penh"
+    },
+    "cioc": "CAM",
+    "name": {
+      "common": "Cambodia",
+      "translations": {
+        "ces": "Kambodža",
+        "slk": "Kambodža",
+        "fra": "Cambodge",
+        "spa": "Camboya",
+        "deu": "Kambodscha",
+        "eng": "Cambodia"
+      },
+      "official": "Kingdom of Cambodia"
+    },
+    "ccn3": "116",
+    "cca3": "KHM",
+    "region": "Asia",
+    "cca2": "KH"
+  },
+  {
+    "area": 811,
+    "capital": {
+      "translations": {
+        "fra": "Bairiki",
+        "deu": "Bairiki",
+        "eng": "Bairiki"
+      },
+      "official": "South Tarawa"
+    },
+    "cioc": "KIR",
+    "name": {
+      "common": "Kiribati",
+      "translations": {
+        "ces": "Kiribati",
+        "slk": "Kiribati",
+        "fra": "Kiribati",
+        "spa": "Kiribati",
+        "deu": "Kiribati",
+        "eng": "Kiribati"
+      },
+      "official": "Independent and Sovereign Republic of Kiribati"
+    },
+    "ccn3": "296",
+    "cca3": "KIR",
+    "region": "Oceania",
+    "cca2": "KI"
+  },
+  {
+    "area": 261,
+    "capital": {
+      "translations": {
+        "fra": "Basseterre",
+        "deu": "Basseterre",
+        "eng": "Basseterre"
+      },
+      "official": "Basseterre"
+    },
+    "cioc": "SKN",
+    "name": {
+      "common": "Saint Kitts and Nevis",
+      "translations": {
+        "ces": "Svatý Kryštof a Nevis",
+        "slk": "Svätý Krištof a Nevis",
+        "fra": "Saint-Christophe-et-Niévès",
+        "deu": "Sankt Kitts und Nevis",
+        "spa": "San Cristóbal y Nieves",
+        "eng": "Saint Kitts and Nevis"
+      },
+      "official": "Federation of Saint Christopher and Nevisa"
+    },
+    "ccn3": "659",
+    "cca3": "KNA",
+    "region": "Americas",
+    "cca2": "KN"
+  },
+  {
+    "area": 100210,
+    "capital": {
+      "translations": {
+        "ces": "Soul",
+        "slk": "Soul",
+        "fra": "Séoul",
+        "spa": "Seúl",
+        "deu": "Söul",
+        "eng": "Seoul"
+      },
+      "official": "Seoul"
+    },
+    "cioc": "KOR",
+    "name": {
+      "common": "South Korea",
+      "translations": {
+        "ces": "Jižní Korea",
+        "slk": "Južná Kórea",
+        "fra": "Corée du Sud",
+        "spa": "Corea del Sur",
+        "deu": "Südkorea",
+        "eng": "South Korea"
+      },
+      "official": "Republic of Korea"
+    },
+    "ccn3": "410",
+    "cca3": "KOR",
+    "region": "Asia",
+    "cca2": "KR"
+  },
+  {
+    "area": 17818,
+    "capital": {
+      "translations": {},
+      "official": "Kuwait City"
+    },
+    "cioc": "KUW",
+    "name": {
+      "common": "Kuwait",
+      "translations": {
+        "ces": "Kuvajt",
+        "slk": "Kuvajt",
+        "fra": "Koweït",
+        "spa": "Kuwait",
+        "deu": "Kuweit",
+        "eng": "Kuwait"
+      },
+      "official": "State of Kuwait"
+    },
+    "ccn3": "414",
+    "cca3": "KWT",
+    "region": "Asia",
+    "cca2": "KW"
+  },
+  {
+    "area": 236800,
+    "capital": {
+      "translations": {
+        "ces": "Vientian",
+        "slk": "Vientian",
+        "fra": "Vientiane",
+        "deu": "Vientiane",
+        "spa": "Vientián",
+        "eng": "Vientiane"
+      },
+      "official": "Vientiane"
+    },
+    "cioc": "LAO",
+    "name": {
+      "common": "Laos",
+      "translations": {
+        "ces": "Laos",
+        "slk": "Laos",
+        "fra": "Laos",
+        "spa": "Laos",
+        "deu": "Laos",
+        "eng": "Laos"
+      },
+      "official": "Lao People's Democratic Republic"
+    },
+    "ccn3": "418",
+    "cca3": "LAO",
+    "region": "Asia",
+    "cca2": "LA"
+  },
+  {
+    "area": 10452,
+    "capital": {
+      "translations": {
+        "ces": "Bejrút",
+        "slk": "Bejrút",
+        "fra": "Beyrouth",
+        "spa": "Beirut",
+        "deu": "Beirut",
+        "eng": "Beirut"
+      },
+      "official": "Beirut"
+    },
+    "cioc": "LIB",
+    "name": {
+      "common": "Lebanon",
+      "translations": {
+        "ces": "Libanon",
+        "slk": "Libanon",
+        "fra": "Liban",
+        "spa": "Líbano",
+        "deu": "Libanon",
+        "eng": "Lebanon"
+      },
+      "official": "Lebanese Republic"
+    },
+    "ccn3": "422",
+    "cca3": "LBN",
+    "region": "Asia",
+    "cca2": "LB"
+  },
+  {
+    "area": 111369,
+    "capital": {
+      "translations": {
+        "fra": "Monrovia",
+        "deu": "Monrovia",
+        "eng": "Monrovia"
+      },
+      "official": "Monrovia"
+    },
+    "cioc": "LBR",
+    "name": {
+      "common": "Liberia",
+      "translations": {
+        "ces": "Libérie",
+        "slk": "Libéria",
+        "fra": "Liberia",
+        "spa": "Liberia",
+        "deu": "Liberia",
+        "eng": "Liberia"
+      },
+      "official": "Republic of Liberia"
+    },
+    "ccn3": "430",
+    "cca3": "LBR",
+    "region": "Africa",
+    "cca2": "LR"
+  },
+  {
+    "area": 1759540,
+    "capital": {
+      "translations": {
+        "ces": "Tripolis",
+        "slk": "Tripolis",
+        "fra": "Tripoli",
+        "spa": "Trípoli",
+        "deu": "Tripolis",
+        "eng": "Tripoli"
+      },
+      "official": "Tripoli"
+    },
+    "cioc": "LBA",
+    "name": {
+      "common": "Libya",
+      "translations": {
+        "ces": "Libye",
+        "slk": "Líbya",
+        "fra": "Libye",
+        "spa": "Libia",
+        "deu": "Libyen",
+        "eng": "Libya"
+      },
+      "official": "State of Libya"
+    },
+    "ccn3": "434",
+    "cca3": "LBY",
+    "region": "Africa",
+    "cca2": "LY"
+  },
+  {
+    "area": 616,
+    "capital": {
+      "translations": {
+        "fra": "Castries",
+        "deu": "Castries",
+        "eng": "Castries"
+      },
+      "official": "Castries"
+    },
+    "cioc": "LCA",
+    "name": {
+      "common": "Saint Lucia",
+      "translations": {
+        "ces": "Svatá Lucie",
+        "slk": "Svätá Lucia",
+        "fra": "Sainte-Lucie",
+        "spa": "Santa Lucía",
+        "deu": "Sankt Lucia",
+        "eng": "Saint Lucia"
+      },
+      "official": "Saint Lucia"
+    },
+    "ccn3": "662",
+    "cca3": "LCA",
+    "region": "Americas",
+    "cca2": "LC"
+  },
+  {
+    "area": 160,
+    "capital": {
+      "translations": {
+        "fra": "Vaduz",
+        "deu": "Vaduz",
+        "eng": "Vaduz"
+      },
+      "official": "Vaduz"
+    },
+    "cioc": "LIE",
+    "name": {
+      "common": "Liechtenstein",
+      "translations": {
+        "ces": "Lichtenštejnsko",
+        "slk": "Lichtenštajnsko",
+        "fra": "Liechtenstein",
+        "spa": "Liechtenstein",
+        "deu": "Liechtenstein",
+        "eng": "Liechtenstein"
+      },
+      "official": "Principality of Liechtenstein"
+    },
+    "ccn3": "438",
+    "cca3": "LIE",
+    "region": "Europe",
+    "cca2": "LI"
+  },
+  {
+    "area": 65610,
+    "capital": {
+      "translations": {
+        "ces": "Šrí Džajavardanapura Kotte",
+        "slk": "Šrí Džajavardanapura Kotte",
+        "fra": "Sri Jayawardenapura Kotte",
+        "deu": "Sri Jayawardenepura Kotte",
+        "eng": "Sri Jayawardenapura Kotte"
+      },
+      "official": "Colombo"
+    },
+    "cioc": "SRI",
+    "name": {
+      "common": "Sri Lanka",
+      "translations": {
+        "ces": "Šrí Lanka",
+        "slk": "Srí Lanka",
+        "fra": "Sri Lanka",
+        "spa": "Sri Lanka",
+        "deu": "Sri Lanka",
+        "eng": "Sri Lanka"
+      },
+      "official": "Democratic Socialist Republic of Sri Lanka"
+    },
+    "ccn3": "144",
+    "cca3": "LKA",
+    "region": "Asia",
+    "cca2": "LK"
+  },
+  {
+    "area": 30355,
+    "capital": {
+      "translations": {
+        "fra": "Maseru",
+        "deu": "Maseru",
+        "eng": "Maseru"
+      },
+      "official": "Maseru"
+    },
+    "cioc": "LES",
+    "name": {
+      "common": "Lesotho",
+      "translations": {
+        "ces": "Lesotho",
+        "slk": "Lesotho",
+        "fra": "Lesotho",
+        "spa": "Lesoto",
+        "deu": "Lesotho",
+        "eng": "Lesotho"
+      },
+      "official": "Kingdom of Lesotho"
+    },
+    "ccn3": "426",
+    "cca3": "LSO",
+    "region": "Africa",
+    "cca2": "LS"
+  },
+  {
+    "area": 65300,
+    "capital": {
+      "translations": {
+        "ces": "Vilna",
+        "fra": "Vilnius",
+        "spa": "Vilna",
+        "deu": "Wilna",
+        "eng": "Vilnius"
+      },
+      "official": "Vilnius"
+    },
+    "cioc": "LTU",
+    "name": {
+      "common": "Lithuania",
+      "translations": {
+        "ces": "Litva",
+        "slk": "Litva",
+        "fra": "Lituanie",
+        "spa": "Lituania",
+        "deu": "Litauen",
+        "eng": "Lithuania"
+      },
+      "official": "Republic of Lithuania"
+    },
+    "ccn3": "440",
+    "cca3": "LTU",
+    "region": "Europe",
+    "cca2": "LT"
+  },
+  {
+    "area": 2586,
+    "capital": {
+      "translations": {},
+      "official": "Luxembourg"
+    },
+    "cioc": "LUX",
+    "name": {
+      "common": "Luxembourg",
+      "translations": {
+        "ces": "Lucembursko",
+        "slk": "Luxembursko / Luxemburg*",
+        "fra": "Luxembourg",
+        "spa": "Luxemburgo",
+        "deu": "Luxemburg",
+        "eng": "Luxembourg"
+      },
+      "official": "Grand Duchy of Luxembourg"
+    },
+    "ccn3": "442",
+    "cca3": "LUX",
+    "region": "Europe",
+    "cca2": "LU"
+  },
+  {
+    "area": 64559,
+    "capital": {
+      "translations": {
+        "ces": "Riga",
+        "slk": "Riga",
+        "fra": "Riga",
+        "spa": "Riga",
+        "deu": "Riga",
+        "eng": "Riga"
+      },
+      "official": "Riga"
+    },
+    "cioc": "LAT",
+    "name": {
+      "common": "Latvia",
+      "translations": {
+        "ces": "Lotyšsko",
+        "slk": "Lotyšsko",
+        "fra": "Lettonie",
+        "spa": "Letonia",
+        "deu": "Lettland",
+        "eng": "Latvia"
+      },
+      "official": "Republic of Latvia"
+    },
+    "ccn3": "428",
+    "cca3": "LVA",
+    "region": "Europe",
+    "cca2": "LV"
+  },
+  {
+    "area": 30,
+    "capital": {
+      "translations": "",
+      "official": ""
+    },
+    "cioc": "",
+    "name": {
+      "common": "Macau",
+      "translations": "",
+      "official": "Macao Special Administrative Region of the People's Republic of China"
+    },
+    "ccn3": "446",
+    "cca3": "MAC",
+    "region": "Asia",
+    "cca2": "MO"
+  },
+  {
+    "area": 53,
+    "capital": {
+      "translations": "",
+      "official": "Marigot"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Saint Martin",
+      "translations": "",
+      "official": "Saint Martin"
+    },
+    "ccn3": "663",
+    "cca3": "MAF",
+    "region": "Americas",
+    "cca2": "MF"
+  },
+  {
+    "area": 446550,
+    "capital": {
+      "translations": {
+        "fra": "Rabat",
+        "deu": "Rabat",
+        "eng": "Rabat"
+      },
+      "official": "Rabat"
+    },
+    "cioc": "MAR",
+    "name": {
+      "common": "Morocco",
+      "translations": {
+        "ces": "Maroko",
+        "slk": "Maroko",
+        "fra": "Maroc",
+        "spa": "Marruecos",
+        "deu": "Marokko",
+        "eng": "Morocco"
+      },
+      "official": "Kingdom of Morocco"
+    },
+    "ccn3": "504",
+    "cca3": "MAR",
+    "region": "Africa",
+    "cca2": "MA"
+  },
+  {
+    "area": 2.02,
+    "capital": {
+      "translations": {},
+      "official": "Monaco"
+    },
+    "cioc": "MON",
+    "name": {
+      "common": "Monaco",
+      "translations": {
+        "ces": "Monako",
+        "slk": "Monako",
+        "fra": "Monaco",
+        "spa": "Mónaco",
+        "deu": "Monako",
+        "eng": "Monaco"
+      },
+      "official": "Principality of Monaco"
+    },
+    "ccn3": "492",
+    "cca3": "MCO",
+    "region": "Europe",
+    "cca2": "MC"
+  },
+  {
+    "area": 33846,
+    "capital": {
+      "translations": {
+        "ces": "Kišiněv",
+        "slk": "Kišiňov",
+        "fra": "Chișinău",
+        "deu": "Kischinau",
+        "eng": "Chisinau"
+      },
+      "official": "Chișinău"
+    },
+    "cioc": "MDA",
+    "name": {
+      "common": "Moldova",
+      "translations": {
+        "ces": "Moldavsko",
+        "slk": "Moldavsko",
+        "fra": "Moldova",
+        "spa": "Moldova",
+        "deu": "Moldawien",
+        "eng": "Moldova"
+      },
+      "official": "Republic of Moldova"
+    },
+    "ccn3": "498",
+    "cca3": "MDA",
+    "region": "Europe",
+    "cca2": "MD"
+  },
+  {
+    "area": 587041,
+    "capital": {
+      "translations": {
+        "fra": "Antananarivo",
+        "deu": "Antananarivo",
+        "eng": "Antananarivo"
+      },
+      "official": "Antananarivo"
+    },
+    "cioc": "MAD",
+    "name": {
+      "common": "Madagascar",
+      "translations": {
+        "ces": "Madagaskar",
+        "slk": "Madagaskar",
+        "fra": "Madagascar",
+        "spa": "Madagascar",
+        "deu": "Madagaskar",
+        "eng": "Madagascar"
+      },
+      "official": "Republic of Madagascar"
+    },
+    "ccn3": "450",
+    "cca3": "MDG",
+    "region": "Africa",
+    "cca2": "MG"
+  },
+  {
+    "area": 300,
+    "capital": {
+      "translations": {
+        "fra": "Malé",
+        "spa": "Malé",
+        "deu": "Malé",
+        "eng": "Male"
+      },
+      "official": "Malé"
+    },
+    "cioc": "MDV",
+    "name": {
+      "common": "Maldives",
+      "translations": {
+        "ces": "Maledivy",
+        "slk": "Maledivy",
+        "fra": "Maldives",
+        "spa": "Maldivas",
+        "deu": "Malediven",
+        "eng": "Maldives"
+      },
+      "official": "Republic of the Maldives"
+    },
+    "ccn3": "462",
+    "cca3": "MDV",
+    "region": "Asia",
+    "cca2": "MV"
+  },
+  {
+    "area": 1964375,
+    "capital": {
+      "translations": {
+        "fra": "Mexico",
+        "deu": "Mexiko",
+        "spa": "Ciudad de México",
+        "eng": "Mexico City"
+      },
+      "official": "Mexico City"
+    },
+    "cioc": "MEX",
+    "name": {
+      "common": "Mexico",
+      "translations": {
+        "ces": "Mexiko",
+        "slk": "Mexiko",
+        "fra": "Mexique",
+        "deu": "Mexiko",
+        "spa": "México",
+        "eng": "Mexico"
+      },
+      "official": "United Mexican States"
+    },
+    "ccn3": "484",
+    "cca3": "MEX",
+    "region": "Americas",
+    "cca2": "MX"
+  },
+  {
+    "area": 181,
+    "capital": {
+      "translations": {
+        "fra": "Majuro",
+        "deu": "Majuro",
+        "eng": "Majuro"
+      },
+      "official": "Majuro"
+    },
+    "cioc": "MHL",
+    "name": {
+      "common": "Marshall Islands",
+      "translations": {
+        "ces": "Marshallovy ostrovy",
+        "slk": "Marshallove ostrovy",
+        "fra": "Îles Marshall",
+        "spa": "Islas Marshall",
+        "deu": "Marshallinseln",
+        "eng": "Marshall Islands"
+      },
+      "official": "Republic of the Marshall Islands"
+    },
+    "ccn3": "584",
+    "cca3": "MHL",
+    "region": "Oceania",
+    "cca2": "MH"
+  },
+  {
+    "area": 25713,
+    "capital": {
+      "translations": {
+        "fra": "Skopje",
+        "deu": "Skopje",
+        "spa": "Skopia",
+        "eng": "Skopje"
+      },
+      "official": "Skopje"
+    },
+    "cioc": "MKD",
+    "name": {
+      "common": "Macedonia",
+      "translations": {
+        "ces": "Makedonie",
+        "slk": "Macedónsko",
+        "fra": "Macédoine",
+        "spa": "Macedonia",
+        "deu": "Mazedonien",
+        "eng": "Macedonia"
+      },
+      "official": "Republic of Macedonia"
+    },
+    "ccn3": "807",
+    "cca3": "MKD",
+    "region": "Europe",
+    "cca2": "MK"
+  },
+  {
+    "area": 1240192,
+    "capital": {
+      "translations": {
+        "fra": "Bamako",
+        "deu": "Bamako",
+        "eng": "Bamako"
+      },
+      "official": "Bamako"
+    },
+    "cioc": "MLI",
+    "name": {
+      "common": "Mali",
+      "translations": {
+        "ces": "Mali",
+        "slk": "Mali",
+        "fra": "Mali",
+        "spa": "Malí",
+        "deu": "Mali",
+        "eng": "Mali"
+      },
+      "official": "Republic of Mali"
+    },
+    "ccn3": "466",
+    "cca3": "MLI",
+    "region": "Africa",
+    "cca2": "ML"
+  },
+  {
+    "area": 316,
+    "capital": {
+      "translations": {
+        "fra": "La Valette",
+        "deu": "Valletta",
+        "spa": "La Valeta",
+        "eng": "Valletta"
+      },
+      "official": "Valletta"
+    },
+    "cioc": "MLT",
+    "name": {
+      "common": "Malta",
+      "translations": {
+        "ces": "Malta",
+        "slk": "Malta",
+        "fra": "Malte",
+        "spa": "Malta",
+        "deu": "Malta",
+        "eng": "Malta"
+      },
+      "official": "Republic of Malta"
+    },
+    "ccn3": "470",
+    "cca3": "MLT",
+    "region": "Europe",
+    "cca2": "MT"
+  },
+  {
+    "area": 676578,
+    "capital": {
+      "translations": {
+        "ces": "Nepjito",
+        "slk": "Nepjito",
+        "fra": "Naypyidaw",
+        "deu": "Naypyidaw",
+        "eng": "Naypyidaw"
+      },
+      "official": "Naypyidaw"
+    },
+    "cioc": "MYA",
+    "name": {
+      "common": "Myanmar",
+      "translations": {
+        "ces": "Myanmar",
+        "slk": "Mjanmarsko",
+        "fra": "Myanmar",
+        "spa": "Myanmar",
+        "deu": "Myanmar",
+        "eng": "Myanmar"
+      },
+      "official": "Republic of the Union of Myanmar"
+    },
+    "ccn3": "104",
+    "cca3": "MMR",
+    "region": "Asia",
+    "cca2": "MM"
+  },
+  {
+    "area": 13812,
+    "capital": {
+      "translations": {
+        "fra": "Podgorica",
+        "deu": "Podgorica",
+        "eng": "Podgorica"
+      },
+      "official": "Podgorica"
+    },
+    "cioc": "MNE",
+    "name": {
+      "common": "Montenegro",
+      "translations": {
+        "ces": "Černá Hora",
+        "slk": "Čierna Hora",
+        "fra": "Monténégro",
+        "spa": "Montenegro",
+        "deu": "Montenegro",
+        "eng": "Montenegro"
+      },
+      "official": "Montenegro"
+    },
+    "ccn3": "499",
+    "cca3": "MNE",
+    "region": "Europe",
+    "cca2": "ME"
+  },
+  {
+    "area": 1564110,
+    "capital": {
+      "translations": {
+        "ces": "Ulánbátar",
+        "slk": "Ulánbátar",
+        "fra": "Oulan-Bator",
+        "spa": "Ulán Bator",
+        "deu": "Ulan Bator",
+        "eng": "Ulan Bator"
+      },
+      "official": "Ulan Bator"
+    },
+    "cioc": "MGL",
+    "name": {
+      "common": "Mongolia",
+      "translations": {
+        "ces": "Mongolsko",
+        "slk": "Mongolsko",
+        "fra": "Mongolie",
+        "spa": "Mongolia",
+        "deu": "Mongolei",
+        "eng": "Mongolia"
+      },
+      "official": "Mongolia"
+    },
+    "ccn3": "496",
+    "cca3": "MNG",
+    "region": "Asia",
+    "cca2": "MN"
+  },
+  {
+    "area": 464,
+    "capital": {
+      "translations": "",
+      "official": "Saipan"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Northern Mariana Islands",
+      "translations": "",
+      "official": "Commonwealth of the Northern Mariana Islands"
+    },
+    "ccn3": "580",
+    "cca3": "MNP",
+    "region": "Oceania",
+    "cca2": "MP"
+  },
+  {
+    "area": 801590,
+    "capital": {
+      "translations": {
+        "fra": "Maputo",
+        "deu": "Maputo",
+        "eng": "Maputo"
+      },
+      "official": "Maputo"
+    },
+    "cioc": "MOZ",
+    "name": {
+      "common": "Mozambique",
+      "translations": {
+        "ces": "Mosambik",
+        "slk": "Mozambik",
+        "fra": "Mozambique",
+        "spa": "Mozambique",
+        "deu": "Mosambik",
+        "eng": "Mozambique"
+      },
+      "official": "Republic of Mozambique"
+    },
+    "ccn3": "508",
+    "cca3": "MOZ",
+    "region": "Africa",
+    "cca2": "MZ"
+  },
+  {
+    "area": 1030700,
+    "capital": {
+      "translations": {
+        "slk": "Nuakšott",
+        "fra": "Nouakchott",
+        "deu": "Nuakschott",
+        "eng": "Nouakchott"
+      },
+      "official": "Nouakchott"
+    },
+    "cioc": "MTN",
+    "name": {
+      "common": "Mauritania",
+      "translations": {
+        "ces": "Mauritánie",
+        "slk": "Mauretánia",
+        "fra": "Mauritanie",
+        "spa": "Mauritania",
+        "deu": "Mauretanien",
+        "eng": "Mauritania"
+      },
+      "official": "Islamic Republic of Mauritania"
+    },
+    "ccn3": "478",
+    "cca3": "MRT",
+    "region": "Africa",
+    "cca2": "MR"
+  },
+  {
+    "area": 102,
+    "capital": {
+      "translations": "",
+      "official": "Plymouth"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Montserrat",
+      "translations": "",
+      "official": "Montserrat"
+    },
+    "ccn3": "500",
+    "cca3": "MSR",
+    "region": "Americas",
+    "cca2": "MS"
+  },
+  {
+    "area": 1128,
+    "capital": {
+      "translations": "",
+      "official": "Fort-de-France"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Martinique",
+      "translations": "",
+      "official": "Martinique"
+    },
+    "ccn3": "474",
+    "cca3": "MTQ",
+    "region": "Americas",
+    "cca2": "MQ"
+  },
+  {
+    "area": 2040,
+    "capital": {
+      "translations": {
+        "fra": "Port Louis",
+        "deu": "Port Louis",
+        "eng": "Port Louis"
+      },
+      "official": "Port Louis"
+    },
+    "cioc": "MRI",
+    "name": {
+      "common": "Mauritius",
+      "translations": {
+        "ces": "Mauricius",
+        "slk": "Maurícius",
+        "fra": "Maurice",
+        "spa": "Mauricio",
+        "deu": "Mauritius",
+        "eng": "Mauritius"
+      },
+      "official": "Republic of Mauritius"
+    },
+    "ccn3": "480",
+    "cca3": "MUS",
+    "region": "Africa",
+    "cca2": "MU"
+  },
+  {
+    "area": 118484,
+    "capital": {
+      "translations": {
+        "fra": "Lilongwe",
+        "deu": "Lilongwe",
+        "spa": "Lilongüe",
+        "eng": "Lilongwe"
+      },
+      "official": "Lilongwe"
+    },
+    "cioc": "MAW",
+    "name": {
+      "common": "Malawi",
+      "translations": {
+        "ces": "Malawi",
+        "slk": "Malawi",
+        "fra": "Malawi",
+        "spa": "Malawi",
+        "deu": "Malawi",
+        "eng": "Malawi"
+      },
+      "official": "Republic of Malawi"
+    },
+    "ccn3": "454",
+    "cca3": "MWI",
+    "region": "Africa",
+    "cca2": "MW"
+  },
+  {
+    "area": 330803,
+    "capital": {
+      "translations": {
+        "fra": "Kuala Lumpur",
+        "deu": "Kuala Lumpur",
+        "eng": "Kuala Lumpur"
+      },
+      "official": "Kuala Lumpur"
+    },
+    "cioc": "MAS",
+    "name": {
+      "common": "Malaysia",
+      "translations": {
+        "ces": "Malajsie",
+        "slk": "Malajzia",
+        "fra": "Malaisie",
+        "spa": "Malasia",
+        "deu": "Malaysia",
+        "eng": "Malaysia"
+      },
+      "official": "Malaysia"
+    },
+    "ccn3": "458",
+    "cca3": "MYS",
+    "region": "Asia",
+    "cca2": "MY"
+  },
+  {
+    "area": 374,
+    "capital": {
+      "translations": "",
+      "official": "Mamoudzou"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Mayotte",
+      "translations": "",
+      "official": "Department of Mayotte"
+    },
+    "ccn3": "175",
+    "cca3": "MYT",
+    "region": "Africa",
+    "cca2": "YT"
+  },
+  {
+    "area": 825615,
+    "capital": {
+      "translations": {
+        "fra": "Windhoek",
+        "deu": "Windhuk",
+        "eng": "Windhoek"
+      },
+      "official": "Windhoek"
+    },
+    "cioc": "NAM",
+    "name": {
+      "common": "Namibia",
+      "translations": {
+        "ces": "Namibie",
+        "slk": "Namíbia",
+        "fra": "Namibie",
+        "spa": "Namibia",
+        "deu": "Namibia",
+        "eng": "Namibia"
+      },
+      "official": "Republic of Namibia"
+    },
+    "ccn3": "516",
+    "cca3": "NAM",
+    "region": "Africa",
+    "cca2": "NA"
+  },
+  {
+    "area": 18575,
+    "capital": {
+      "translations": "",
+      "official": "Nouméa"
+    },
+    "cioc": "",
+    "name": {
+      "common": "New Caledonia",
+      "translations": "",
+      "official": "New Caledonia"
+    },
+    "ccn3": "540",
+    "cca3": "NCL",
+    "region": "Oceania",
+    "cca2": "NC"
+  },
+  {
+    "area": 1267000,
+    "capital": {
+      "translations": {
+        "fra": "Niamey",
+        "deu": "Niamey",
+        "eng": "Niamey"
+      },
+      "official": "Niamey"
+    },
+    "cioc": "NIG",
+    "name": {
+      "common": "Niger",
+      "translations": {
+        "ces": "Niger",
+        "slk": "Niger",
+        "fra": "Niger",
+        "spa": "Níger",
+        "deu": "Niger",
+        "eng": "Niger"
+      },
+      "official": "Republic of Niger"
+    },
+    "ccn3": "562",
+    "cca3": "NER",
+    "region": "Africa",
+    "cca2": "NE"
+  },
+  {
+    "area": 36,
+    "capital": {
+      "translations": "",
+      "official": "Kingston"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Norfolk Island",
+      "translations": "",
+      "official": "Territory of Norfolk Island"
+    },
+    "ccn3": "574",
+    "cca3": "NFK",
+    "region": "Oceania",
+    "cca2": "NF"
+  },
+  {
+    "area": 923768,
+    "capital": {
+      "translations": {
+        "fra": "Abuja",
+        "deu": "Abuja",
+        "spa": "Abuya",
+        "eng": "Abuja"
+      },
+      "official": "Abuja"
+    },
+    "cioc": "NGR",
+    "name": {
+      "common": "Nigeria",
+      "translations": {
+        "ces": "Nigérie",
+        "slk": "Nigéria",
+        "fra": "Nigéria",
+        "spa": "Nigeria",
+        "deu": "Nigeria",
+        "eng": "Nigeria"
+      },
+      "official": "Federal Republic of Nigeria"
+    },
+    "ccn3": "566",
+    "cca3": "NGA",
+    "region": "Africa",
+    "cca2": "NG"
+  },
+  {
+    "area": 130373,
+    "capital": {
+      "translations": {
+        "fra": "Managua",
+        "spa": "Managua",
+        "deu": "Managua",
+        "eng": "Managua"
+      },
+      "official": "Managua"
+    },
+    "cioc": "NCA",
+    "name": {
+      "common": "Nicaragua",
+      "translations": {
+        "ces": "Nikaragua",
+        "slk": "Nikaragua",
+        "fra": "Nicaragua",
+        "spa": "Nicaragua",
+        "deu": "Nikaragua",
+        "eng": "Nicaragua"
+      },
+      "official": "Republic of Nicaragua"
+    },
+    "ccn3": "558",
+    "cca3": "NIC",
+    "region": "Americas",
+    "cca2": "NI"
+  },
+  {
+    "area": 260,
+    "capital": {
+      "translations": "",
+      "official": "Alofi"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Niue",
+      "translations": "",
+      "official": "Niue"
+    },
+    "ccn3": "570",
+    "cca3": "NIU",
+    "region": "Oceania",
+    "cca2": "NU"
+  },
+  {
+    "area": 41850,
+    "capital": {
+      "translations": {
+        "ces": "Amsterodam",
+        "fra": "Amsterdam",
+        "deu": "Amsterdam",
+        "spa": "Ámsterdam",
+        "eng": "Amsterdam"
+      },
+      "official": "Amsterdam"
+    },
+    "cioc": "NED",
+    "name": {
+      "common": "Netherlands",
+      "translations": {
+        "ces": "Nizozemsko",
+        "slk": "Holandsko",
+        "fra": "Pays-Bas",
+        "spa": "Países Baxos",
+        "deu": "Niederlande",
+        "eng": "Netherlands"
+      },
+      "official": "Netherlands"
+    },
+    "ccn3": "528",
+    "cca3": "NLD",
+    "region": "Europe",
+    "cca2": "NL"
+  },
+  {
+    "area": 323802,
+    "capital": {
+      "translations": {
+        "fra": "Oslo",
+        "deu": "Oslo",
+        "eng": "Oslo"
+      },
+      "official": "Oslo"
+    },
+    "cioc": "NOR",
+    "name": {
+      "common": "Norway",
+      "translations": {
+        "ces": "Norsko",
+        "slk": "Nórsko",
+        "fra": "Norvège",
+        "spa": "Noruega",
+        "deu": "Norwegen",
+        "eng": "Norway"
+      },
+      "official": "Kingdom of Norway"
+    },
+    "ccn3": "578",
+    "cca3": "NOR",
+    "region": "Europe",
+    "cca2": "NO"
+  },
+  {
+    "area": 147181,
+    "capital": {
+      "translations": {
+        "ces": "Káthmándú",
+        "slk": "Káthmandu",
+        "fra": "Katmandou",
+        "spa": "Katmandú",
+        "deu": "Kathmandu",
+        "eng": "Kathmandu"
+      },
+      "official": "Kathmandu"
+    },
+    "cioc": "NEP",
+    "name": {
+      "common": "Nepal",
+      "translations": {
+        "ces": "Nepál",
+        "slk": "Nepál",
+        "fra": "Népal",
+        "spa": "Nepal",
+        "deu": "Nepal",
+        "eng": "Nepal"
+      },
+      "official": "Federal Democratic Republic of Nepal"
+    },
+    "ccn3": "524",
+    "cca3": "NPL",
+    "region": "Asia",
+    "cca2": "NP"
+  },
+  {
+    "area": 21,
+    "capital": {
+      "translations": {
+        "fra": "Yaren",
+        "deu": "Yaren",
+        "eng": "Yaren"
+      },
+      "official": "Yaren"
+    },
+    "cioc": "NRU",
+    "name": {
+      "common": "Nauru",
+      "translations": {
+        "ces": "Nauru",
+        "slk": "Nauru",
+        "fra": "Nauru",
+        "spa": "Nauru",
+        "deu": "Nauru",
+        "eng": "Nauru"
+      },
+      "official": "Republic of Nauru"
+    },
+    "ccn3": "520",
+    "cca3": "NRU",
+    "region": "Oceania",
+    "cca2": "NR"
+  },
+  {
+    "area": 270467,
+    "capital": {
+      "translations": {
+        "fra": "Wellington",
+        "deu": "Wellington",
+        "eng": "Wellington"
+      },
+      "official": "Wellington"
+    },
+    "cioc": "NZL",
+    "name": {
+      "common": "New Zealand",
+      "translations": {
+        "ces": "Nový Zéland",
+        "slk": "Nový Zéland",
+        "fra": "Nouvelle-Zélande",
+        "deu": "Neuseeland",
+        "spa": "Nueva Zelanda",
+        "eng": "New Zealand"
+      },
+      "official": "New Zealand"
+    },
+    "ccn3": "554",
+    "cca3": "NZL",
+    "region": "Oceania",
+    "cca2": "NZ"
+  },
+  {
+    "area": 309500,
+    "capital": {
+      "translations": {
+        "ces": "Maskat",
+        "slk": "Maskat",
+        "fra": "Mascate",
+        "spa": "Mascate",
+        "deu": "Maskat",
+        "eng": "Muscat"
+      },
+      "official": "Muscat"
+    },
+    "cioc": "OMA",
+    "name": {
+      "common": "Oman",
+      "translations": {
+        "ces": "Omán",
+        "slk": "Omán",
+        "fra": "Oman",
+        "spa": "Omán",
+        "deu": "Oman",
+        "eng": "Oman"
+      },
+      "official": "Sultanate of Oman"
+    },
+    "ccn3": "512",
+    "cca3": "OMN",
+    "region": "Asia",
+    "cca2": "OM"
+  },
+  {
+    "area": 881912,
+    "capital": {
+      "translations": {
+        "ces": "Islámábád",
+        "fra": "Islamabad",
+        "deu": "Islamabad",
+        "eng": "Islamabad"
+      },
+      "official": "Islamabad"
+    },
+    "cioc": "PAK",
+    "name": {
+      "common": "Pakistan",
+      "translations": {
+        "ces": "Pákistán",
+        "slk": "Pakistan",
+        "fra": "Pakistan",
+        "deu": "Pakistan",
+        "spa": "Pakistán",
+        "eng": "Pakistan"
+      },
+      "official": "Islamic Republic of Pakistan"
+    },
+    "ccn3": "586",
+    "cca3": "PAK",
+    "region": "Asia",
+    "cca2": "PK"
+  },
+  {
+    "area": 75417,
+    "capital": {
+      "translations": {
+        "deu": "Panama-Stadt",
+        "spa": "Ciudad de Panamá",
+        "eng": "Panama City"
+      },
+      "official": "Panama City"
+    },
+    "cioc": "PAN",
+    "name": {
+      "common": "Panama",
+      "translations": {
+        "ces": "Panama",
+        "slk": "Panama",
+        "fra": "Panama",
+        "spa": "Panamá",
+        "deu": "Panama",
+        "eng": "Panama"
+      },
+      "official": "Republic of Panama"
+    },
+    "ccn3": "591",
+    "cca3": "PAN",
+    "region": "Americas",
+    "cca2": "PA"
+  },
+  {
+    "area": 47,
+    "capital": {
+      "translations": "",
+      "official": "Adamstown"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Pitcairn Islands",
+      "translations": "",
+      "official": "Pitcairn Group of Islands"
+    },
+    "ccn3": "612",
+    "cca3": "PCN",
+    "region": "Oceania",
+    "cca2": "PN"
+  },
+  {
+    "area": 1285216,
+    "capital": {
+      "translations": {
+        "fra": "Lima",
+        "spa": "Lima",
+        "deu": "Lima",
+        "eng": "Lima"
+      },
+      "official": "Lima"
+    },
+    "cioc": "PER",
+    "name": {
+      "common": "Peru",
+      "translations": {
+        "ces": "Peru",
+        "slk": "Peru",
+        "fra": "Pérou",
+        "spa": "Perú",
+        "deu": "Peru",
+        "eng": "Peru"
+      },
+      "official": "Republic of Peru"
+    },
+    "ccn3": "604",
+    "cca3": "PER",
+    "region": "Americas",
+    "cca2": "PE"
+  },
+  {
+    "area": 342353,
+    "capital": {
+      "translations": {
+        "fra": "Manille",
+        "spa": "Manila",
+        "deu": "Manila",
+        "eng": "Manila"
+      },
+      "official": "Manila"
+    },
+    "cioc": "PHI",
+    "name": {
+      "common": "Philippines",
+      "translations": {
+        "ces": "Filipíny",
+        "slk": "Filipíny",
+        "fra": "Philippines",
+        "spa": "Filipinas",
+        "deu": "Philippinen",
+        "eng": "Philippines"
+      },
+      "official": "Republic of the Philippines"
+    },
+    "ccn3": "608",
+    "cca3": "PHL",
+    "region": "Asia",
+    "cca2": "PH"
+  },
+  {
+    "area": 459,
+    "capital": {
+      "translations": {
+        "fra": "Melekeok",
+        "deu": "Melekeok",
+        "eng": "Melekeok"
+      },
+      "official": "Ngerulmud"
+    },
+    "cioc": "PLW",
+    "name": {
+      "common": "Palau",
+      "translations": {
+        "ces": "Palau",
+        "slk": "Palau",
+        "fra": "Palaos",
+        "spa": "Palau",
+        "deu": "Palau",
+        "eng": "Palau"
+      },
+      "official": "Republic of Palau"
+    },
+    "ccn3": "585",
+    "cca3": "PLW",
+    "region": "Oceania",
+    "cca2": "PW"
+  },
+  {
+    "area": 462840,
+    "capital": {
+      "translations": {
+        "fra": "Port Moresby",
+        "deu": "Port Moresby",
+        "eng": "Port Moresby"
+      },
+      "official": "Port Moresby"
+    },
+    "cioc": "PNG",
+    "name": {
+      "common": "Papua New Guinea",
+      "translations": {
+        "ces": "Papua-Nová Guinea",
+        "slk": "Papua-Nová Guinea",
+        "fra": "Papouasie-Nouvelle-Guinée",
+        "spa": "Papúa Nueva Guinea",
+        "deu": "Papua-Neuguinea",
+        "eng": "Papua New Guinea"
+      },
+      "official": "Independent State of Papua New Guinea"
+    },
+    "ccn3": "598",
+    "cca3": "PNG",
+    "region": "Oceania",
+    "cca2": "PG"
+  },
+  {
+    "area": 312679,
+    "capital": {
+      "translations": {
+        "ces": "Varšava",
+        "slk": "Varšava",
+        "fra": "Varsovie",
+        "spa": "Varsovia",
+        "deu": "Warschau",
+        "eng": "Warsaw"
+      },
+      "official": "Warsaw"
+    },
+    "cioc": "POL",
+    "name": {
+      "common": "Poland",
+      "translations": {
+        "ces": "Polsko",
+        "slk": "Poľsko",
+        "fra": "Pologne",
+        "spa": "Polonia",
+        "deu": "Polen",
+        "eng": "Poland"
+      },
+      "official": "Republic of Poland"
+    },
+    "ccn3": "616",
+    "cca3": "POL",
+    "region": "Europe",
+    "cca2": "PL"
+  },
+  {
+    "area": 8870,
+    "capital": {
+      "translations": "",
+      "official": "San Juan"
+    },
+    "cioc": "PUR",
+    "name": {
+      "common": "Puerto Rico",
+      "translations": "",
+      "official": "Commonwealth of Puerto Rico"
+    },
+    "ccn3": "630",
+    "cca3": "PRI",
+    "region": "Americas",
+    "cca2": "PR"
+  },
+  {
+    "area": 120538,
+    "capital": {
+      "translations": {
+        "ces": "Pchjongjang",
+        "slk": "Pchjongjang",
+        "fra": "Pyongyang",
+        "deu": "Pjöngjang",
+        "eng": "Pyongyang"
+      },
+      "official": "Pyongyang"
+    },
+    "cioc": "PRK",
+    "name": {
+      "common": "North Korea",
+      "translations": {
+        "ces": "Severní Korea",
+        "slk": "Severná Kórea",
+        "fra": "Corée du Nord",
+        "spa": "Corea del Norte",
+        "deu": "Nordkorea",
+        "eng": "North Korea"
+      },
+      "official": "Democratic People's Republic of Korea"
+    },
+    "ccn3": "408",
+    "cca3": "PRK",
+    "region": "Asia",
+    "cca2": "KP"
+  },
+  {
+    "area": 92090,
+    "capital": {
+      "translations": {
+        "ces": "Lisabon",
+        "slk": "Lisabon",
+        "fra": "Lisbonne",
+        "spa": "Lisboa",
+        "deu": "Lissabon",
+        "eng": "Lisbon"
+      },
+      "official": "Lisbon"
+    },
+    "cioc": "POR",
+    "name": {
+      "common": "Portugal",
+      "translations": {
+        "ces": "Portugalsko",
+        "slk": "Portugalsko",
+        "fra": "Portugal",
+        "spa": "Portugal",
+        "deu": "Portugal",
+        "eng": "Portugal"
+      },
+      "official": "Portuguese Republic"
+    },
+    "ccn3": "620",
+    "cca3": "PRT",
+    "region": "Europe",
+    "cca2": "PT"
+  },
+  {
+    "area": 406752,
+    "capital": {
+      "translations": {
+        "fra": "Asunción",
+        "deu": "Asunción",
+        "spa": "Asunción",
+        "eng": "Asuncion"
+      },
+      "official": "Asunción"
+    },
+    "cioc": "PAR",
+    "name": {
+      "common": "Paraguay",
+      "translations": {
+        "ces": "Paraguay",
+        "slk": "Paraguaj",
+        "fra": "Paraguay",
+        "spa": "Paraguay",
+        "deu": "Paraguay",
+        "eng": "Paraguay"
+      },
+      "official": "Republic of Paraguay"
+    },
+    "ccn3": "600",
+    "cca3": "PRY",
+    "region": "Americas",
+    "cca2": "PY"
+  },
+  {
+    "area": 6220,
+    "capital": {
+      "translations": {},
+      "official": "Ramallah"
+    },
+    "cioc": "PLE",
+    "name": {
+      "common": "Palestine",
+      "translations": {
+        "ces": "Palestina",
+        "slk": "Palestína",
+        "fra": "Palestine",
+        "spa": "Palestina",
+        "deu": "Palästina",
+        "eng": "Palestine"
+      },
+      "official": "State of Palestine"
+    },
+    "ccn3": "275",
+    "cca3": "PSE",
+    "region": "Asia",
+    "cca2": "PS"
+  },
+  {
+    "area": 4167,
+    "capital": {
+      "translations": "",
+      "official": "Papeetē"
+    },
+    "cioc": "",
+    "name": {
+      "common": "French Polynesia",
+      "translations": "",
+      "official": "French Polynesia"
+    },
+    "ccn3": "258",
+    "cca3": "PYF",
+    "region": "Oceania",
+    "cca2": "PF"
+  },
+  {
+    "area": 11586,
+    "capital": {
+      "translations": {
+        "ces": "Dohá",
+        "slk": "Dauhá",
+        "fra": "Doha",
+        "deu": "Doha",
+        "eng": "Doha"
+      },
+      "official": "Doha"
+    },
+    "cioc": "QAT",
+    "name": {
+      "common": "Qatar",
+      "translations": {
+        "ces": "Katar",
+        "slk": "Katar",
+        "fra": "Qatar",
+        "spa": "Qatar",
+        "deu": "Katar",
+        "eng": "Qatar"
+      },
+      "official": "State of Qatar"
+    },
+    "ccn3": "634",
+    "cca3": "QAT",
+    "region": "Asia",
+    "cca2": "QA"
+  },
+  {
+    "area": 2511,
+    "capital": {
+      "translations": "",
+      "official": "Saint-Denis"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Réunion",
+      "translations": "",
+      "official": "Réunion Island"
+    },
+    "ccn3": "638",
+    "cca3": "REU",
+    "region": "Africa",
+    "cca2": "RE"
+  },
+  {
+    "area": 238391,
+    "capital": {
+      "translations": {
+        "ces": "Bukurešť",
+        "slk": "Bukurešť",
+        "fra": "Bucarest",
+        "spa": "Bucarest",
+        "deu": "Bukarest",
+        "eng": "Bucharest"
+      },
+      "official": "Bucharest"
+    },
+    "cioc": "ROU",
+    "name": {
+      "common": "Romania",
+      "translations": {
+        "ces": "Rumunsko",
+        "slk": "Rumunsko",
+        "fra": "Roumanie",
+        "spa": "Rumania",
+        "deu": "Rumänien",
+        "eng": "Romania"
+      },
+      "official": "Romania"
+    },
+    "ccn3": "642",
+    "cca3": "ROU",
+    "region": "Europe",
+    "cca2": "RO"
+  },
+  {
+    "area": 17098242,
+    "capital": {
+      "translations": {
+        "ces": "Moskva",
+        "slk": "Moskva",
+        "fra": "Moscou",
+        "deu": "Moskau",
+        "spa": "Moscú",
+        "eng": "Moscow"
+      },
+      "official": "Moscow"
+    },
+    "cioc": "RUS",
+    "name": {
+      "common": "Russia",
+      "translations": {
+        "ces": "Rusko",
+        "slk": "Rusko",
+        "fra": "Russie",
+        "spa": "Rusia",
+        "deu": "Russland",
+        "eng": "Russia"
+      },
+      "official": "Russian Federation"
+    },
+    "ccn3": "643",
+    "cca3": "RUS",
+    "region": ["Europe","Asia"],
+    "cca2": "RU"
+  },
+  {
+    "area": 26338,
+    "capital": {
+      "translations": {
+        "fra": "Kigali",
+        "deu": "Kigali",
+        "eng": "Kigali"
+      },
+      "official": "Kigali"
+    },
+    "cioc": "RWA",
+    "name": {
+      "common": "Rwanda",
+      "translations": {
+        "ces": "Rwanda",
+        "slk": "Rwanda",
+        "fra": "Rwanda",
+        "spa": "Ruanda",
+        "deu": "Ruanda",
+        "eng": "Rwanda"
+      },
+      "official": "Republic of Rwanda"
+    },
+    "ccn3": "646",
+    "cca3": "RWA",
+    "region": "Africa",
+    "cca2": "RW"
+  },
+  {
+    "area": 2149690,
+    "capital": {
+      "translations": {
+        "ces": "Rijád",
+        "slk": "Rijád",
+        "fra": "Riyad",
+        "spa": "Riad",
+        "deu": "Riad",
+        "eng": "Riyadh"
+      },
+      "official": "Riyadh"
+    },
+    "cioc": "KSA",
+    "name": {
+      "common": "Saudi Arabia",
+      "translations": {
+        "ces": "Saúdská Arábie",
+        "slk": "Saudská Arábia",
+        "fra": "Arabie saoudite",
+        "deu": "Saudi-Arabien",
+        "spa": "Arabia Saudita",
+        "eng": "Saudi Arabia"
+      },
+      "official": "Kingdom of Saudi Arabia"
+    },
+    "ccn3": "682",
+    "cca3": "SAU",
+    "region": "Asia",
+    "cca2": "SA"
+  },
+  {
+    "area": 1886068,
+    "capital": {
+      "translations": {
+        "ces": "Chartúm",
+        "slk": "Chartúm",
+        "fra": "Khartoum",
+        "deu": "Chartum",
+        "spa": "Jartum",
+        "eng": "Khartoum"
+      },
+      "official": "Khartoum"
+    },
+    "cioc": "SUD",
+    "name": {
+      "common": "Sudan",
+      "translations": {
+        "ces": "Súdán",
+        "slk": "Sudán",
+        "fra": "Soudan",
+        "spa": "Sudán",
+        "deu": "Sudan",
+        "eng": "Sudan"
+      },
+      "official": "Republic of the Sudan"
+    },
+    "ccn3": "729",
+    "cca3": "SDN",
+    "region": "Africa",
+    "cca2": "SD"
+  },
+  {
+    "area": 196722,
+    "capital": {
+      "translations": {
+        "fra": "Dakar",
+        "deu": "Dakar",
+        "eng": "Dakar"
+      },
+      "official": "Dakar"
+    },
+    "cioc": "SEN",
+    "name": {
+      "common": "Senegal",
+      "translations": {
+        "ces": "Senegal",
+        "slk": "Senegal",
+        "fra": "Sénégal",
+        "spa": "Senegal",
+        "deu": "Senegal",
+        "eng": "Senegal"
+      },
+      "official": "Republic of Senegal"
+    },
+    "ccn3": "686",
+    "cca3": "SEN",
+    "region": "Africa",
+    "cca2": "SN"
+  },
+  {
+    "area": 710,
+    "capital": {
+      "translations": {},
+      "official": "Singapore"
+    },
+    "cioc": "SIN",
+    "name": {
+      "common": "Singapore",
+      "translations": {
+        "ces": "Singapur",
+        "slk": "Singapur",
+        "fra": "Singapour",
+        "spa": "Singapur",
+        "deu": "Singapur",
+        "eng": "Singapore"
+      },
+      "official": "Republic of Singapore"
+    },
+    "ccn3": "702",
+    "cca3": "SGP",
+    "region": "Asia",
+    "cca2": "SG"
+  },
+  {
+    "area": 3903,
+    "capital": {
+      "translations": "",
+      "official": "King Edward Point"
+    },
+    "cioc": "",
+    "name": {
+      "common": "South Georgia",
+      "translations": "",
+      "official": "South Georgia and the South Sandwich Islands"
+    },
+    "ccn3": "239",
+    "cca3": "SGS",
+    "region": "Americas",
+    "cca2": "GS"
+  },
+  {
+    "area": 394,
+    "capital": {
+      "translations": "",
+      "official": "Jamestown"
+    },
+    "cioc": "SHN",
+    "name": {
+      "common": "Saint Helena, Ascension and Tristan da Cunha",
+      "translations": "",
+      "official": "Saint Helena, Ascension and Tristan da Cunha"
+    },
+    "ccn3": "654",
+    "cca3": "SHN",
+    "region": "Africa",
+    "cca2": "SH"
+  },
+  {
+    "area": -1,
+    "capital": {
+      "translations": "",
+      "official": "Longyearbyen"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Svalbard and Jan Mayen",
+      "translations": "",
+      "official": "Svalbard og Jan Mayen"
+    },
+    "ccn3": "744",
+    "cca3": "SJM",
+    "region": "Europe",
+    "cca2": "SJ"
+  },
+  {
+    "area": 28896,
+    "capital": {
+      "translations": {
+        "fra": "Honiara",
+        "deu": "Honiara",
+        "eng": "Honiara"
+      },
+      "official": "Honiara"
+    },
+    "cioc": "SOL",
+    "name": {
+      "common": "Solomon Islands",
+      "translations": {
+        "ces": "Šalamounovy ostrovy",
+        "slk": "Šalamúnove ostrovy",
+        "fra": "Îles Salomon",
+        "spa": "Islas Salomón",
+        "deu": "Salomonen",
+        "eng": "Solomon Islands"
+      },
+      "official": "Solomon Islands"
+    },
+    "ccn3": "090",
+    "cca3": "SLB",
+    "region": "Oceania",
+    "cca2": "SB"
+  },
+  {
+    "area": 71740,
+    "capital": {
+      "translations": {
+        "fra": "Freetown",
+        "deu": "Freetown",
+        "eng": "Freetown"
+      },
+      "official": "Freetown"
+    },
+    "cioc": "SLE",
+    "name": {
+      "common": "Sierra Leone",
+      "translations": {
+        "ces": "Sierra Leone",
+        "slk": "Sierra Leone",
+        "fra": "Sierra Leone",
+        "deu": "Sierra Leone",
+        "spa": "Sierra Leona",
+        "eng": "Sierra Leone"
+      },
+      "official": "Republic of Sierra Leone"
+    },
+    "ccn3": "694",
+    "cca3": "SLE",
+    "region": "Africa",
+    "cca2": "SL"
+  },
+  {
+    "area": 21041,
+    "capital": {
+      "translations": {
+        "fra": "San Salvador",
+        "spa": "San Salvador",
+        "deu": "San Salvador",
+        "eng": "San Salvador"
+      },
+      "official": "San Salvador"
+    },
+    "cioc": "ESA",
+    "name": {
+      "common": "El Salvador",
+      "translations": {
+        "ces": "Salvador",
+        "slk": "Salvádor",
+        "fra": "Salvador",
+        "spa": "El Salvador",
+        "deu": "El Salvador",
+        "eng": "El Salvador"
+      },
+      "official": "Republic of El Salvador"
+    },
+    "ccn3": "222",
+    "cca3": "SLV",
+    "region": "Americas",
+    "cca2": "SV"
+  },
+  {
+    "area": 61,
+    "capital": {
+      "translations": {},
+      "official": "City of San Marino"
+    },
+    "cioc": "SMR",
+    "name": {
+      "common": "San Marino",
+      "translations": {
+        "ces": "San Marino",
+        "slk": "San Marino",
+        "fra": "Saint-Marin",
+        "spa": "San Marino",
+        "deu": "San Marino",
+        "eng": "San Marino"
+      },
+      "official": "Most Serene Republic of San Marino"
+    },
+    "ccn3": "674",
+    "cca3": "SMR",
+    "region": "Europe",
+    "cca2": "SM"
+  },
+  {
+    "area": 637657,
+    "capital": {
+      "translations": {
+        "ces": "Mogadišo",
+        "slk": "Mogadišo",
+        "fra": "Mogadiscio",
+        "deu": "Mogadischu",
+        "spa": "Mogadiscio",
+        "eng": "Mogadishu"
+      },
+      "official": "Mogadishu"
+    },
+    "cioc": "SOM",
+    "name": {
+      "common": "Somalia",
+      "translations": {
+        "ces": "Somálsko",
+        "slk": "Somálsko",
+        "fra": "Somalie",
+        "spa": "Somalia",
+        "deu": "Somalia",
+        "eng": "Somalia"
+      },
+      "official": "Federal Republic of Somalia"
+    },
+    "ccn3": "706",
+    "cca3": "SOM",
+    "region": "Africa",
+    "cca2": "SO"
+  },
+  {
+    "area": 242,
+    "capital": {
+      "translations": "",
+      "official": "Saint-Pierre"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Saint Pierre and Miquelon",
+      "translations": "",
+      "official": "Saint Pierre and Miquelon"
+    },
+    "ccn3": "666",
+    "cca3": "SPM",
+    "region": "Americas",
+    "cca2": "PM"
+  },
+  {
+    "area": 88361,
+    "capital": {
+      "translations": {
+        "ces": "Bělehrad",
+        "slk": "Belehrad",
+        "fra": "Belgrade",
+        "spa": "Belgrado",
+        "deu": "Belgrad",
+        "eng": "Belgrade"
+      },
+      "official": "Belgrade"
+    },
+    "cioc": "SRB",
+    "name": {
+      "common": "Serbia",
+      "translations": {
+        "ces": "Srbsko",
+        "slk": "Srbsko",
+        "fra": "Serbie",
+        "spa": "Serbia",
+        "deu": "Serbien",
+        "eng": "Serbia"
+      },
+      "official": "Republic of Serbia"
+    },
+    "ccn3": "688",
+    "cca3": "SRB",
+    "region": "Europe",
+    "cca2": "RS"
+  },
+  {
+    "area": 619745,
+    "capital": {
+      "translations": {
+        "ces": "Džuba",
+        "slk": "Džuba",
+        "fra": "Djouba",
+        "deu": "Dschuba",
+        "spa": "Yuba",
+        "eng": "Juba"
+      },
+      "official": "Juba"
+    },
+    "cioc": "",
+    "name": {
+      "common": "South Sudan",
+      "translations": {
+        "ces": "Jižní Súdán",
+        "slk": "Južný Sudán",
+        "fra": "Sud-Soudan",
+        "spa": "Sudán del Sur",
+        "deu": "Südsudan",
+        "eng": "South Sudan"
+      },
+      "official": "Republic of South Sudan"
+    },
+    "ccn3": "728",
+    "cca3": "SSD",
+    "region": "Africa",
+    "cca2": "SS"
+  },
+  {
+    "area": 964,
+    "capital": {
+      "translations": {
+        "slk": "Svätý Tomáš",
+        "fra": "Sao Tomé",
+        "deu": "São Tomé",
+        "spa": "Santo Tomé",
+        "eng": "Sao Tome"
+      },
+      "official": "São Tomé"
+    },
+    "cioc": "STP",
+    "name": {
+      "common": "São Tomé and Príncipe",
+      "translations": {
+        "ces": "Svatý Tomáš a Princův ostrov",
+        "slk": "Svätý Tomáš a Princov ostrov",
+        "fra": "São Tomé-et-Principe",
+        "deu": "São Tomé und Príncipe",
+        "spa": "Santo Tomé y Príncipe",
+        "eng": "Sao Tome and Principe"
+      },
+      "official": "Democratic Republic of São Tomé and Príncipe"
+    },
+    "ccn3": "678",
+    "cca3": "STP",
+    "region": "Africa",
+    "cca2": "ST"
+  },
+  {
+    "area": 163820,
+    "capital": {
+      "translations": {
+        "fra": "Paramaribo",
+        "deu": "Paramaribo",
+        "eng": "Paramaribo"
+      },
+      "official": "Paramaribo"
+    },
+    "cioc": "SUR",
+    "name": {
+      "common": "Suriname",
+      "translations": {
+        "ces": "Surinam",
+        "slk": "Surinam",
+        "fra": "Suriname",
+        "spa": "Surinam",
+        "deu": "Surinam",
+        "eng": "Suriname"
+      },
+      "official": "Republic of Suriname"
+    },
+    "ccn3": "740",
+    "cca3": "SUR",
+    "region": "Americas",
+    "cca2": "SR"
+  },
+  {
+    "area": 49037,
+    "capital": {
+      "translations": {
+        "slk": "Bratislava",
+        "fra": "Bratislava",
+        "deu": "Pressburg",
+        "eng": "Bratislava"
+      },
+      "official": "Bratislava"
+    },
+    "cioc": "SVK",
+    "name": {
+      "common": "Slovakia",
+      "translations": {
+        "ces": "Slovensko",
+        "slk": "Slovensko",
+        "fra": "Slovaquie",
+        "spa": "Eslovaquia",
+        "deu": "Slowakei",
+        "eng": "Slovakia"
+      },
+      "official": "Slovak Republic"
+    },
+    "ccn3": "703",
+    "cca3": "SVK",
+    "region": "Europe",
+    "cca2": "SK"
+  },
+  {
+    "area": 20273,
+    "capital": {
+      "translations": {
+        "ces": "Lublaň",
+        "slk": "Ľubľana",
+        "fra": "Ljubljana",
+        "spa": "Liubliana",
+        "deu": "Laibach",
+        "eng": "Ljubljana"
+      },
+      "official": "Ljubljana"
+    },
+    "cioc": "SLO",
+    "name": {
+      "common": "Slovenia",
+      "translations": {
+        "ces": "Slovinsko",
+        "slk": "Slovinsko",
+        "fra": "Slovénie",
+        "spa": "Eslovenia",
+        "deu": "Slowenien",
+        "eng": "Slovenia"
+      },
+      "official": "Republic of Slovenia"
+    },
+    "ccn3": "705",
+    "cca3": "SVN",
+    "region": "Europe",
+    "cca2": "SI"
+  },
+  {
+    "area": 450295,
+    "capital": {
+      "translations": {
+        "ces": "Štockholm",
+        "slk": "Štokholm",
+        "fra": "Stockholm",
+        "spa": "Estocolmo",
+        "deu": "Stockholm",
+        "eng": "Stockholm"
+      },
+      "official": "Stockholm"
+    },
+    "cioc": "SWE",
+    "name": {
+      "common": "Sweden",
+      "translations": {
+        "ces": "Švédsko",
+        "slk": "Švédsko",
+        "fra": "Suède",
+        "spa": "Suecia",
+        "deu": "Schweden",
+        "eng": "Sweden"
+      },
+      "official": "Kingdom of Sweden"
+    },
+    "ccn3": "752",
+    "cca3": "SWE",
+    "region": "Europe",
+    "cca2": "SE"
+  },
+  {
+    "area": 17364,
+    "capital": {
+      "translations": {
+        "fra": "Mbabane",
+        "deu": "Mbabane",
+        "eng": "Mbabane"
+      },
+      "official": "Lobamba"
+    },
+    "cioc": "SWZ",
+    "name": {
+      "common": "Swaziland",
+      "translations": {
+        "ces": "Svazijsko",
+        "slk": "Svazijsko",
+        "fra": "Swaziland",
+        "spa": "Suazilandia",
+        "deu": "Swasiland",
+        "eng": "Swaziland"
+      },
+      "official": "Kingdom of Swaziland"
+    },
+    "ccn3": "748",
+    "cca3": "SWZ",
+    "region": "Africa",
+    "cca2": "SZ"
+  },
+  {
+    "area": 34,
+    "capital": {
+      "translations": "",
+      "official": "Philipsburg"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Sint Maarten",
+      "translations": "",
+      "official": "Sint Maarten"
+    },
+    "ccn3": "534",
+    "cca3": "SXM",
+    "region": "Americas",
+    "cca2": "SX"
+  },
+  {
+    "area": 452,
+    "capital": {
+      "translations": {
+        "fra": "Victoria",
+        "deu": "Viktoria",
+        "eng": "Victoria"
+      },
+      "official": "Victoria"
+    },
+    "cioc": "SEY",
+    "name": {
+      "common": "Seychelles",
+      "translations": {
+        "ces": "Seychely",
+        "slk": "Seychely",
+        "fra": "Seychelles",
+        "spa": "Seychelles",
+        "deu": "Seschellen",
+        "eng": "Seychelles"
+      },
+      "official": "Republic of Seychelles"
+    },
+    "ccn3": "690",
+    "cca3": "SYC",
+    "region": "Africa",
+    "cca2": "SC"
+  },
+  {
+    "area": 185180,
+    "capital": {
+      "translations": {
+        "ces": "Damašek",
+        "slk": "Damask",
+        "fra": "Damas",
+        "spa": "Damasco",
+        "deu": "Damaskus",
+        "eng": "Damascus"
+      },
+      "official": "Damascus"
+    },
+    "cioc": "SYR",
+    "name": {
+      "common": "Syria",
+      "translations": {
+        "ces": "Sýrie",
+        "slk": "Sýria",
+        "fra": "Syrie",
+        "spa": "Siria",
+        "deu": "Syrien",
+        "eng": "Syria"
+      },
+      "official": "Syrian Arab Republic"
+    },
+    "ccn3": "760",
+    "cca3": "SYR",
+    "region": "Asia",
+    "cca2": "SY"
+  },
+  {
+    "area": 948,
+    "capital": {
+      "translations": "",
+      "official": "Cockburn Town"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Turks and Caicos Islands",
+      "translations": "",
+      "official": "Turks and Caicos Islands"
+    },
+    "ccn3": "796",
+    "cca3": "TCA",
+    "region": "Americas",
+    "cca2": "TC"
+  },
+  {
+    "area": 1284000,
+    "capital": {
+      "translations": {
+        "ces": "Ndžamena",
+        "fra": "N\u2019Djaména",
+        "deu": "Ndschamena",
+        "spa": "Yamena",
+        "eng": "N\u2019Djamena"
+      },
+      "official": "N'Djamena"
+    },
+    "cioc": "CHA",
+    "name": {
+      "common": "Chad",
+      "translations": {
+        "ces": "Čad",
+        "slk": "Čad",
+        "fra": "Tchad",
+        "spa": "Chad",
+        "deu": "Tschad",
+        "eng": "Chad"
+      },
+      "official": "Republic of Chad"
+    },
+    "ccn3": "148",
+    "cca3": "TCD",
+    "region": "Africa",
+    "cca2": "TD"
+  },
+  {
+    "area": 56785,
+    "capital": {
+      "translations": {
+        "fra": "Lomé",
+        "deu": "Lomé",
+        "eng": "Lome"
+      },
+      "official": "Lomé"
+    },
+    "cioc": "TOG",
+    "name": {
+      "common": "Togo",
+      "translations": {
+        "ces": "Togo",
+        "slk": "Togo",
+        "fra": "Togo",
+        "spa": "Togo",
+        "deu": "Togo",
+        "eng": "Togo"
+      },
+      "official": "Togolese Republic"
+    },
+    "ccn3": "768",
+    "cca3": "TGO",
+    "region": "Africa",
+    "cca2": "TG"
+  },
+  {
+    "area": 513120,
+    "capital": {
+      "translations": {
+        "fra": "Bangkok",
+        "deu": "Bangkok",
+        "eng": "Bangkok"
+      },
+      "official": "Bangkok"
+    },
+    "cioc": "THA",
+    "name": {
+      "common": "Thailand",
+      "translations": {
+        "ces": "Thajsko",
+        "slk": "Thajsko",
+        "fra": "Thaïlande",
+        "spa": "Tailandia",
+        "deu": "Thailand",
+        "eng": "Thailand"
+      },
+      "official": "Kingdom of Thailand"
+    },
+    "ccn3": "764",
+    "cca3": "THA",
+    "region": "Asia",
+    "cca2": "TH"
+  },
+  {
+    "area": 143100,
+    "capital": {
+      "translations": {
+        "ces": "Dušanbe",
+        "slk": "Dušanbe",
+        "fra": "Douchanbé",
+        "deu": "Duschanbe",
+        "spa": "Dusambé",
+        "eng": "Dushanbe"
+      },
+      "official": "Dushanbe"
+    },
+    "cioc": "TJK",
+    "name": {
+      "common": "Tajikistan",
+      "translations": {
+        "ces": "Tádžikistán",
+        "slk": "Tadžikistan",
+        "fra": "Tadjikistan",
+        "deu": "Tadschikistan",
+        "spa": "Tayikistán",
+        "eng": "Tajikistan"
+      },
+      "official": "Republic of Tajikistan"
+    },
+    "ccn3": "762",
+    "cca3": "TJK",
+    "region": "Asia",
+    "cca2": "TJ"
+  },
+  {
+    "area": 12,
+    "capital": {
+      "translations": "",
+      "official": "Fakaofo"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Tokelau",
+      "translations": "",
+      "official": "Tokelau"
+    },
+    "ccn3": "772",
+    "cca3": "TKL",
+    "region": "Oceania",
+    "cca2": "TK"
+  },
+  {
+    "area": 488100,
+    "capital": {
+      "translations": {
+        "ces": "Ašchabád",
+        "slk": "Ašchabad",
+        "fra": "Achgabat",
+        "deu": "Aschgabat",
+        "eng": "Ashgabat"
+      },
+      "official": "Ashgabat"
+    },
+    "cioc": "TKM",
+    "name": {
+      "common": "Turkmenistan",
+      "translations": {
+        "ces": "Turkmenistán",
+        "slk": "Turkménsko",
+        "fra": "Turkménistan",
+        "spa": "Turkmenistán",
+        "deu": "Turkmenistan",
+        "eng": "Turkmenistan"
+      },
+      "official": "Turkmenistan"
+    },
+    "ccn3": "795",
+    "cca3": "TKM",
+    "region": "Asia",
+    "cca2": "TM"
+  },
+  {
+    "area": 14874,
+    "capital": {
+      "translations": {
+        "fra": "Dili",
+        "deu": "Dili",
+        "eng": "Dili"
+      },
+      "official": "Dili"
+    },
+    "cioc": "TLS",
+    "name": {
+      "common": "Timor-Leste",
+      "translations": {
+        "ces": "Východní Timor",
+        "slk": "Východný Timor",
+        "fra": "Timor oriental",
+        "spa": "Timor Oriental",
+        "deu": "Osttimor",
+        "eng": "East Timor"
+      },
+      "official": "Democratic Republic of Timor-Leste"
+    },
+    "ccn3": "626",
+    "cca3": "TLS",
+    "region": "Asia",
+    "cca2": "TL"
+  },
+  {
+    "area": 747,
+    "capital": {
+      "translations": {
+        "fra": "Nuku\u2019alofa",
+        "deu": "Nuku\u2019alofa",
+        "eng": "Nuku\u2019alofa"
+      },
+      "official": "Nuku'alofa"
+    },
+    "cioc": "TGA",
+    "name": {
+      "common": "Tonga",
+      "translations": {
+        "ces": "Tonga",
+        "slk": "Tonga",
+        "fra": "Tonga",
+        "spa": "Tonga",
+        "deu": "Tonga",
+        "eng": "Tonga"
+      },
+      "official": "Kingdom of Tonga"
+    },
+    "ccn3": "776",
+    "cca3": "TON",
+    "region": "Oceania",
+    "cca2": "TO"
+  },
+  {
+    "area": 5130,
+    "capital": {
+      "translations": {
+        "fra": "Port-d\u2019Espagne",
+        "deu": "Port of Spain",
+        "spa": "Puerto España",
+        "eng": "Port of Spain"
+      },
+      "official": "Port of Spain"
+    },
+    "cioc": "TTO",
+    "name": {
+      "common": "Trinidad and Tobago",
+      "translations": {
+        "ces": "Trinidad a Tobago",
+        "slk": "Trinidad a Tobago",
+        "fra": "Trinité-et-Tobago",
+        "spa": "Trinidad y Tobago",
+        "deu": "Trinidad und Tobago",
+        "eng": "Trinidad and Tobago"
+      },
+      "official": "Republic of Trinidad and Tobago"
+    },
+    "ccn3": "780",
+    "cca3": "TTO",
+    "region": "Americas",
+    "cca2": "TT"
+  },
+  {
+    "area": 163610,
+    "capital": {
+      "translations": {
+        "fra": "Tunis",
+        "deu": "Tunis",
+        "spa": "Túnez",
+        "eng": "Tunis"
+      },
+      "official": "Tunis"
+    },
+    "cioc": "TUN",
+    "name": {
+      "common": "Tunisia",
+      "translations": {
+        "ces": "Tunisko",
+        "slk": "Tunisko",
+        "fra": "Tunisie",
+        "deu": "Tunesien",
+        "spa": "Túnez",
+        "eng": "Tunisia"
+      },
+      "official": "Tunisian Republic"
+    },
+    "ccn3": "788",
+    "cca3": "TUN",
+    "region": "Africa",
+    "cca2": "TN"
+  },
+  {
+    "area": 783562,
+    "capital": {
+      "translations": {
+        "fra": "Ankara",
+        "deu": "Ankara",
+        "eng": "Ankara"
+      },
+      "official": "Ankara"
+    },
+    "cioc": "TUR",
+    "name": {
+      "common": "Turkey",
+      "translations": {
+        "ces": "Turecko",
+        "slk": "Turecko",
+        "fra": "Turquie",
+        "spa": "Turquía",
+        "deu": "Türkei",
+        "eng": "Turkey"
+      },
+      "official": "Republic of Turkey"
+    },
+    "ccn3": "792",
+    "cca3": "TUR",
+    "region": "Asia",
+    "cca2": "TR"
+  },
+  {
+    "area": 26,
+    "capital": {
+      "translations": {
+        "fra": "Funafuti",
+        "deu": "Funafuti",
+        "eng": "Funafuti"
+      },
+      "official": "Funafuti"
+    },
+    "cioc": "TUV",
+    "name": {
+      "common": "Tuvalu",
+      "translations": {
+        "ces": "Tuvalu",
+        "slk": "Tuvalu",
+        "fra": "Tuvalu",
+        "spa": "Tuvalu",
+        "deu": "Tuvalu",
+        "eng": "Tuvalu"
+      },
+      "official": "Tuvalu"
+    },
+    "ccn3": "798",
+    "cca3": "TUV",
+    "region": "Oceania",
+    "cca2": "TV"
+  },
+  {
+    "area": 36193,
+    "capital": {
+      "translations": {
+        "ces": "Tchajpej",
+        "slk": "Tchajpej",
+        "fra": "Taïpeh",
+        "deu": "Taipeh",
+        "eng": "Taipei"
+      },
+      "official": "Taipei"
+    },
+    "cioc": "TPE",
+    "name": {
+      "common": "Taiwan",
+      "translations": {
+        "ces": "Tchajwan",
+        "slk": "Taiwan",
+        "fra": "Taïwan",
+        "spa": "Taiwán",
+        "deu": "Taiwan",
+        "eng": "Taiwan"
+      },
+      "official": "Republic of China (Taiwan)"
+    },
+    "ccn3": "158",
+    "cca3": "TWN",
+    "region": "Asia",
+    "cca2": "TW"
+  },
+  {
+    "area": 945087,
+    "capital": {
+      "translations": {
+        "fra": "Dodoma",
+        "deu": "Dodoma",
+        "eng": "Dodoma"
+      },
+      "official": "Dodoma"
+    },
+    "cioc": "TAN",
+    "name": {
+      "common": "Tanzania",
+      "translations": {
+        "ces": "Tanzánie",
+        "slk": "Tanzánia",
+        "fra": "Tanzanie",
+        "deu": "Tansania",
+        "spa": "Tanzanía",
+        "eng": "Tanzania"
+      },
+      "official": "United Republic of Tanzania"
+    },
+    "ccn3": "834",
+    "cca3": "TZA",
+    "region": "Africa",
+    "cca2": "TZ"
+  },
+  {
+    "area": 241550,
+    "capital": {
+      "translations": {
+        "fra": "Kampala",
+        "deu": "Kampala",
+        "eng": "Kampala"
+      },
+      "official": "Kampala"
+    },
+    "cioc": "UGA",
+    "name": {
+      "common": "Uganda",
+      "translations": {
+        "ces": "Uganda",
+        "slk": "Uganda",
+        "fra": "Ouganda",
+        "spa": "Uganda",
+        "deu": "Uganda",
+        "eng": "Uganda"
+      },
+      "official": "Republic of Uganda"
+    },
+    "ccn3": "800",
+    "cca3": "UGA",
+    "region": "Africa",
+    "cca2": "UG"
+  },
+  {
+    "area": 603500,
+    "capital": {
+      "translations": {
+        "ces": "Kyjev",
+        "slk": "Kyjev",
+        "fra": "Kiev",
+        "deu": "Kiew",
+        "spa": "Kíev",
+        "eng": "Kiev"
+      },
+      "official": "Kiev"
+    },
+    "cioc": "UKR",
+    "name": {
+      "common": "Ukraine",
+      "translations": {
+        "ces": "Ukrajina",
+        "slk": "Ukrajina",
+        "fra": "Ukraine",
+        "deu": "Ukraine",
+        "spa": "Ucrania",
+        "eng": "Ukraine"
+      },
+      "official": "Ukraine"
+    },
+    "ccn3": "804",
+    "cca3": "UKR",
+    "region": "Europe",
+    "cca2": "UA"
+  },
+  {
+    "area": 34.2,
+    "capital": {
+      "translations": "",
+      "official": ""
+    },
+    "cioc": "",
+    "name": {
+      "common": "United States Minor Outlying Islands",
+      "translations": "",
+      "official": "United States Minor Outlying Islands"
+    },
+    "ccn3": "581",
+    "cca3": "UMI",
+    "region": "Americas",
+    "cca2": "UM"
+  },
+  {
+    "area": 181034,
+    "capital": {
+      "translations": {
+        "fra": "Montevideo",
+        "spa": "Montevideo",
+        "deu": "Montevideo",
+        "eng": "Montevideo"
+      },
+      "official": "Montevideo"
+    },
+    "cioc": "URU",
+    "name": {
+      "common": "Uruguay",
+      "translations": {
+        "ces": "Uruguay",
+        "slk": "Uruguaj",
+        "fra": "Uruguay",
+        "spa": "Uruguay",
+        "deu": "Uruguay",
+        "eng": "Uruguay"
+      },
+      "official": "Oriental Republic of Uruguay"
+    },
+    "ccn3": "858",
+    "cca3": "URY",
+    "region": "Americas",
+    "cca2": "UY"
+  },
+  {
+    "area": 9372610,
+    "capital": {
+      "translations": {
+        "fra": "Washington",
+        "deu": "Washington",
+        "eng": "Washington"
+      },
+      "official": "Washington D.C."
+    },
+    "cioc": "USA",
+    "name": {
+      "common": "United States",
+      "translations": {
+        "ces": "Spojené státy americké",
+        "slk": "Spojené štáty americké",
+        "fra": "États-Unis d\u2019Amérique",
+        "spa": "Estados Unidos de América",
+        "deu": "Vereinigte Staaten von Amerika",
+        "eng": "United States of America"
+      },
+      "official": "United States of America"
+    },
+    "ccn3": "840",
+    "cca3": "USA",
+    "region": "Americas",
+    "cca2": "US"
+  },
+  {
+    "area": 447400,
+    "capital": {
+      "translations": {
+        "ces": "Taškent",
+        "slk": "Taškent",
+        "fra": "Tachkent",
+        "deu": "Taschkent",
+        "eng": "Tashkent"
+      },
+      "official": "Tashkent"
+    },
+    "cioc": "UZB",
+    "name": {
+      "common": "Uzbekistan",
+      "translations": {
+        "ces": "Uzbekistán",
+        "slk": "Uzbekistan",
+        "fra": "Ouzbékistan",
+        "deu": "Usbekistan",
+        "spa": "Uzbekistán",
+        "eng": "Uzbekistan"
+      },
+      "official": "Republic of Uzbekistan"
+    },
+    "ccn3": "860",
+    "cca3": "UZB",
+    "region": "Asia",
+    "cca2": "UZ"
+  },
+  {
+    "area": 0.44,
+    "capital": {
+      "translations": {
+        "ces": "Svatý Stolec",
+        "slk": "Svätá Stolica",
+        "fra": "Saint-Siège",
+        "spa": "Santa Sede",
+        "deu": "Heiliger Stuhl",
+        "eng": "Holy See"
+      },
+      "official": "Vatican City"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Vatican City",
+      "translations": {
+        "ces": "Město Vatikán",
+        "slk": "Mesto Vatikán",
+        "fra": "Cité du Vatican",
+        "deu": "Vatikanstadt",
+        "spa": "Ciudad del Vaticano",
+        "eng": "Vatican City"
+      },
+      "official": "Vatican City State"
+    },
+    "ccn3": "336",
+    "cca3": "VAT",
+    "region": "Europe",
+    "cca2": "VA"
+  },
+  {
+    "area": 389,
+    "capital": {
+      "translations": {
+        "fra": "Kingstown",
+        "deu": "Kingstown",
+        "eng": "Kingstown"
+      },
+      "official": "Kingstown"
+    },
+    "cioc": "VIN",
+    "name": {
+      "common": "Saint Vincent and the Grenadines",
+      "translations": {
+        "ces": "Svatý Vincenc a Grenadiny",
+        "slk": "Svätý Vincent a Grenadíny",
+        "fra": "Saint-Vincent-et-les Grenadines",
+        "deu": "Sankt Vincent und die Grenadinen",
+        "spa": "San Vicente y las Granadinas",
+        "eng": "Saint Vincent and the Grenadines"
+      },
+      "official": "Saint Vincent and the Grenadines"
+    },
+    "ccn3": "670",
+    "cca3": "VCT",
+    "region": "Americas",
+    "cca2": "VC"
+  },
+  {
+    "area": 916445,
+    "capital": {
+      "translations": {
+        "fra": "Caracas",
+        "spa": "Caracas",
+        "deu": "Caracas",
+        "eng": "Caracas"
+      },
+      "official": "Caracas"
+    },
+    "cioc": "VEN",
+    "name": {
+      "common": "Venezuela",
+      "translations": {
+        "ces": "Venezuela",
+        "slk": "Venezuela",
+        "fra": "Vénézuela",
+        "spa": "Venezuela",
+        "deu": "Venezuela",
+        "eng": "Venezuela"
+      },
+      "official": "Bolivarian Republic of Venezuela"
+    },
+    "ccn3": "862",
+    "cca3": "VEN",
+    "region": "Americas",
+    "cca2": "VE"
+  },
+  {
+    "area": 151,
+    "capital": {
+      "translations": "",
+      "official": "Road Town"
+    },
+    "cioc": "IVB",
+    "name": {
+      "common": "British Virgin Islands",
+      "translations": "",
+      "official": "Virgin Islands"
+    },
+    "ccn3": "092",
+    "cca3": "VGB",
+    "region": "Americas",
+    "cca2": "VG"
+  },
+  {
+    "area": 347,
+    "capital": {
+      "translations": "",
+      "official": "Charlotte Amalie"
+    },
+    "cioc": "ISV",
+    "name": {
+      "common": "United States Virgin Islands",
+      "translations": "",
+      "official": "Virgin Islands of the United States"
+    },
+    "ccn3": "850",
+    "cca3": "VIR",
+    "region": "Americas",
+    "cca2": "VI"
+  },
+  {
+    "area": 331212,
+    "capital": {
+      "translations": {
+        "ces": "Hanoj",
+        "slk": "Hanoj",
+        "fra": "Hanoï",
+        "deu": "Hanoi",
+        "spa": "Hanói",
+        "eng": "Hanoi"
+      },
+      "official": "Hanoi"
+    },
+    "cioc": "VIE",
+    "name": {
+      "common": "Vietnam",
+      "translations": {
+        "ces": "Vietnam",
+        "slk": "Vietnam",
+        "fra": "Viêt Nam",
+        "spa": "Vietnam",
+        "deu": "Vietnam",
+        "eng": "Vietnam"
+      },
+      "official": "Socialist Republic of Vietnam"
+    },
+    "ccn3": "704",
+    "cca3": "VNM",
+    "region": "Asia",
+    "cca2": "VN"
+  },
+  {
+    "area": 12189,
+    "capital": {
+      "translations": {
+        "fra": "Port Vila",
+        "deu": "Port Vila",
+        "eng": "Port Vila"
+      },
+      "official": "Port Vila"
+    },
+    "cioc": "VAN",
+    "name": {
+      "common": "Vanuatu",
+      "translations": {
+        "ces": "Vanuatu",
+        "slk": "Vanuatu",
+        "fra": "Vanuatu",
+        "spa": "Vanuatu",
+        "deu": "Vanuatu",
+        "eng": "Vanuatu"
+      },
+      "official": "Republic of Vanuatu"
+    },
+    "ccn3": "548",
+    "cca3": "VUT",
+    "region": "Oceania",
+    "cca2": "VU"
+  },
+  {
+    "area": 142,
+    "capital": {
+      "translations": "",
+      "official": "Mata-Utu"
+    },
+    "cioc": "",
+    "name": {
+      "common": "Wallis and Futuna",
+      "translations": "",
+      "official": "Territory of the Wallis and Futuna Islands"
+    },
+    "ccn3": "876",
+    "cca3": "WLF",
+    "region": "Oceania",
+    "cca2": "WF"
+  },
+  {
+    "area": 2842,
+    "capital": {
+      "translations": {
+        "fra": "Apia",
+        "deu": "Apia",
+        "eng": "Apia"
+      },
+      "official": "Apia"
+    },
+    "cioc": "SAM",
+    "name": {
+      "common": "Samoa",
+      "translations": {
+        "ces": "Samoa",
+        "slk": "Samoa",
+        "fra": "Samoa",
+        "spa": "Samoa",
+        "deu": "Samoa",
+        "eng": "Samoa"
+      },
+      "official": "Independent State of Samoa"
+    },
+    "ccn3": "882",
+    "cca3": "WSM",
+    "region": "Oceania",
+    "cca2": "WS"
+  },
+  {
+    "area": 527968,
+    "capital": {
+      "translations": {
+        "ces": "Saná",
+        "slk": "Saná",
+        "fra": "Sanaa",
+        "spa": "Saná",
+        "deu": "Sanaa",
+        "eng": "Sana\u2019a"
+      },
+      "official": "Sana'a"
+    },
+    "cioc": "YEM",
+    "name": {
+      "common": "Yemen",
+      "translations": {
+        "ces": "Jemen",
+        "slk": "Jemen",
+        "fra": "Yémen",
+        "spa": "Yemen",
+        "deu": "Jemen",
+        "eng": "Yemen"
+      },
+      "official": "Republic of Yemen"
+    },
+    "ccn3": "887",
+    "cca3": "YEM",
+    "region": "Asia",
+    "cca2": "YE"
+  },
+  {
+    "area": 1221037,
+    "capital": {
+      "translations": {
+        "fra": "Tshwane",
+        "deu": "Pretoria",
+        "eng": "Tshwane"
+      },
+      "official": "Pretoria"
+    },
+    "cioc": "RSA",
+    "name": {
+      "common": "South Africa",
+      "translations": {
+        "ces": "Jižní Afrika",
+        "slk": "Južná Afrika",
+        "fra": "Afrique du Sud",
+        "deu": "Südafrika",
+        "spa": "Sudáfrica",
+        "eng": "South Africa"
+      },
+      "official": "Republic of South Africa"
+    },
+    "ccn3": "710",
+    "cca3": "ZAF",
+    "region": "Africa",
+    "cca2": "ZA"
+  },
+  {
+    "area": 752612,
+    "capital": {
+      "translations": {
+        "fra": "Lusaka",
+        "deu": "Lusaka",
+        "eng": "Lusaka"
+      },
+      "official": "Lusaka"
+    },
+    "cioc": "ZAM",
+    "name": {
+      "common": "Zambia",
+      "translations": {
+        "ces": "Zambie",
+        "slk": "Zambia",
+        "fra": "Zambie",
+        "spa": "Zambia",
+        "deu": "Sambia",
+        "eng": "Zambia"
+      },
+      "official": "Republic of Zambia"
+    },
+    "ccn3": "894",
+    "cca3": "ZMB",
+    "region": "Africa",
+    "cca2": "ZM"
+  },
+  {
+    "area": 390757,
+    "capital": {
+      "translations": {
+        "fra": "Harare",
+        "deu": "Harare",
+        "eng": "Harare"
+      },
+      "official": "Harare"
+    },
+    "cioc": "ZIM",
+    "name": {
+      "common": "Zimbabwe",
+      "translations": {
+        "ces": "Zimbabwe",
+        "slk": "Zimbabwe",
+        "fra": "Zimbabwe",
+        "deu": "Simbabwe",
+        "spa": "Zimbabue",
+        "eng": "Zimbabwe"
+      },
+      "official": "Republic of Zimbabwe"
+    },
+    "ccn3": "716",
+    "cca3": "ZWE",
+    "region": "Africa",
+    "cca2": "ZW"
+  }
+]}

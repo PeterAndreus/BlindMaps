@@ -116,7 +116,7 @@ td{
     background-position: inherit;
 }
 .claro .dijitTitlePane .dijitArrowNode{
-    background-image: url("data/images/menu.png");
+    background-image: url("images/menu.png");
     width: 27px;
     height: 17px;
     float: right;

@@ -461,7 +461,7 @@ nls = {
         "Correct": "Correcte",
         "Congratulation": "Félicitation!"
     }
-}
+};
 
 var settings;
 var countryData;
@@ -483,6 +483,8 @@ var satLayer = new ol.layer.Tile({
 });
 
 var vectorLayer = new ol.layer.Vector({
+    updateWhileAnimating: true,
+    updateWhileInteracting: true,
     source: new ol.source.Vector({
         loader: function() {
             var source = this;
@@ -852,8 +854,8 @@ map.on('pointermove', function(evt) {
     if (evt.dragging) {
         return;
     }
-    var pixel = map.getEventPixel(evt.originalEvent);
     if (!godModeActivated) {
+        var pixel = map.getEventPixel(evt.originalEvent);
         highlightFeatureInfo(pixel);
     }
 });

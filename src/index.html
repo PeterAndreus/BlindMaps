@@ -1,4 +1,4 @@
- 
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -72,25 +72,25 @@
                                             <input class="taskChckBox" id="americas" name="region" value="Americas" data-dojo-type="dijit/form/CheckBox" checked onChange="changeSetting(this)"/>
                                             <label for="americas"><span localization="America"></span></label>
                                         </td>
-                                        <td class="center" rowspan="5">
+                                        <td class="center" rowspan="6">
                                             <a href="javascript:void(0)" onClick="simpleMode()">
                                                 <img class="whiteBorder" src="data/images/simple.png" alt="simple"><br/>
                                                 <span localization="SimpleMode"></span>
                                             </a>
                                         </td>
-                                        <td class="center" rowspan="5">
+                                        <td class="center" rowspan="6">
                                             <a href="javascript:void(0)" onClick="satMode()">
                                                 <img class="whiteBorder" src="data/images/sat.png" alt="satellite"><br/>
                                                 <span localization="SatelliteMode"></span>
                                             </a>
                                         </td>
-                                        <td class="center" rowspan="5">
+                                        <td class="center" rowspan="6">
                                             <a href="javascript:void(0)" onClick="godMode()">
                                                 <img class="whiteBorder" src="data/images/god.png" alt="god mode"><br/>
                                                 <span localization="GodMode"></span>
                                             </a>
                                         </td>
-                                        <td class="center" rowspan="5">
+                                        <td class="center" rowspan="6">
                                             <a href="javascript:void(0)" onClick="learnMode()">
                                                 <img class="whiteBorder" src="data/images/simple.png" alt="learn mode"><br/>
                                                 <span localization="LearnMode"></span>
@@ -155,6 +155,13 @@
                                             <label for="africa"><span localization="Africa"></span></label>
                                         </td>
                                     </tr>
+                                    <tr>
+                                    <td></td>
+                                        <td>
+                                            <input id="sovereign" name="sovereign" value="sovereign" data-dojo-type="dijit/form/CheckBox"  onChange="changeSetting(this)"/>
+                                            <label for="sovereign"><span localization="Sovereign"></span></label>
+                                        </td>
+                                    </tr>
                                 </table>
                                 <button data-dojo-type="dijit/form/Button" type="button"><span localization="Restart"></span>
                                     <script type="dojo/on" data-dojo-event="click" data-dojo-args="evt">
@@ -191,9 +198,9 @@
                 <div class="nextTaskDiv">
                     <span localization="NextTask"></span>
                 </div>
-            </a>    
+            </a>
         </div>
-        <div data-dojo-type="dijit/Dialog" 
+        <div data-dojo-type="dijit/Dialog"
              data-dojo-id="aboutDialog"
              class="aboutDialog">
             <div class="center aboutName">

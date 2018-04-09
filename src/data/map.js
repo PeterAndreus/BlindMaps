@@ -51,7 +51,17 @@ require(["dojo/_base/array", "dojo/dom", "dijit/registry", "dojo/dom-class", "do
                     }
                 });
             }
-            return region &&
+            var sovereign = false;
+            if (item.pc) {
+                if (settings.sovereign.length !== 0) {
+                    sovereign = true;
+                }
+            } else {
+                if (settings.sovereign.length == 0) {
+                    sovereign = true;
+                }
+            }
+            return region && sovereign &&
                     item.area <= settings.maxArea &&
                     item.area >= settings.minArea;
         });
@@ -321,7 +331,8 @@ nls = {
         "AllAnswered": "All answered",
         "NextTask": "Next Task",
         "Score": "Score",
-        "Congratulation": "Congratulation"
+        "Congratulation": "Congratulation",
+        "Sovereign": "Dependent territory"
     },
     "slk": {
         "CountryArea": "Rozloha:",
@@ -348,7 +359,8 @@ nls = {
         "AllAnswered": "Všetko zodpovedané",
         "NextTask": "Ďalšia úloha",
         "Score": "Výsledok",
-        "Congratulation": "Blahoželám!"
+        "Congratulation": "Blahoželám!",
+        "Sovereign": "Závislé územie"
     },
     "ces": {
         "CountryArea": "Rozloha krajiny",
@@ -377,7 +389,8 @@ nls = {
         "AllAnswered": "Vše zodpovedané",
         "NextTask": "Další úkol",
         "Score": "Výsledek",
-        "Congratulation": "Gratuluji!"
+        "Congratulation": "Gratuluji!",
+        "Sovereign": "Závislé území"
     },
     "spa": {
         "CountryArea": "Superficie del país:",
@@ -404,7 +417,8 @@ nls = {
         "AllAnswered": "Todo contestado",
         "NextTask": "Siguiente tarea",
         "Score": "Resultado",
-        "Congratulation": "Felicitaciones!"
+        "Congratulation": "Felicitaciones!",
+        "Sovereign": "Territorio dependiente"
     },
     "deu": {
         "CountryArea": "Landesgrösse:",
@@ -433,7 +447,8 @@ nls = {
         "AllAnswered": "Alle beantwortet",
         "NextTask": "Nächste Aufgabe",
         "Score": "Ergebnis",
-        "Congratulation": "Glückwunsch!"
+        "Congratulation": "Glückwunsch!",
+        "Sovereign": "Abhängiges Territorium"
     },
     "fra": {
         "CountryArea": "Superficie:",
@@ -459,7 +474,8 @@ nls = {
         "AllAnswered": "Tous répondu",
         "NextTask": "Tâche suivante",
         "Correct": "Correcte",
-        "Congratulation": "Félicitation!"
+        "Congratulation": "Félicitation!",
+        "Sovereign": "Territoire dépendant"
     }
 };
 
@@ -520,19 +536,6 @@ var map = new ol.Map({
     })
 });
 
-var overlayFeature = new ol.layer.Vector({
-    source: new ol.source.Vector(),
-    map: map,
-    style: new ol.style.Style({
-        stroke: new ol.style.Stroke({
-            color: 'rgba(0,0,0,1)',
-            width: 2
-        }),
-        fill: new ol.style.Fill({
-            color: 'rgba(0,0,0,0.3)'
-        })
-    })
-});
 
 var correctAnswerFeature = new ol.layer.Vector({
     source: new ol.source.Vector(),
@@ -556,6 +559,20 @@ var hintFeature = new ol.layer.Vector({
             width: 2
         })
     })
+});
+var overlayFeature = new ol.layer.Vector({
+    source: new ol.source.Vector(),
+    map: map,
+    style: new ol.style.Style({
+        stroke: new ol.style.Stroke({
+            color: 'rgba(0,0,0,1)',
+            width: 2
+        }),
+        fill: new ol.style.Fill({
+            color: 'rgba(0,0,0,0.3)'
+        })
+    }),
+    zIndex: 99
 });
 
 function learnMode() {
@@ -698,8 +715,14 @@ function highlightFeatureInfo(pixel) {
     if (feature !== highlightFeature) {
         if (highlightFeature && overlayFeature.getSource().getFeatures().length !== 0) {
             overlayFeature.getSource().removeFeature(highlightFeature);
+            if (highlightFeature.getStyle()) {
+                highlightFeature.getStyle().getStroke().setWidth(0.4);
+            }
         }
         if (feature) {
+            if (feature.getStyle()) {
+                feature.getStyle().getStroke().setWidth(2);
+            }
             overlayFeature.getSource().addFeature(feature);
         } else {
         }
@@ -783,6 +806,8 @@ function checkCorrectAnswer(pixel) {
             correctAnswerFeature.getSource().addFeature(childFeature);
             if (keepHighlight) {
                 correctAnswerAnimate(fill, childFeature);
+            } else {
+                childFeature.setStyle(getCorrectAnswerColorStyle());
             }
         });
 
@@ -831,6 +856,7 @@ function clearHintFeature() {
 function restart() {
     var vectorSource = correctAnswerFeature.getSource();
     dojo.forEach(vectorSource.getFeatures(), function(feature) {
+        feature.setStyle(null);
         vectorSource.removeFeature(feature);
     });
     clearHintFeature();
@@ -848,6 +874,60 @@ function destroyLayer(layer) {
         map.removeLayer(layer);
         layer = null;
     }
+}
+
+function getCorrectAnswerColorStyle() {
+    var rgbColor = numberToColorHsl();
+    var s = new ol.style.Style({
+        stroke: new ol.style.Stroke({
+            color: 'rgba(0, 0, 0, 1)',
+            width: 0.4
+        }),
+        fill: new ol.style.Fill({
+            color: rgbColor
+        })
+    });
+
+    return s;
+}
+
+function hslToRgb(h, s, l) {
+    var r, g, b;
+
+    if (s == 0) {
+        r = g = b = l;
+    } else {
+        function hue2rgb(p, q, t) {
+            if (t < 0)
+                t += 1;
+            if (t > 1)
+                t -= 1;
+            if (t < 1 / 6)
+                return p + (q - p) * 6 * t;
+            if (t < 1 / 2)
+                return q;
+            if (t < 2 / 3)
+                return p + (q - p) * (2 / 3 - t) * 6;
+            return p;
+        }
+
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1 / 3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1 / 3);
+    }
+
+    return [Math.floor(r * 255), Math.floor(g * 255), Math.floor(b * 255)];
+}
+
+
+function numberToColorHsl() {
+    var per = 100 / settings.guessCount;
+    var i = wrongGuess * per;
+    var hue = (i > 100 ? 100 : i) * 1.2 / 360;
+    var rgb = hslToRgb(hue, 1, .5);
+    return 'rgba(' + rgb[1] + ',' + rgb[0] + ',' + rgb[2] + ', 0.5)';
 }
 
 map.on('pointermove', function(evt) {

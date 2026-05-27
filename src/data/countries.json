@@ -14,8 +14,7 @@
     "ccn3": "533",
     "cca3": "ABW",
     "region": "Americas",
-    "cca2": "AW",
-    "pc" : 528
+    "cca2": "AW"
   },
   {
     "area": 652230,
@@ -90,8 +89,7 @@
     "ccn3": "660",
     "cca3": "AIA",
     "region": "Americas",
-    "cca2": "AI",
-    "pc" : 826
+    "cca2": "AI"
   },
   {
     "area": 1580,
@@ -108,8 +106,7 @@
     "ccn3": "248",
     "cca3": "ALA",
     "region": "Europe",
-    "cca2": "AX",
-    "pc": 246
+    "cca2": "AX"
   },
   {
     "area": 28748,
@@ -274,8 +271,7 @@
     "ccn3": "016",
     "cca3": "ASM",
     "region": "Oceania",
-    "cca2": "AS",
-    "pc" : 840
+    "cca2": "AS"
   },
   {
     "area": 14000000,
@@ -309,8 +305,7 @@
     "ccn3": "260",
     "cca3": "ATF",
     "region": "",
-    "cca2": "TF",
-    "pc" : 250
+    "cca2": "TF"
   },
   {
     "area": 442,
@@ -530,8 +525,7 @@
     "ccn3": "535",
     "cca3": "BES",
     "region": "Americas",
-    "cca2": "BQ",
-    "pc": 528
+    "cca2": "BQ"
   },
   {
     "area": 272967,
@@ -724,8 +718,7 @@
     "ccn3": "652",
     "cca3": "BLM",
     "region": "Americas",
-    "cca2": "BL",
-    "pc" : 250
+    "cca2": "BL"
   },
   {
     "area": 207600,
@@ -799,8 +792,7 @@
     "ccn3": "060",
     "cca3": "BMU",
     "region": "Americas",
-    "cca2": "BM",
-    "pc" : 826
+    "cca2": "BM"
   },
   {
     "area": 1098581,
@@ -962,8 +954,7 @@
     "ccn3": "074",
     "cca3": "BVT",
     "region": "",
-    "cca2": "BV",
-    "pc" : 578
+    "cca2": "BV"
   },
   {
     "area": 582000,
@@ -1065,8 +1056,7 @@
     "ccn3": "166",
     "cca3": "CCK",
     "region": "Oceania",
-    "cca2": "CC",
-    "pc" : 36
+    "cca2": "CC"
   },
   {
     "area": 41284,
@@ -1280,8 +1270,7 @@
     "ccn3": "184",
     "cca3": "COK",
     "region": "Oceania",
-    "cca2": "CK",
-    "pc" : 554
+    "cca2": "CK"
   },
   {
     "area": 1141748,
@@ -1445,8 +1434,7 @@
     "ccn3": "531",
     "cca3": "CUW",
     "region": "Americas",
-    "cca2": "CW",
-    "pc" : 528
+    "cca2": "CW"
   },
   {
     "area": 135,
@@ -1463,8 +1451,7 @@
     "ccn3": "162",
     "cca3": "CXR",
     "region": "Oceania",
-    "cca2": "CX",
-    "pc" : 36
+    "cca2": "CX"
   },
   {
     "area": 264,
@@ -1481,8 +1468,7 @@
     "ccn3": "136",
     "cca3": "CYM",
     "region": "Americas",
-    "cca2": "KY",
-    "pc" : 826
+    "cca2": "KY"
   },
   {
     "area": 9251,
@@ -1999,8 +1985,7 @@
     "ccn3": "238",
     "cca3": "FLK",
     "region": "Americas",
-    "cca2": "FK",
-    "pc" : 826
+    "cca2": "FK"
   },
   {
     "area": 551695,
@@ -2048,8 +2033,7 @@
     "ccn3": "234",
     "cca3": "FRO",
     "region": "Europe",
-    "cca2": "FO",
-    "pc" : 208
+    "cca2": "FO"
   },
   {
     "area": 702,
@@ -2077,8 +2061,7 @@
     "ccn3": "583",
     "cca3": "FSM",
     "region": "Oceania",
-    "cca2": "FM",
-    "pc" : 840
+    "cca2": "FM"
   },
   {
     "area": 267668,
@@ -2183,8 +2166,7 @@
     "ccn3": "831",
     "cca3": "GGY",
     "region": "Europe",
-    "cca2": "GG",
-    "pc" : 826
+    "cca2": "GG"
   },
   {
     "area": 238533,
@@ -2231,8 +2213,7 @@
     "ccn3": "292",
     "cca3": "GIB",
     "region": "Europe",
-    "cca2": "GI",
-    "pc" : 826
+    "cca2": "GI"
   },
   {
     "area": 245857,
@@ -2279,8 +2260,7 @@
     "ccn3": "312",
     "cca3": "GLP",
     "region": "Americas",
-    "cca2": "GP",
-    "pc" : 250
+    "cca2": "GP"
   },
   {
     "area": 10689,
@@ -2441,8 +2421,7 @@
     "ccn3": "304",
     "cca3": "GRL",
     "region": "Americas",
-    "cca2": "GL",
-    "pc" : 208
+    "cca2": "GL"
   },
   {
     "area": 108889,
@@ -2500,8 +2479,7 @@
     "ccn3": "316",
     "cca3": "GUM",
     "region": "Oceania",
-    "cca2": "GU",
-    "pc" : 840
+    "cca2": "GU"
   },
   {
     "area": 214969,
@@ -2546,8 +2524,7 @@
     "ccn3": "344",
     "cca3": "HKG",
     "region": "Asia",
-    "cca2": "HK",
-    "pc" : 156
+    "cca2": "HK"
   },
   {
     "area": 412,
@@ -2564,8 +2541,7 @@
     "ccn3": "334",
     "cca3": "HMD",
     "region": "",
-    "cca2": "HM",
-    "pc" : 36
+    "cca2": "HM"
   },
   {
     "area": 112492,
@@ -2730,8 +2706,7 @@
     "ccn3": "833",
     "cca3": "IMN",
     "region": "Europe",
-    "cca2": "IM",
-    "pc" : 826
+    "cca2": "IM"
   },
   {
     "area": 3287590,
@@ -2778,8 +2753,7 @@
     "ccn3": "086",
     "cca3": "IOT",
     "region": "Africa",
-    "cca2": "IO",
-    "pc" : 826
+    "cca2": "IO"
   },
   {
     "area": 70273,
@@ -3008,8 +2982,7 @@
     "ccn3": "832",
     "cca3": "JEY",
     "region": "Europe",
-    "cca2": "JE",
-    "pc" : 826
+    "cca2": "JE"
   },
   {
     "area": 89342,
@@ -3634,8 +3607,7 @@
     "ccn3": "446",
     "cca3": "MAC",
     "region": "Asia",
-    "cca2": "MO",
-    "pc" : 156
+    "cca2": "MO"
   },
   {
     "area": 53,
@@ -3652,8 +3624,7 @@
     "ccn3": "663",
     "cca3": "MAF",
     "region": "Americas",
-    "cca2": "MF",
-    "pc" : 250
+    "cca2": "MF"
   },
   {
     "area": 446550,
@@ -3849,8 +3820,7 @@
     "ccn3": "584",
     "cca3": "MHL",
     "region": "Oceania",
-    "cca2": "MH",
-    "pc" : 840
+    "cca2": "MH"
   },
   {
     "area": 25713,
@@ -4042,8 +4012,7 @@
     "ccn3": "580",
     "cca3": "MNP",
     "region": "Oceania",
-    "cca2": "MP",
-    "pc" : 840
+    "cca2": "MP"
   },
   {
     "area": 801590,
@@ -4117,8 +4086,7 @@
     "ccn3": "500",
     "cca3": "MSR",
     "region": "Americas",
-    "cca2": "MS",
-    "pc" : 826
+    "cca2": "MS"
   },
   {
     "area": 1128,
@@ -4135,8 +4103,7 @@
     "ccn3": "474",
     "cca3": "MTQ",
     "region": "Americas",
-    "cca2": "MQ",
-    "pc" : 250
+    "cca2": "MQ"
   },
   {
     "area": 2040,
@@ -4238,8 +4205,7 @@
     "ccn3": "175",
     "cca3": "MYT",
     "region": "Africa",
-    "cca2": "YT",
-    "pc" : 250
+    "cca2": "YT"
   },
   {
     "area": 825615,
@@ -4284,8 +4250,7 @@
     "ccn3": "540",
     "cca3": "NCL",
     "region": "Oceania",
-    "cca2": "NC",
-    "pc" : 250
+    "cca2": "NC"
   },
   {
     "area": 1267000,
@@ -4330,8 +4295,7 @@
     "ccn3": "574",
     "cca3": "NFK",
     "region": "Oceania",
-    "cca2": "NF",
-    "pc" : 36
+    "cca2": "NF"
   },
   {
     "area": 923768,
@@ -4406,8 +4370,7 @@
     "ccn3": "570",
     "cca3": "NIU",
     "region": "Oceania",
-    "cca2": "NU",
-    "pc" : 554
+    "cca2": "NU"
   },
   {
     "area": 41850,
@@ -4657,8 +4620,7 @@
     "ccn3": "612",
     "cca3": "PCN",
     "region": "Oceania",
-    "cca2": "PN",
-    "pc" : 826
+    "cca2": "PN"
   },
   {
     "area": 1285216,
@@ -4744,8 +4706,7 @@
     "ccn3": "585",
     "cca3": "PLW",
     "region": "Oceania",
-    "cca2": "PW",
-    "pc" : 840
+    "cca2": "PW"
   },
   {
     "area": 462840,
@@ -4821,8 +4782,7 @@
     "ccn3": "630",
     "cca3": "PRI",
     "region": "Americas",
-    "cca2": "PR",
-    "pc" : 840
+    "cca2": "PR"
   },
   {
     "area": 120538,
@@ -4953,8 +4913,7 @@
     "ccn3": "258",
     "cca3": "PYF",
     "region": "Oceania",
-    "cca2": "PF",
-    "pc" : 250
+    "cca2": "PF"
   },
   {
     "area": 11586,
@@ -5001,8 +4960,7 @@
     "ccn3": "638",
     "cca3": "REU",
     "region": "Africa",
-    "cca2": "RE",
-    "pc" : 250
+    "cca2": "RE"
   },
   {
     "area": 238391,
@@ -5223,8 +5181,7 @@
     "ccn3": "239",
     "cca3": "SGS",
     "region": "Americas",
-    "cca2": "GS",
-    "pc" : 826
+    "cca2": "GS"
   },
   {
     "area": 394,
@@ -5241,8 +5198,7 @@
     "ccn3": "654",
     "cca3": "SHN",
     "region": "Africa",
-    "cca2": "SH",
-    "pc" : 826
+    "cca2": "SH"
   },
   {
     "area": -1,
@@ -5259,8 +5215,7 @@
     "ccn3": "744",
     "cca3": "SJM",
     "region": "Europe",
-    "cca2": "SJ",
-    "pc" : 578
+    "cca2": "SJ"
   },
   {
     "area": 28896,
@@ -5417,8 +5372,7 @@
     "ccn3": "666",
     "cca3": "SPM",
     "region": "Americas",
-    "cca2": "PM",
-    "pc" : 250
+    "cca2": "PM"
   },
   {
     "area": 88361,
@@ -5674,8 +5628,7 @@
     "ccn3": "534",
     "cca3": "SXM",
     "region": "Americas",
-    "cca2": "SX",
-    "pc" : 528
+    "cca2": "SX"
   },
   {
     "area": 452,
@@ -5751,8 +5704,7 @@
     "ccn3": "796",
     "cca3": "TCA",
     "region": "Americas",
-    "cca2": "TC",
-    "pc" : 826
+    "cca2": "TC"
   },
   {
     "area": 1284000,
@@ -5870,24 +5822,6 @@
     "cca3": "TJK",
     "region": "Asia",
     "cca2": "TJ"
-  },
-  {
-    "area": 12,
-    "capital": {
-      "translations": "",
-      "official": "Fakaofo"
-    },
-    "cioc": "",
-    "name": {
-      "common": "Tokelau",
-      "translations": "",
-      "official": "Tokelau"
-    },
-    "ccn3": "772",
-    "cca3": "TKL",
-    "region": "Oceania",
-    "cca2": "TK",
-    "pc" : 554
   },
   {
     "area": 488100,
@@ -6062,34 +5996,6 @@
     "cca2": "TR"
   },
   {
-    "area": 26,
-    "capital": {
-      "translations": {
-        "fra": "Funafuti",
-        "deu": "Funafuti",
-        "eng": "Funafuti"
-      },
-      "official": "Funafuti"
-    },
-    "cioc": "TUV",
-    "name": {
-      "common": "Tuvalu",
-      "translations": {
-        "ces": "Tuvalu",
-        "slk": "Tuvalu",
-        "fra": "Tuvalu",
-        "spa": "Tuvalu",
-        "deu": "Tuvalu",
-        "eng": "Tuvalu"
-      },
-      "official": "Tuvalu"
-    },
-    "ccn3": "798",
-    "cca3": "TUV",
-    "region": "Oceania",
-    "cca2": "TV"
-  },
-  {
     "area": 36193,
     "capital": {
       "translations": {
@@ -6205,24 +6111,6 @@
     "cca3": "UKR",
     "region": "Europe",
     "cca2": "UA"
-  },
-  {
-    "area": 34.2,
-    "capital": {
-      "translations": "",
-      "official": ""
-    },
-    "cioc": "",
-    "name": {
-      "common": "United States Minor Outlying Islands",
-      "translations": "",
-      "official": "United States Minor Outlying Islands"
-    },
-    "ccn3": "581",
-    "cca3": "UMI",
-    "region": "Americas",
-    "cca2": "UM",
-    "pc" : 840
   },
   {
     "area": 181034,
@@ -6414,8 +6302,7 @@
     "ccn3": "092",
     "cca3": "VGB",
     "region": "Americas",
-    "cca2": "VG",
-    "pc" : 826
+    "cca2": "VG"
   },
   {
     "area": 347,
@@ -6432,8 +6319,7 @@
     "ccn3": "850",
     "cca3": "VIR",
     "region": "Americas",
-    "cca2": "VI",
-    "pc" : 840
+    "cca2": "VI"
   },
   {
     "area": 331212,
@@ -6509,8 +6395,7 @@
     "ccn3": "876",
     "cca3": "WLF",
     "region": "Oceania",
-    "cca2": "WF",
-    "pc" : 250
+    "cca2": "WF"
   },
   {
     "area": 2842,
